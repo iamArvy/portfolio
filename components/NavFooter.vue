@@ -7,7 +7,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import type { NavItem } from "@/types";
-
+import { Icon } from "@iconify/vue";
 interface Props {
   items: NavItem[];
   class?: string;
@@ -28,7 +28,12 @@ defineProps<Props>();
             as-child
           >
             <a :href="item.href" target="_blank" rel="noopener noreferrer">
-              <component :is="item.icon" />
+              <Icon
+                v-if="item.icon"
+                :icon="item.icon"
+                inline
+                class="w-[20px]"
+              />
               <span>{{ item.title }}</span>
             </a>
           </SidebarMenuButton>

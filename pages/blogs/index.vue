@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import type { LayoutKey } from "#build/types/layouts";
-import PlaceholderPattern from "../components/PlaceholderPattern.vue";
+import PlaceholderPattern from "~/components/PlaceholderPattern.vue";
+const title = "Blogs";
+useAppTitle(title);
 
-useAppTitle("Profile");
 const { layout } = useLayout();
 const layoutName = computed<false | LayoutKey>(() => {
   return layout.value ? (`dashboard-${layout.value}` as LayoutKey) : false;
 });
 
 const breadcrumbs = useBreadcrumbs();
-breadcrumbs.value = [{ title: "Profile", href: "/" }];
+breadcrumbs.value = [{ title: title, href: "blogs" }];
 definePageMeta({
-  title: "Profile",
+  title: title,
   meta: [
     {
       name: "description",

@@ -2,13 +2,13 @@
 import AppLogo from "@/components/AppLogo.vue";
 import AppLogoIcon from "@/components/AppLogoIcon.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -29,12 +29,12 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import UserMenuContent from "@/components/UserMenuContent.vue";
-import { getInitials } from "@/composables";
-import type { BreadcrumbItem, NavItem, User } from "~/types";
+// import UserMenuContent from "@/components/UserMenuContent.vue";
+// import { getInitials } from "@/composables";
+import type { BreadcrumbItem, NavItem } from "~/types";
 import { Menu, Search } from "lucide-vue-next";
 import { computed } from "vue";
-
+import { Icon } from "@iconify/vue";
 interface Props {
   breadcrumbs?: BreadcrumbItem[];
   mainNavItems?: NavItem[];
@@ -47,7 +47,6 @@ const props = withDefaults(defineProps<Props>(), {
   rightNavItems: () => [],
 });
 
-const user = useAuth().user.value as User;
 const nav = useNav();
 const activeItemStyles = computed(
   () => (url: string) =>
@@ -55,10 +54,6 @@ const activeItemStyles = computed(
       ? "text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100"
       : ""
 );
-
-onMounted(() => {
-  console.log(user);
-});
 </script>
 
 <template>
@@ -141,9 +136,9 @@ onMounted(() => {
                       'h-9 cursor-pointer px-3',
                     ]"
                   >
-                    <component
-                      :is="item.icon"
+                    <Icon
                       v-if="item.icon"
+                      :icon="item.icon"
                       class="mr-2 h-4 w-4"
                     />
                     {{ item.title }}
@@ -183,8 +178,9 @@ onMounted(() => {
                       >
                         <NuxtLink :to="item.href" target="_blank">
                           <span class="sr-only">{{ item.title }}</span>
-                          <component
-                            :is="item.icon"
+                          <Icon
+                            v-if="item.icon"
+                            :icon="item.icon"
                             class="size-5 opacity-80 group-hover:opacity-100"
                           />
                         </NuxtLink>
@@ -196,10 +192,11 @@ onMounted(() => {
                   </Tooltip>
                 </TooltipProvider>
               </template>
+              <AppearanceButton />
             </div>
           </div>
 
-          <DropdownMenu>
+          <!-- <DropdownMenu>
             <DropdownMenuTrigger :as-child="true">
               <Button
                 variant="ghost"
@@ -223,7 +220,7 @@ onMounted(() => {
             <DropdownMenuContent v-if="user" class="w-56" align="end">
               <UserMenuContent :user="user" />
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> -->
         </div>
       </div>
     </div>

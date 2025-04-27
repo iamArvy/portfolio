@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import NavFooter from "@/components/NavFooter.vue";
 import NavMain from "@/components/NavMain.vue";
-import NavUser from "@/components/NavUser.vue";
+// import NavUser from "@/components/NavUser.vue";
 import {
   Sidebar,
   SidebarContent,
@@ -42,7 +42,7 @@ defineProps<Props>();
 
     <SidebarFooter v-if="rightNavItems">
       <NavFooter :items="rightNavItems" />
-      <NavUser />
+      <!-- <NavUser /> -->
     </SidebarFooter>
   </Sidebar>
   <slot />

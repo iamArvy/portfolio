@@ -7,12 +7,13 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import type { NavItem } from "@/types";
+import { Icon } from "@iconify/vue";
 
 defineProps<{
   items: NavItem[];
 }>();
 
-const nav = useNav()
+const nav = useNav();
 </script>
 
 <template>
@@ -26,7 +27,7 @@ const nav = useNav()
           :tooltip="item.title"
         >
           <NuxtLink :href="item.href">
-            <component :is="item.icon" />
+            <Icon v-if="item.icon" :icon="item.icon" width="50" />
             <span>{{ item.title }}</span>
           </NuxtLink>
         </SidebarMenuButton>

@@ -1,24 +1,38 @@
-import { LayoutGrid, Folder, BookOpen } from "lucide-vue-next";
+// import { LayoutGrid, Folder, BookOpen } from "lucide-vue-next";
 import type { NavItem } from "@/types";
-
 const mainNavItems: NavItem[] = [
   {
-    title: "Dashboard",
-    href: "/dashboard",
-    icon: LayoutGrid,
+    title: "Profile",
+    href: "/",
+    icon: "mingcute:profile-fill",
+  },
+  {
+    title: "Stacks",
+    href: "/stacks",
+    icon: "material-symbols:stacks",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+    icon: "grommet-icons:projects",
+  },
+  {
+    title: "Blog",
+    href: "/blogs",
+    icon: "carbon:blog",
   },
 ];
 
 const rightNavItems: NavItem[] = [
   {
-    title: "Repository",
-    href: "https://github.com/laravel/vue-starter-kit",
-    icon: Folder,
+    title: "Github",
+    href: "https://github.com/iamArvy",
+    icon: "mdi:github",
   },
   {
-    title: "Documentation",
-    href: "https://laravel.com/docs/starter-kits",
-    icon: BookOpen,
+    title: "LinkedIn",
+    href: "https://linkedIn.com/oluwaseyioke-webdev",
+    icon: "radix-icons:linkedin-logo",
   },
 ];
 
