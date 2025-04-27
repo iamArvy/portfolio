@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Breadcrumbs from "@/components/Breadcrumbs.vue";
-import { SidebarTrigger } from "@/components/ui/sidebar";
+import Breadcrumbs from "~/components/BreadcrumbsComponent.vue";
+import { SidebarTrigger } from "~/components/ui/sidebar";
 import type { BreadcrumbItemType } from "~/types";
 
 defineProps<{

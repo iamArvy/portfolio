@@ -1,0 +1,31 @@
+{
+  "name": "Oluwaseyi Oke",
+  "image": "/myimg.png",
+  "bio" : "I’m a Full-Stack Web Developer, Cloud Solutions Architect, and DevOps Engineer specializing in AWS cloud-native solutions. I design and build scalable, secure, and high-performance applications, leveraging automation and modern development practices to streamline workflows and optimize efficiency. With a strong DevOps mindset, I focus on reliability, cost optimization, and seamless deployments to deliver robust digital solutions.",
+  "contacts": [
+    {
+      "url": "https://maps.app.goo.gl/17P8qssuzY6fiyMf7",
+      "icon": "fluent:location-24-filled",
+      "text": "Lagos, Nigeria"
+    },
+    {
+      "url": "mailto:iamarvy.tech@gmail.com",
+      "icon": "mingcute:mail-send-fill",
+      "text": "iamarvy.tech@gmail.com"
+    },
+    {
+      "url": "tel:+2349047745098",
+      "icon": "bx-phone-call",
+      "text": "+234 9047745098"
+    }
+  ],
+  "socials": [
+    { "url": "https://github.com/iamArvy", "icon": "skill-icons:github-dark", "platform": "Github" },
+    {
+      "url": "https://linkedin.com/in/oluwaseyioke-webdev",
+      "icon": "skill-icons:linkedin",
+      "platform": "LinkedIn"
+    },
+    { "url": "https://wa.link/2e231j", "icon": "logos:whatsapp-icon", "platform": "Whatsapp" }
+  ]
+}

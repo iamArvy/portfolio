@@ -4,13 +4,13 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "~/components/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/components/ui/sidebar";
+} from "~/components/ui/sidebar";
 import type { User } from "~/types";
 import { ChevronsUpDown } from "lucide-vue-next";
 import UserMenuContent from "./UserMenuContent.vue";

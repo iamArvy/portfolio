@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import AppLogo from "@/components/AppLogo.vue";
 import AppLogoIcon from "@/components/AppLogoIcon.vue";
-import Breadcrumbs from "@/components/Breadcrumbs.vue";
+import Breadcrumbs from "~/components/BreadcrumbsComponent.vue";
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Button } from "~/components/ui/button";
 // import {
 //   DropdownMenu,
 //   DropdownMenuContent,
@@ -15,39 +15,38 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "~/components/ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "~/components/ui/sheet";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "~/components/ui/tooltip";
 // import UserMenuContent from "@/components/UserMenuContent.vue";
 // import { getInitials } from "@/composables";
-import type { BreadcrumbItem, NavItem } from "~/types";
+import type { BreadcrumbItem } from "~/types";
 import { Menu, Search } from "lucide-vue-next";
 import { computed } from "vue";
 import { Icon } from "@iconify/vue";
+import { navs } from "~/data";
+
 interface Props {
   breadcrumbs?: BreadcrumbItem[];
-  mainNavItems?: NavItem[];
-  rightNavItems?: NavItem[];
 }
 
 const props = withDefaults(defineProps<Props>(), {
   breadcrumbs: () => [],
-  mainNavItems: () => [],
-  rightNavItems: () => [],
 });
 
 const nav = useNav();
+const { socials, contacts } = await useAppProfile();
 const activeItemStyles = computed(
   () => (url: string) =>
     nav.isCurrentRoute(url)
@@ -80,7 +79,7 @@ const activeItemStyles = computed(
               >
                 <nav class="-mx-3 space-y-1">
                   <NuxtLink
-                    v-for="item in mainNavItems"
+                    v-for="item in navs"
                     :key="item.title"
                     :to="item.href"
                     active-class="text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100"
@@ -96,18 +95,14 @@ const activeItemStyles = computed(
                 </nav>
                 <div class="flex flex-col space-y-4">
                   <NuxtLink
-                    v-for="item in rightNavItems"
-                    :key="item.title"
-                    :to="item.href"
+                    v-for="item in contacts"
+                    :key="item.text"
+                    :to="item.url"
                     target="_blank"
                     class="flex items-center space-x-2 text-sm font-medium"
                   >
-                    <component
-                      :is="item.icon"
-                      v-if="item.icon"
-                      class="h-5 w-5"
-                    />
-                    <span>{{ item.title }}</span>
+                    <Icon v-if="item.icon" :icon="item.icon" class="h-5 w-5" />
+                    <span>{{ item.text }}</span>
                   </NuxtLink>
                 </div>
               </div>
@@ -124,7 +119,7 @@ const activeItemStyles = computed(
           <NavigationMenu class="ml-10 flex h-full items-stretch">
             <NavigationMenuList class="flex h-full items-stretch space-x-2">
               <NavigationMenuItem
-                v-for="(item, index) in mainNavItems"
+                v-for="(item, index) in navs"
                 :key="index"
                 class="relative flex h-full items-center"
               >
@@ -164,9 +159,15 @@ const activeItemStyles = computed(
             >
               <Search class="size-5 opacity-80 group-hover:opacity-100" />
             </Button>
+            <TooltipProvider :delay-duration="0">
+              <Tooltip>
+                <TooltipTrigger><AppearanceButton /></TooltipTrigger>
+                <TooltipContent>Appearance Settings</TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
 
             <div class="hidden space-x-1 lg:flex">
-              <template v-for="item in rightNavItems" :key="item.title">
+              <template v-for="item in contacts" :key="item.text">
                 <TooltipProvider :delay-duration="0">
                   <Tooltip>
                     <TooltipTrigger>
@@ -176,8 +177,8 @@ const activeItemStyles = computed(
                         as-child
                         class="group h-9 w-9 cursor-pointer"
                       >
-                        <NuxtLink :to="item.href" target="_blank">
-                          <span class="sr-only">{{ item.title }}</span>
+                        <NuxtLink :to="item.url" target="_blank">
+                          <span class="sr-only">{{ item.text }}</span>
                           <Icon
                             v-if="item.icon"
                             :icon="item.icon"
@@ -187,12 +188,40 @@ const activeItemStyles = computed(
                       </Button>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>{{ item.title }}</p>
+                      <p>{{ item.text }}</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
               </template>
-              <AppearanceButton />
+            </div>
+
+            <div class="hidden space-x-1 lg:flex">
+              <template v-for="item in socials" :key="item.platform">
+                <TooltipProvider :delay-duration="0">
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        as-child
+                        class="group h-9 w-9 cursor-pointer"
+                      >
+                        <NuxtLink :to="item.url" target="_blank">
+                          <span class="sr-only">{{ item.platform }}</span>
+                          <Icon
+                            v-if="item.icon"
+                            :icon="item.icon"
+                            class="size-5 opacity-80 group-hover:opacity-100"
+                          />
+                        </NuxtLink>
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{{ item.platform }}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </template>
             </div>
           </div>
 

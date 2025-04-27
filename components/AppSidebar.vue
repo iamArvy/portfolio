@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import NavFooter from "@/components/NavFooter.vue";
 import NavMain from "@/components/NavMain.vue";
 // import NavUser from "@/components/NavUser.vue";
 import {
@@ -10,16 +9,8 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
-import type { NavItem } from "~/types";
+} from "~/components/ui/sidebar";
 import AppLogo from "./AppLogo.vue";
-
-interface Props {
-  mainNavItems?: NavItem[];
-  rightNavItems?: NavItem[];
-}
-
-defineProps<Props>();
 </script>
 
 <template>
@@ -36,12 +27,11 @@ defineProps<Props>();
       </SidebarMenu>
     </SidebarHeader>
 
-    <SidebarContent v-if="mainNavItems">
-      <NavMain :items="mainNavItems" />
+    <SidebarContent>
+      <NavMain />
     </SidebarContent>
 
-    <SidebarFooter v-if="rightNavItems">
-      <NavFooter :items="rightNavItems" />
+    <SidebarFooter>
       <!-- <NavUser /> -->
     </SidebarFooter>
   </Sidebar>

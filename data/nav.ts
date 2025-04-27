@@ -1,6 +1,6 @@
 // import { LayoutGrid, Folder, BookOpen } from "lucide-vue-next";
 import type { NavItem } from "@/types";
-const mainNavItems: NavItem[] = [
+export const navs: NavItem[] = [
   {
     title: "Profile",
     href: "/",
@@ -23,31 +23,15 @@ const mainNavItems: NavItem[] = [
   },
 ];
 
-const rightNavItems: NavItem[] = [
-  {
-    title: "Github",
-    href: "https://github.com/iamArvy",
-    icon: "mdi:github",
-  },
-  {
-    title: "LinkedIn",
-    href: "https://linkedIn.com/oluwaseyioke-webdev",
-    icon: "radix-icons:linkedin-logo",
-  },
-];
-
-const settingsNavItems: NavItem[] = [
-  {
-    title: "Profile",
-    href: "settings-profile",
-  },
-  {
-    title: "Password",
-    href: "settings-password",
-  },
-  {
-    title: "Appearance",
-    href: "settings-appearance",
-  },
-];
-export { mainNavItems, rightNavItems, settingsNavItems };
+// const rightNavItems: NavItem[] = [
+//   {
+//     title: "Github",
+//     href: "https://github.com/iamArvy",
+//     icon: "mdi:github",
+//   },
+//   {
+//     title: "LinkedIn",
+//     href: "https://linkedIn.com/oluwaseyioke-webdev",
+//     icon: "radix-icons:linkedin-logo",
+//   },
+// ];

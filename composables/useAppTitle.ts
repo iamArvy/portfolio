@@ -1,6 +1,6 @@
 export const useAppTitle = (pageTitle?: string) => {
-  const config = useRuntimeConfig();
-  const appName = config.public.appName;
+  const config = useAppConfig();
+  const appName = config.appName;
   useHead({
     title: pageTitle ? `${pageTitle} - ${appName}` : (appName as string),
   });

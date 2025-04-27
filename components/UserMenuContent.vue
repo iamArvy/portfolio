@@ -5,7 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
+} from "~/components/ui/dropdown-menu";
 import type { User } from "~/types";
 import { LogOut, Settings } from "lucide-vue-next";
 import { Button } from "./ui/button";

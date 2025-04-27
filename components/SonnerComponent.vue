@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { toast } from "vue-sonner";
 import { watch, nextTick } from "vue";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "~/components/ui/sonner";
 
 const { flashMessage, clearFlash } = useFlash();
 watch(

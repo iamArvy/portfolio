@@ -4,7 +4,7 @@
 
 // Components
 import HeadingSmall from "@/components/HeadingSmall.vue";
-import { Button } from "@/components/ui/button";
+import { Button } from "~/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -14,15 +14,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
+} from "~/components/ui/dialog";
+import { Input } from "~/components/ui/input";
 import {
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "~/components/ui/form";
 import { z } from "zod";
 import { toTypedSchema } from "@vee-validate/zod";
 // const passwordInput = ref<HTMLInputElement | null>(null);

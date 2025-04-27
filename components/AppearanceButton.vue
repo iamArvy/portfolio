@@ -6,7 +6,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "~/components/ui/dropdown-menu";
 import { Button } from "~/components/ui/button";
 import { Icon } from "@iconify/vue";
 const { layout, setLayout } = useLayout();

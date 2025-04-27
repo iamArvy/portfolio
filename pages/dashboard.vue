@@ -12,8 +12,6 @@ definePageMeta({
       content: "Dashboard page description",
     },
   ],
-  // layout: `dashboard-sidebar`,
-  middleware: ["auth"],
 });
 
 const { layout } = useLayout();
