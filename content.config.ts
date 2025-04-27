@@ -17,9 +17,9 @@ export default defineContentConfig({
       source: "stacks/**.json",
       schema: z.object({
         name: z.string(),
-        image: z.string(),
-        repository: z.string(),
-        live: z.string(),
+        icon: z.string(),
+        url: z.string(),
+        job: z.string(),
       }),
     }),
     jobs: defineCollection({

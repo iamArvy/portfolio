@@ -1,0 +1,7 @@
+{
+  "name": "Leenkonnect",
+  "desc": "A web platform for an IT Consulting company with a blog, services, consultation, e-commerce and a custom admin panel among other features.",
+  "stack": ["Laravel", "Inertia", "Vue.js", "MySQL", "TailwindCSS", "Typescript"],
+  "job": "web",
+  "links": { "live": "api.leenovative.com" }
+}

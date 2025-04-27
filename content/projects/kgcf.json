@@ -1,0 +1,7 @@
+{
+  "name": "KGCF",
+  "description": "Built a backend for a church website with an events, livestream, donation system and a custom ad,min panel.",
+  "stacks": ["PHP", "MySQL"],
+  "job": "web",
+  "live": "kgcfellowship.org"
+}

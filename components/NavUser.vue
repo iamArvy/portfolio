@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import UserInfo from "@/components/UserInfo.vue";
+// import UserInfo from "@/components/UserInfo.vue";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,11 +11,11 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "~/components/ui/sidebar";
-import type { User } from "~/types";
-import { ChevronsUpDown } from "lucide-vue-next";
-import UserMenuContent from "./UserMenuContent.vue";
+// import type { User } from "~/types";
+// import { ChevronsUpDown } from "lucide-vue-next";
+// import UserMenuContent from "./UserMenuContent.vue";
 
-const user = useAuth().user.value as User;
+// const user = useAuth().user.value as User;
 const { isMobile, state } = useSidebar();
 </script>
 
@@ -28,7 +28,7 @@ const { isMobile, state } = useSidebar();
             size="lg"
             class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
           >
-            <UserInfo :user="user" />
+            <!-- <UserInfo :user="user" /> -->
             <ChevronsUpDown class="ml-auto size-4" />
           </SidebarMenuButton>
         </DropdownMenuTrigger>
@@ -40,7 +40,7 @@ const { isMobile, state } = useSidebar();
           align="end"
           :side-offset="4"
         >
-          <UserMenuContent :user="user" />
+          <!-- <UserMenuContent :user="user" /> -->
         </DropdownMenuContent>
       </DropdownMenu>
     </SidebarMenuItem>

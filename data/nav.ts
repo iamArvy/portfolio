@@ -7,11 +7,6 @@ export const navs: NavItem[] = [
     icon: "mingcute:profile-fill",
   },
   {
-    title: "Stacks",
-    href: "/stacks",
-    icon: "material-symbols:stacks",
-  },
-  {
     title: "Projects",
     href: "/projects",
     icon: "grommet-icons:projects",

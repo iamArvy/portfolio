@@ -14,7 +14,7 @@ const { socials, contacts } = await useAppProfile();
 </script>
 
 <template>
-  <SidebarGroup class="px-2 py-0">
+  <SidebarGroup class="px-2 py-0 mb-2">
     <SidebarGroupLabel>Navigation</SidebarGroupLabel>
     <SidebarMenu>
       <SidebarMenuItem v-for="item in navs" :key="item.title">
@@ -31,7 +31,7 @@ const { socials, contacts } = await useAppProfile();
       </SidebarMenuItem>
     </SidebarMenu>
   </SidebarGroup>
-  <SidebarGroup class="px-2 py-0">
+  <SidebarGroup class="px-2 py-0 mb-2">
     <SidebarGroupLabel>Contact</SidebarGroupLabel>
     <SidebarMenu>
       <SidebarMenuItem v-for="item in contacts" :key="item.text">
