@@ -67,6 +67,49 @@ const { data: certifications } = await useAsyncData("certification", () => {
       </div>
       <div class="grid auto-rows-min gap-4 md:grid-cols-3">
         <SectionMain>
+          <template #title> Certifications </template>
+          <div class="flex flex-col my-4">
+            <Accordion
+              type="single"
+              collapsible
+              :default-value="certifications?.[0].name"
+            >
+              <AccordionItem
+                v-for="item in certifications"
+                :key="item.name"
+                :value="item.name"
+              >
+                <AccordionTrigger
+                  >{{ item.name }} ({{ item.date }})</AccordionTrigger
+                >
+                <AccordionContent>
+                  <NuxtLink
+                    :to="item.location_url"
+                    class="flex gap-1 items-center hover:underline"
+                  >
+                    <Icon icon="mdi:map-marker" inline />
+                    <span>{{ item.location }}</span>
+                  </NuxtLink>
+                  <p>{{ item.description }}</p>
+                  <Button size="sm" class="text-[12px]">
+                    Download Certificate
+                  </Button>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </SectionMain>
+        <SectionMain>
+          <template #title> Stacks </template>
+          <div class="flex flex-wrap gap-4 justify-center my-4">
+            <StackComponent
+              v-for="item in stacks"
+              :key="item.name"
+              :skill="item"
+            />
+          </div>
+        </SectionMain>
+        <SectionMain>
           <template #title> Experience </template>
           <div class="flex flex-col my-4">
             <Accordion
@@ -96,49 +139,6 @@ const { data: certifications } = await useAsyncData("certification", () => {
                       {{ desc }}
                     </li>
                   </ul>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </SectionMain>
-        <SectionMain>
-          <template #title> Stacks </template>
-          <div class="flex flex-wrap gap-4 justify-center my-4">
-            <StackComponent
-              v-for="item in stacks"
-              :key="item.name"
-              :skill="item"
-            />
-          </div>
-        </SectionMain>
-        <SectionMain>
-          <template #title> Certifications </template>
-          <div class="flex flex-col my-4">
-            <Accordion
-              type="single"
-              collapsible
-              :default-value="certifications?.[0].name"
-            >
-              <AccordionItem
-                v-for="item in certifications"
-                :key="item.name"
-                :value="item.name"
-              >
-                <AccordionTrigger
-                  >{{ item.name }} ({{ item.date }})</AccordionTrigger
-                >
-                <AccordionContent>
-                  <NuxtLink
-                    :to="item.location_url"
-                    class="flex gap-1 items-center hover:underline"
-                  >
-                    <Icon icon="mdi:map-marker" inline />
-                    <span>{{ item.location }}</span>
-                  </NuxtLink>
-                  <p>{{ item.description }}</p>
-                  <Button size="sm" class="text-[12px]">
-                    Download Certificate
-                  </Button>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
