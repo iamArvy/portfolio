@@ -11,11 +11,11 @@ export const navs: NavItem[] = [
     href: "/projects",
     icon: "grommet-icons:projects",
   },
-  {
-    title: "Blog",
-    href: "/blogs",
-    icon: "carbon:blog",
-  },
+  // {
+  //   title: "Blog",
+  //   href: "/blogs",
+  //   icon: "carbon:blog",
+  // },
 ];
 
 // const rightNavItems: NavItem[] = [

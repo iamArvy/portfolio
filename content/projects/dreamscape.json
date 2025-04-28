@@ -1,0 +1,8 @@
+{
+  "name": "Dreamscape",
+  "description": "A social media and chat website built using Dreamscape Chat and Dreamscape Social",
+  "stack": ["Nuxt", "Typescript"],
+  "tag": "frontend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Dreamscape"
+}

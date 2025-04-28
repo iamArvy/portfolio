@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import Sonner from "~/components/SonnerComponent.vue";
 import { useHead } from "#imports";
 import { getThemeInitScript } from "@/utils/theme-snippet";
+import type { LayoutKey } from "#build/types/layouts";
+
 useHead({
   script: [
     {
@@ -10,10 +11,14 @@ useHead({
     },
   ],
 });
+const { layout } = useLayout();
+const layoutName = computed<false | LayoutKey>(() => {
+  return layout.value ? (`dashboard-${layout.value}` as LayoutKey) : false;
+});
 </script>
 <template>
-  <Sonner />
-  <NuxtLayout>
+  <SonnerComponent />
+  <NuxtLayout :name="layoutName">
     <NuxtPage />
   </NuxtLayout>
 </template>

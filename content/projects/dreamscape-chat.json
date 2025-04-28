@@ -1,0 +1,8 @@
+{
+  "name": "Dreamscape Chat",
+  "description": "A Web Socket API service for real time messaging",
+  "stack": ["Nest.js", "Typescript", "Prisma", "Websocket", "MongoDB"],
+  "tag": "backend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Dreamscape-Chat"
+}

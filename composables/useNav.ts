@@ -11,7 +11,7 @@ function useNav() {
   };
 
   const isCurrentRoute = (path: string) => {
-    return route.name === path;
+    return route.path === path;
   };
 
   return { goBack, isCurrentRoute };

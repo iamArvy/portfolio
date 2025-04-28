@@ -7,6 +7,9 @@ export default defineContentConfig({
       source: "projects/**.json",
       schema: z.object({
         name: z.string(),
+        description: z.string(),
+        stack: z.array(z.string()),
+        role: z.string(),
         image: z.string(),
         repository: z.string(),
         live: z.string(),

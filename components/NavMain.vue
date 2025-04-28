@@ -9,7 +9,7 @@ import {
 import { Icon } from "@iconify/vue";
 import { navs } from "~/data";
 
-const nav = useNav();
+const { isCurrentRoute } = useNav();
 const { socials, contacts } = await useAppProfile();
 </script>
 
@@ -20,7 +20,7 @@ const { socials, contacts } = await useAppProfile();
       <SidebarMenuItem v-for="item in navs" :key="item.title">
         <SidebarMenuButton
           as-child
-          :is-active="nav.isCurrentRoute(item.href)"
+          :is-active="isCurrentRoute(item.href)"
           :tooltip="item.title"
         >
           <NuxtLink :href="item.href">

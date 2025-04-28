@@ -1,0 +1,8 @@
+{
+  "name": "The Spell",
+  "description": "A template for Portfolio Website built using Nuxt and content management using Nuxt Content",
+  "stack": ["Nuxt", "Typescript"],
+  "job": "frontend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/The-Spell"
+}

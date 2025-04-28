@@ -1,0 +1,8 @@
+{
+  "name": "Recommendation Service",
+  "description": "A Backend Service for handling recommendations in an Application",
+  "stack": ["Nest.js", "Typescript", "MongoDB", "Prisma"],
+  "tag": "backend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Dreamscape"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Devfolio API",
+  "description": "A REST / GraphQL API for accessing the data on Devfolio",
+  "stack": ["Nest.js", "Typescript", "Prisma", "Postgresql"],
+  "tag": "backend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Devfolio-API"
+}

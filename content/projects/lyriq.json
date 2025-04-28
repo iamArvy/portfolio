@@ -1,0 +1,8 @@
+{
+  "name": "Lyriq",
+  "description": "A music website for lyrics and downloads built with spotify developer API",
+  "stack": ["Nuxt", "Typescript"],
+  "job": "frontend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Lyriq"
+}

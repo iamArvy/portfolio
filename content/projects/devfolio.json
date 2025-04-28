@@ -1,0 +1,8 @@
+{
+  "name": "Devfolio",
+  "description": "A Dashboard for storing and managing Portfolio data",
+  "stack": ["Laravel", "Inertia", "Vue", "Postgresql"],
+  "tag": "fullstack",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Dreamscape"
+}

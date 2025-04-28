@@ -1,3 +1,3 @@
 export default defineAppConfig({
-  appName: "The Spell",
+  appName: "Oluwaseyi Oke",
 });

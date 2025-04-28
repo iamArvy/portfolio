@@ -19,7 +19,7 @@ import AppLogo from "./AppLogo.vue";
       <SidebarMenu>
         <SidebarMenuItem>
           <SidebarMenuButton size="lg" as-child>
-            <NuxtLink to="/dashboard">
+            <NuxtLink to="/">
               <AppLogo />
             </NuxtLink>
           </SidebarMenuButton>

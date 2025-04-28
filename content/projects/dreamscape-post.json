@@ -1,0 +1,8 @@
+{
+  "name": "Dreamscape Post",
+  "description": "A backend microservice for managing posts in a Social Media Application",
+  "stack": ["Nest.js", "Typescript", "MongoDB", "Prisma", "GraphQL"],
+  "tag": "backend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Dreamscape-Post"
+}

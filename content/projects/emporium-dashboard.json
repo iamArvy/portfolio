@@ -1,0 +1,8 @@
+{
+  "name": "Emporium Dashboard",
+  "description": "A Dashboard with RBAC for Admins and Stores to manage products and view analytics",
+  "stack": ["Nuxt.js", "Typescript", "TailwindCSS"],
+  "tag": "frontend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Emporium-Dashboard"
+}

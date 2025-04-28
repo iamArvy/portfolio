@@ -1,7 +1,8 @@
 {
   "name": "Emporium",
-  "desc": "A multi-store eccomerce store.",
+  "description": "A multi-store eccomerce store.",
   "stack": ["Laravel", "Vue", "Postgresql"],
   "job": "web",
-  "links": { "github": "iamArvy/Emporium" }
+  "live": "",
+  "repository": "https://github.io/iamArvy/Emporium"
 }

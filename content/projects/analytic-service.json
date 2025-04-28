@@ -1,0 +1,8 @@
+{
+  "name": "Analytic Service",
+  "description": "Analytic Service for doing Analytics in an E-commerce Application",
+  "stack": ["Nest.js", "Typescript", "Redis", "Prisma"],
+  "tag": "backend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Dreamscape"
+}

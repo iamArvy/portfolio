@@ -1,0 +1,8 @@
+{
+  "name": "Product Service",
+  "description": "A Backend Microservice for managing Products in an E-commerce Application",
+  "stack": ["Nest.js", "Typescript", "MongoDB", "Prisma"],
+  "tag": "backend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Dreamscape"
+}

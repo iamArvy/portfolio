@@ -1,0 +1,8 @@
+{
+  "name": "Weaver's Dashboard",
+  "description": "A Dashboard starter template for Nuxt with built in Authentication system, API Integration and highly customisable",
+  "stack": ["Nuxt", "Typescript"],
+  "job": "frontend",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Weaver-s-Dashboard"
+}

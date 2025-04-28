@@ -1,0 +1,8 @@
+{
+  "name": "Dream Gates",
+  "description": "A monolithic website for a Bus Transports Company",
+  "stack": ["Laravel", "Postgresql", "Inertia", "Vue.js"],
+  "tag": "fullstack",
+  "live": "",
+  "repository": "https://github.io/iamArvy/Dreamgate"
+}
