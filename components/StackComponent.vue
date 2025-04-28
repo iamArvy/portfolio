@@ -6,7 +6,7 @@
   >
     <Icon
       :icon="skill.icon"
-      class="text-5xl group-hover:text-inherit transition-all ease-in-out duration-200 text-primary"
+      class="text-xl group-hover:text-inherit transition-all ease-in-out duration-200 text-primary"
       inline
     />
     <span class="text-sm text-center group-hover:text-primary">{{
