@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Icon } from "@iconify/vue";
+  CertificationSection,
+  ExperienceSection,
+  StackSection,
+} from "#components";
+
 useAppTitle();
 const breadcrumbs = useBreadcrumbs();
 breadcrumbs.value = [{ title: "Profile", href: "/" }];
@@ -20,17 +19,20 @@ definePageMeta({
 });
 
 const { profile } = await useAppProfile();
-const { data: stacks } = await useAsyncData("stack", () => {
-  return queryCollection("stack").order("name", "ASC").all();
-});
-
-const { data: experiences } = await useAsyncData("experience", () => {
-  return queryCollection("experience").order("role", "ASC").all();
-});
-
-const { data: certifications } = await useAsyncData("certification", () => {
-  return queryCollection("certification").order("date", "ASC").all();
-});
+const sections = [
+  {
+    title: "Certifications",
+    component: CertificationSection,
+  },
+  {
+    title: "Stacks",
+    component: StackSection,
+  },
+  {
+    title: "Experiences",
+    component: ExperienceSection,
+  },
+];
 </script>
 <template>
   <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4 overflow-x-auto">
@@ -56,83 +58,9 @@ const { data: certifications } = await useAsyncData("certification", () => {
       <p class="text-sm lg:text-base p-2">{{ profile?.bio }}</p>
     </div>
     <div class="grid auto-rows-min gap-4 md:grid-cols-3">
-      <SectionMain>
-        <template #title> Certifications </template>
-        <div class="flex flex-col my-4">
-          <Accordion
-            type="single"
-            collapsible
-            :default-value="certifications?.[0].name"
-          >
-            <AccordionItem
-              v-for="item in certifications"
-              :key="item.name"
-              :value="item.name"
-            >
-              <AccordionTrigger
-                >{{ item.name }} ({{ item.date }})</AccordionTrigger
-              >
-              <AccordionContent>
-                <NuxtLink
-                  :to="item.location_url"
-                  class="flex gap-1 items-center hover:underline"
-                >
-                  <Icon icon="mdi:map-marker" inline />
-                  <span>{{ item.location }}</span>
-                </NuxtLink>
-                <p>{{ item.description }}</p>
-                <Button size="sm" class="text-[12px]">
-                  Download Certificate
-                </Button>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </SectionMain>
-      <SectionMain>
-        <template #title> Stacks </template>
-        <div class="flex flex-wrap gap-4 justify-center my-4">
-          <StackComponent
-            v-for="item in stacks"
-            :key="item.name"
-            :skill="item"
-          />
-        </div>
-      </SectionMain>
-      <SectionMain>
-        <template #title> Experience </template>
-        <div class="flex flex-col my-4">
-          <Accordion
-            type="single"
-            collapsible
-            :default-value="experiences?.[0].role"
-          >
-            <AccordionItem
-              v-for="item in experiences"
-              :key="item.role"
-              :value="item.role"
-            >
-              <AccordionTrigger
-                >{{ item.role }} ({{ item.date }})</AccordionTrigger
-              >
-              <AccordionContent>
-                <div class="flex gap-2 items-center">
-                  <Icon icon="mdi:map-marker" inline />
-                  <span>{{ item.location }}</span>
-                </div>
-                <ul class="list-disc list-decimal">
-                  <li
-                    v-for="desc in item.description"
-                    :key="desc"
-                    class="list-disc list-inside"
-                  >
-                    {{ desc }}
-                  </li>
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
+      <SectionMain v-for="item in sections" :key="item.title">
+        <template #title>{{ item.title }}</template>
+        <component :is="item.component" />
       </SectionMain>
     </div>
   </div>
