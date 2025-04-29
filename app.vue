@@ -11,7 +11,13 @@ useHead({
     },
   ],
 });
+
 const { layout } = useLayout();
+
+// onMounted(() => {
+//   initializeLayout();
+// });
+
 const layoutName = computed<false | LayoutKey>(() => {
   return layout.value ? (`dashboard-${layout.value}` as LayoutKey) : false;
 });
