@@ -5,30 +5,37 @@ const { data: certifications } = await useAsyncData("certification", () => {
 });
 </script>
 <template>
-  <div class="flex flex-col my-4">
-    <Accordion
-      type="single"
-      collapsible
-      :default-value="certifications?.[0].name"
+  <ul class="flex flex-col my-4 gap-4">
+    <li
+      v-for="item in certifications"
+      :key="item.name"
+      class="text-sm cursor-pointer list-disc list-inside flex justify-between"
     >
-      <AccordionItem
-        v-for="item in certifications"
-        :key="item.name"
-        :value="item.name"
-      >
-        <AccordionTrigger>{{ item.name }} ({{ item.date }})</AccordionTrigger>
-        <AccordionContent>
-          <NuxtLink
-            :to="item.location_url"
-            class="flex gap-1 items-center hover:underline"
-          >
-            <Icon icon="mdi:map-marker" inline />
-            <span>{{ item.location }}</span>
-          </NuxtLink>
-          <p>{{ item.description }}</p>
-          <Button size="sm" class="text-[12px]"> Download Certificate </Button>
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
-  </div>
+      <div class="">
+        <h3 class="font-bold text-sm">{{ item.name }} ({{ item.date }})</h3>
+        <div class="flex gap-1 items-center">
+          <Icon icon="mdi:map-marker" inline />
+          <span class="font-normal italic">{{ item.location }}</span>
+        </div>
+      </div>
+      <Dialog>
+        <DialogTrigger as-child>
+          <Button size="icon" variant="ghost"
+            ><Icon icon="mdi:eye" inline
+          /></Button>
+        </DialogTrigger>
+        <DialogContent class="w-full">
+          <DialogHeader class="space-y-3">
+            <DialogTitle>{{ item.name }}</DialogTitle>
+          </DialogHeader>
+          <iframe
+            :src="'https://drive.google.com/file/d/' + item.file + '/preview'"
+            type="application/pdf"
+            width="100%"
+            height="300px"
+          />
+        </DialogContent>
+      </Dialog>
+    </li>
+  </ul>
 </template>

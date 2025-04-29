@@ -50,7 +50,7 @@ const sections = [
         />
         <div class="flex flex-col">
           <h1 class="text-lg lgtext-3xl font-bold">{{ profile?.name }}</h1>
-          <h3 class="text-sm text-neutral">
+          <h3 class="text-sm">
             Web Developer, Cloud Solutions Architect and DevOps Engineer
           </h3>
         </div>

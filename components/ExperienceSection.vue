@@ -18,17 +18,21 @@ const { data: experiences } = await useAsyncData("experience", () => {
         :key="item.role"
         :value="item.role"
       >
-        <AccordionTrigger>{{ item.role }} ({{ item.date }})</AccordionTrigger>
-        <AccordionContent>
-          <div class="flex gap-2 items-center">
-            <Icon icon="mdi:map-marker" inline />
-            <span>{{ item.location }}</span>
+        <AccordionTrigger>
+          <div class="flex flex-col gap">
+            <h3>{{ item.role }} ({{ item.date }})</h3>
+            <div class="flex gap-1 items-center">
+              <Icon icon="mdi:map-marker" inline />
+              <span class="font-normal italic">{{ item.location }}</span>
+            </div>
           </div>
+        </AccordionTrigger>
+        <AccordionContent>
           <ul>
             <li
               v-for="desc in item.description"
               :key="desc"
-              class="list-disc list-inside"
+              class="list-disc list-inside text-sm"
             >
               {{ desc }}
             </li>
