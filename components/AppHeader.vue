@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import AppLogo from "@/components/AppLogo.vue";
-import AppLogoIcon from "@/components/AppLogoIcon.vue";
 import Breadcrumbs from "~/components/BreadcrumbsComponent.vue";
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "~/components/ui/button";
@@ -67,43 +65,61 @@ const activeItemStyles = computed(
                 <Menu class="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" class="w-[300px] p-6">
+            <SheetContent side="left" class="w-[300px] p-3">
               <SheetTitle class="sr-only">Navigation Menu</SheetTitle>
-              <SheetHeader class="flex justify-start text-left">
-                <AppLogoIcon
-                  class="size-6 fill-current text-black dark:text-white"
-                />
+              <SheetHeader
+                class="flex flex-row items-center justify-start text-left"
+              >
+                <AppLogo />
               </SheetHeader>
               <div
-                class="flex h-full flex-1 flex-col justify-between space-y-4 py-6"
+                class="flex h-full flex-1 flex-col justify-between space-y-4"
               >
-                <nav class="-mx-3 space-y-1">
+                <nav class="-mx-1 space-y-1">
                   <NuxtLink
                     v-for="item in navs"
                     :key="item.title"
                     :to="item.href"
-                    active-class="text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100"
+                    active-class="text-neutral-900 bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-100"
                     class="flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent"
                   >
-                    <component
-                      :is="item.icon"
-                      v-if="item.icon"
-                      class="h-5 w-5"
-                    />
+                    <Icon v-if="item.icon" :icon="item.icon" class="h-5 w-5" />
                     {{ item.title }}
                   </NuxtLink>
                 </nav>
-                <div class="flex flex-col space-y-4">
-                  <NuxtLink
-                    v-for="item in contacts"
-                    :key="item.text"
-                    :to="item.url"
-                    target="_blank"
-                    class="flex items-center space-x-2 text-sm font-medium"
-                  >
-                    <Icon v-if="item.icon" :icon="item.icon" class="h-5 w-5" />
-                    <span>{{ item.text }}</span>
-                  </NuxtLink>
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col space-y-4">
+                    <NuxtLink
+                      v-for="item in contacts"
+                      :key="item.text"
+                      :to="item.url"
+                      target="_blank"
+                      class="flex items-center space-x-2 text-sm font-medium"
+                    >
+                      <Icon
+                        v-if="item.icon"
+                        :icon="item.icon"
+                        class="h-5 w-5"
+                      />
+                      <span>{{ item.text }}</span>
+                    </NuxtLink>
+                  </div>
+                  <div class="flex flex-col space-y-4">
+                    <NuxtLink
+                      v-for="item in socials"
+                      :key="item.platform"
+                      :to="item.url"
+                      target="_blank"
+                      class="flex items-center space-x-2 text-sm font-medium"
+                    >
+                      <Icon
+                        v-if="item.icon"
+                        :icon="item.icon"
+                        class="h-5 w-5"
+                      />
+                      <span>{{ item.platform }}</span>
+                    </NuxtLink>
+                  </div>
                 </div>
               </div>
             </SheetContent>

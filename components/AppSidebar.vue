@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import NavMain from "@/components/NavMain.vue";
-// import NavUser from "@/components/NavUser.vue";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "~/components/ui/sidebar";
-import AppLogo from "./AppLogo.vue";
+// import NavMain from "@/components/NavMain.vue";
+// import {
+//   Sidebar,
+//   SidebarContent,
+//   SidebarHeader,
+//   SidebarMenu,
+//   SidebarMenuButton,
+//   SidebarMenuItem,
+// } from "~/components/ui/sidebar";
+// import AppLogo from "./AppLogo.vue";
 </script>
 
 <template>
@@ -30,10 +28,6 @@ import AppLogo from "./AppLogo.vue";
     <SidebarContent>
       <NavMain />
     </SidebarContent>
-
-    <SidebarFooter>
-      <!-- <NavUser /> -->
-    </SidebarFooter>
   </Sidebar>
   <slot />
 </template>
