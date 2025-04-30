@@ -49,7 +49,9 @@ const sections = [
           fit="cover"
         />
         <div class="flex flex-col">
-          <h1 class="text-lg lgtext-3xl font-bold">{{ profile?.name }}</h1>
+          <h1 class="text-lg lg:text-3xl font-bold text-sidebar-primary">
+            {{ profile?.name }}
+          </h1>
           <h3 class="text-sm">
             Web Developer, Cloud Solutions Architect and DevOps Engineer
           </h3>

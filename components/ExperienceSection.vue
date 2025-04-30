@@ -22,7 +22,7 @@ const { data: experiences } = await useAsyncData("experience", () => {
           <div class="flex flex-col gap">
             <h3>{{ item.role }} ({{ item.date }})</h3>
             <div class="flex gap-1 items-center">
-              <Icon icon="mdi:map-marker" inline />
+              <Icon icon="mdi:map-marker" inline class="text-sidebar-primary" />
               <span class="font-normal italic">{{ item.location }}</span>
             </div>
           </div>

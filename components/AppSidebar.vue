@@ -1,15 +1,4 @@
-<script setup lang="ts">
-// import NavMain from "@/components/NavMain.vue";
-// import {
-//   Sidebar,
-//   SidebarContent,
-//   SidebarHeader,
-//   SidebarMenu,
-//   SidebarMenuButton,
-//   SidebarMenuItem,
-// } from "~/components/ui/sidebar";
-// import AppLogo from "./AppLogo.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <Sidebar collapsible="icon" variant="inset">

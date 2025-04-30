@@ -14,15 +14,15 @@ const { data: certifications } = await useAsyncData("certification", () => {
       <div class="">
         <h3 class="font-bold text-sm">{{ item.name }} ({{ item.date }})</h3>
         <div class="flex gap-1 items-center">
-          <Icon icon="mdi:map-marker" inline />
+          <Icon icon="mdi:map-marker" inline class="text-sidebar-primary" />
           <span class="font-normal italic">{{ item.location }}</span>
         </div>
       </div>
       <Dialog>
         <DialogTrigger as-child>
-          <Button size="icon" variant="ghost"
-            ><Icon icon="mdi:eye" inline
-          /></Button>
+          <Button size="icon" variant="ghost">
+            <Icon icon="mdi:eye" inline class="text-sidebar-primary" />
+          </Button>
         </DialogTrigger>
         <DialogContent class="w-full">
           <DialogHeader class="space-y-3">
