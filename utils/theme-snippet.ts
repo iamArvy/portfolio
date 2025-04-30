@@ -17,11 +17,11 @@ export function getThemeInitScript() {
 }
 
 // utils/layout-snippet.ts
-export function getLayoutInitScript() {
-  return `
-    try {
-      const savedLayout = localStorage.getItem("layout") || "topbar";
-      window.__NUXT__layout = "dashboard-" + savedLayout;
-    } catch (e) {}
-  `;
-}
+// export function getLayoutInitScript() {
+//   return `
+//     try {
+//       const savedLayout = localStorage.getItem("layout") || "topbar";
+//       window.__NUXT__layout = "dashboard-" + savedLayout;
+//     } catch (e) {}
+//   `;
+// }

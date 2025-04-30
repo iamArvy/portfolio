@@ -9,7 +9,7 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { Button } from "~/components/ui/button";
 import { Icon } from "@iconify/vue";
-const { layout, setLayout } = useLayout();
+// const { layout, setLayout } = useLayout();
 const { appearance, updateAppearance } = useAppearance();
 interface Tab<T> {
   value: T;
@@ -21,10 +21,10 @@ const themeTabs: Tab<Appearance>[] = [
   { value: "dark", icon: "lucide:moon", label: "Dark" },
   { value: "system", icon: "lucide:monitor", label: "System" },
 ];
-const layoutTabs: Tab<Layout>[] = [
-  { value: "sidebar", icon: "lucide:sidebar", label: "Sidebar" },
-  { value: "topbar", icon: "icon-park-outline:top-bar", label: "Topbar" },
-];
+// const layoutTabs: Tab<Layout>[] = [
+//   { value: "sidebar", icon: "lucide:sidebar", label: "Sidebar" },
+//   { value: "topbar", icon: "icon-park-outline:top-bar", label: "Topbar" },
+// ];
 </script>
 
 <template>
@@ -47,12 +47,12 @@ const layoutTabs: Tab<Layout>[] = [
           :appearance="appearance"
         />
 
-        <AppearanceTabs
+        <!-- <AppearanceTabs
           title="Layout"
           :update-value="setLayout"
           :tabs="layoutTabs"
           :appearance="layout"
-        />
+        /> -->
       </div>
     </DropdownMenuContent>
   </DropdownMenu>
