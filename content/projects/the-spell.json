@@ -1,7 +1,9 @@
 {
   "name": "The Spell",
-  "description": "A template for Portfolio Website built using Nuxt and content management using Nuxt Content",
-  "stack": ["Nuxt", "Typescript"],
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "the-spell",
+  "tags": ["nuxt", "typescript", "portfolio", "template"],
   "job": "frontend",
   "live": "",
   "repository": "https://github.io/iamArvy/The-Spell"

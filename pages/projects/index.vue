@@ -21,7 +21,13 @@ const { data: projects } = await useAsyncData("project", () => {
 <template>
   <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4">
     <div class="grid auto-rows-min gap-4 md:grid-cols-3">
-      <div
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.name"
+        :project="project"
+        class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border p-2"
+      />
+      <!-- <div
         v-for="project in projects"
         :key="project.name"
         class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border p-2"
@@ -30,7 +36,7 @@ const { data: projects } = await useAsyncData("project", () => {
         <p>{{ project.description }}</p>
         <div></div>
         <div></div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

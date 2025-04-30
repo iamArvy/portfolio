@@ -1,8 +1,10 @@
 {
   "name": "Dreamscape",
-  "description": "A social media and chat website built using Dreamscape Chat and Dreamscape Social",
-  "stack": ["Nuxt", "Typescript"],
-  "tag": "frontend",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "dreamscape",
+  "tags": ["nuxt", "typescript", "frontend", "chat", "social"],
+  "job": "frontend",
   "live": "",
   "repository": "https://github.io/iamArvy/Dreamscape"
 }

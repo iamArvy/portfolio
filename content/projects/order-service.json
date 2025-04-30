@@ -1,8 +1,10 @@
 {
   "name": "Order Service",
-  "description": "A Backend Microservice for managing Orders in an E-commerce Application",
-  "stack": ["Nest.js", "Typescript", "MongoDB", "Prisma"],
-  "tag": "backend",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "order-service",
+  "tags": ["backend", "microservice", "nestjs", "typescript", "mongodb", "prisma"],
+  "job": "backend",
   "live": "",
   "repository": "https://github.io/iamArvy/Dreamscape"
 }

@@ -1,8 +1,10 @@
 {
   "name": "Emporium Dashboard",
-  "description": "A Dashboard with RBAC for Admins and Stores to manage products and view analytics",
-  "stack": ["Nuxt.js", "Typescript", "TailwindCSS"],
-  "tag": "frontend",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "emporium-dashboard",
+  "tags": ["nuxt", "typescript", "dashboard", "template"],
+  "job": "frontend",
   "live": "",
   "repository": "https://github.io/iamArvy/Emporium-Dashboard"
 }

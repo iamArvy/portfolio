@@ -1,8 +1,10 @@
 {
   "name": "Devfolio API",
-  "description": "A REST / GraphQL API for accessing the data on Devfolio",
-  "stack": ["Nest.js", "Typescript", "Prisma", "Postgresql"],
-  "tag": "backend",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "devfolio-api",
+  "tags": ["nestjs", "typescript", "prisma", "postgresql"],
+  "job": "backend",
   "live": "",
   "repository": "https://github.io/iamArvy/Devfolio-API"
 }

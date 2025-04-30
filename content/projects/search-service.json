@@ -1,8 +1,11 @@
 {
   "name": "Search Service",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "search-service",
+  "tags": ["backend", "microservice", "nestjs", "typescript", "mongodb", "prisma"],
+  "job": "backend",
   "description": "A Backend Microservice for handling searches",
-  "stack": ["Nest.js", "Typescript", "MongoDB", "Prisma"],
-  "tag": "backend",
   "live": "",
   "repository": "https://github.io/iamArvy/Dreamscape"
 }

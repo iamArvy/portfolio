@@ -1,8 +1,10 @@
 {
   "name": "Dreamscape Post",
-  "description": "A backend microservice for managing posts in a Social Media Application",
-  "stack": ["Nest.js", "Typescript", "MongoDB", "Prisma", "GraphQL"],
-  "tag": "backend",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "dreamscape-post",
+  "tags": ["nestjs", "typescript", "mongodb", "prisma", "graphql"],
+  "job": "backend",
   "live": "",
   "repository": "https://github.io/iamArvy/Dreamscape-Post"
 }

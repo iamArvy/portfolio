@@ -1,7 +1,9 @@
 {
   "name": "Lyriq",
-  "description": "A music website for lyrics and downloads built with spotify developer API",
-  "stack": ["Nuxt", "Typescript"],
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "lyriq",
+  "tags": ["nuxt", "typescript", "portfolio", "template"],
   "job": "frontend",
   "live": "",
   "repository": "https://github.io/iamArvy/Lyriq"

@@ -1,5 +1,10 @@
 {
   "name": "Emporium",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "emporium",
+  "tags": ["laravel", "vue", "ecommerce", "multi-store"],
+  "tag": "fullstack",
   "description": "A multi-store eccomerce store.",
   "stack": ["Laravel", "Vue", "Postgresql"],
   "job": "web",

@@ -1,8 +1,10 @@
 {
   "name": "Analytic Service",
-  "description": "Analytic Service for doing Analytics in an E-commerce Application",
-  "stack": ["Nest.js", "Typescript", "Redis", "Prisma"],
-  "tag": "backend",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "analytic-service",
+  "tags": ["backend", "microservice", "nestjs", "typescript", "redis", "prisma"],
+  "job": "backend",
   "live": "",
   "repository": "https://github.io/iamArvy/Dreamscape"
 }

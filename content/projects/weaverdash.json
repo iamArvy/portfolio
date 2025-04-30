@@ -1,7 +1,9 @@
 {
   "name": "Weaver's Dashboard",
-  "description": "A Dashboard starter template for Nuxt with built in Authentication system, API Integration and highly customisable",
-  "stack": ["Nuxt", "Typescript"],
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "weaverdash",
+  "tags": ["nuxt", "typescript", "portfolio", "template"],
   "job": "frontend",
   "live": "",
   "repository": "https://github.io/iamArvy/Weaver-s-Dashboard"

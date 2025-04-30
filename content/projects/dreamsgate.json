@@ -1,8 +1,10 @@
 {
   "name": "Dream Gates",
-  "description": "A monolithic website for a Bus Transports Company",
-  "stack": ["Laravel", "Postgresql", "Inertia", "Vue.js"],
-  "tag": "fullstack",
+  "image": "/projects/sample.png",
+  "release": "2023",
+  "slug": "dreamsgate",
+  "tags": ["laravel", "vue", "fullstack"],
+  "job": "fullstack",
   "live": "",
   "repository": "https://github.io/iamArvy/Dreamgate"
 }
