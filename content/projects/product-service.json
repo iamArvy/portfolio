@@ -6,5 +6,6 @@
   "tags": ["backend", "microservice", "nestjs", "typescript", "mongodb", "prisma"],
   "job": "backend",
   "live": "",
-  "repository": "https://github.io/iamArvy/Dreamscape"
+  "repository": "https://github.com/iamArvy/ProductService",
+  "content": "https://raw.githubusercontent.com/iamArvy/ProductService/main/README.md"
 }

@@ -6,5 +6,6 @@
   "tags": ["nuxt", "typescript", "portfolio", "template"],
   "job": "frontend",
   "live": "",
-  "repository": "https://github.io/iamArvy/Lyriq"
+  "repository": "https://github.com/iamArvy/Lyriq",
+  "content": "https://raw.githubusercontent.com/iamArvy/Lyriq/main/README.md"
 }

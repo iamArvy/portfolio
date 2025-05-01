@@ -6,5 +6,6 @@
   "tags": ["nuxt", "typescript", "portfolio", "template"],
   "job": "frontend",
   "live": "",
-  "repository": "https://github.io/iamArvy/Weaver-s-Dashboard"
+  "repository": "https://github.com/iamArvy/Weaver-s-Dashboard",
+  "content": "https://raw.githubusercontent.com/iamArvy/Weaver-s-Dashboard/main/README.md"
 }

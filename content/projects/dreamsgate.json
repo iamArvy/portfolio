@@ -6,5 +6,6 @@
   "tags": ["laravel", "vue", "fullstack"],
   "job": "fullstack",
   "live": "",
-  "repository": "https://github.io/iamArvy/Dreamgate"
+  "repository": "https://github.com/iamArvy/Dreamgate",
+  "content": "https://raw.githubusercontent.com/iamArvy/Dreamgate/main/README.md"
 }

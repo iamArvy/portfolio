@@ -59,7 +59,7 @@ const sections = [
       </div>
       <p class="text-sm lg:text-base p-2">{{ profile?.bio }}</p>
     </div>
-    <div class="grid auto-rows-min gap-4 md:grid-cols-3">
+    <div class="grid auto-rows-min gap-4 lg:grid-cols-3">
       <SectionMain v-for="item in sections" :key="item.title">
         <template #title>{{ item.title }}</template>
         <component :is="item.component" />

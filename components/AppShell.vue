@@ -7,7 +7,7 @@ interface Props {
 
 defineProps<Props>();
 
-const isOpen = useState("sidebarOpen", () => false);
+const isOpen = useState("sidebarOpen", () => true);
 </script>
 
 <template>

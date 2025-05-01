@@ -7,5 +7,6 @@
   "job": "backend",
   "description": "A Backend Microservice for handling searches",
   "live": "",
-  "repository": "https://github.io/iamArvy/Dreamscape"
+  "repository": "https://github.com/iamArvy/SearchService",
+  "content": "https://raw.githubusercontent.com/iamArvy/SearchService/main/README.md"
 }

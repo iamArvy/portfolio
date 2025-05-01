@@ -6,5 +6,6 @@
   "tags": ["nuxt", "typescript", "frontend", "chat", "social"],
   "job": "frontend",
   "live": "",
-  "repository": "https://github.io/iamArvy/Dreamscape"
+  "repository": "https://github.com/iamArvy/Dreamscape",
+  "content": "https://raw.githubusercontent.com/iamArvy/Dreamscape/main/README.md"
 }

@@ -6,5 +6,6 @@
   "tags": ["laravel", "vue", "fullstack", "dashboard", "postgresql"],
   "job": "fullstack",
   "live": "",
-  "repository": "https://github.io/iamArvy/Dreamscape"
+  "repository": "https://github.com/iamArvy/Devfolio",
+  "content": "https://raw.githubusercontent.com/iamArvy/Devfolio/main/README.md"
 }

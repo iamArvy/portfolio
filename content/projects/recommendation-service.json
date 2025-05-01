@@ -7,5 +7,6 @@
   "stack": ["Nest.js", "Typescript", "MongoDB", "Prisma"],
   "tag": "backend",
   "live": "",
-  "repository": "https://github.io/iamArvy/Dreamscape"
+  "repository": "https://github.com/iamArvy/RecommendationService",
+  "content": "https://raw.githubusercontent.com/iamArvy/RecommendationService/main/README.md"
 }

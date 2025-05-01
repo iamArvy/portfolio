@@ -9,5 +9,6 @@
   "stack": ["Laravel", "Vue", "Postgresql"],
   "job": "web",
   "live": "",
-  "repository": "https://github.io/iamArvy/Emporium"
+  "repository": "https://github.com/iamArvy/Emporium",
+  "content": "https://raw.githubusercontent.com/iamArvy/Emporium/main/README.md"
 }

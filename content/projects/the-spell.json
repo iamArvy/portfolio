@@ -6,5 +6,6 @@
   "tags": ["nuxt", "typescript", "portfolio", "template"],
   "job": "frontend",
   "live": "",
-  "repository": "https://github.io/iamArvy/The-Spell"
+  "repository": "https://github.com/iamArvy/The-Spell",
+  "content": "https://raw.githubusercontent.com/iamArvy/The-Spell/main/README.md"
 }

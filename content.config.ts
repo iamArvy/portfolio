@@ -14,6 +14,7 @@ export default defineContentConfig({
         job: z.string(),
         repository: z.string(),
         live: z.string(),
+        content: z.string(),
       }),
     }),
     stack: defineCollection({

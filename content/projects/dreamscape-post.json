@@ -6,5 +6,6 @@
   "tags": ["nestjs", "typescript", "mongodb", "prisma", "graphql"],
   "job": "backend",
   "live": "",
-  "repository": "https://github.io/iamArvy/Dreamscape-Post"
+  "repository": "https://github.com/iamArvy/Dreamscape-Post",
+  "content": "https://raw.githubusercontent.com/iamArvy/Dreamscape-Post/main/README.md"
 }

@@ -6,5 +6,6 @@
   "tags": ["nestjs", "typescript", "mongodb", "prisma", "websocket"],
   "job": "backend",
   "live": "",
-  "repository": "https://github.io/iamArvy/Dreamscape-Chat"
+  "repository": "https://github.com/iamArvy/Dreamscape-Chat",
+  "content": "https://raw.githubusercontent.com/iamArvy/Dreamscape-Chat/main/README.md"
 }
