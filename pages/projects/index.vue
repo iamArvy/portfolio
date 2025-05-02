@@ -27,16 +27,6 @@ const { data: projects } = await useAsyncData("project", () => {
         :project="project"
         class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border p-2"
       />
-      <!-- <div
-        v-for="project in projects"
-        :key="project.name"
-        class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border p-2"
-      >
-        <h1 class="font-bold text-md">{{ project.name }}</h1>
-        <p>{{ project.description }}</p>
-        <div></div>
-        <div></div>
-      </div> -->
     </div>
   </div>
 </template>
