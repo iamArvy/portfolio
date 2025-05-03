@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 
-const { data: stacks } = await useAsyncData("stack", () => {
-  return queryCollection("stack").order("name", "ASC").all();
-});
+const { stacks } = useContent();
 </script>
 <template>
   <div class="flex flex-wrap gap-4 justify-center my-4">

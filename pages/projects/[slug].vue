@@ -2,10 +2,8 @@
 import { Icon } from "@iconify/vue";
 const route = useRoute();
 const slug = route.params.slug as string;
-const { data: project } = await useAsyncData("project", () => {
-  return queryCollection("project").where("slug", "=", slug).first();
-});
-
+const { getProject } = useContent();
+const project = getProject(slug);
 useAppTitle(project?.value?.name);
 const breadcrumbs = useBreadcrumbs();
 breadcrumbs.value = [
@@ -23,7 +21,6 @@ definePageMeta({
 });
 
 const { getMarkdown } = useMarkdown();
-// const markdown = ref<string>("");
 const html = ref<string>("");
 const toc = ref<TOCItem[]>([]);
 const currentSection = ref("");
@@ -31,33 +28,6 @@ onMounted(async () => {
   const markdown = await getMarkdown(project.value?.content as string);
   html.value = markdown.html;
   toc.value = markdown.toc;
-  // const headings = document.querySelectorAll(
-  //   "article h1, article h2, article h3"
-  // ); // adjust levels
-
-  // const observer = new IntersectionObserver(
-  //   (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         currentSection.value = entry.target.id;
-  //       }
-  //     });
-  //   },
-  //   {
-  //     rootMargin: "0px 0px -70% 0px", // trigger earlier
-  //     threshold: 0,
-  //   }
-  // );
-
-  // headings.forEach((heading) => {
-  //   observer.observe(heading);
-  // });
-
-  // onBeforeUnmount(() => {
-  //   headings.forEach((heading) => {
-  //     observer.unobserve(heading);
-  //   });
-  // });
 });
 watch(html, async (newHtml) => {
   if (newHtml) {
@@ -89,8 +59,6 @@ watch(html, async (newHtml) => {
         observer.unobserve(heading);
       });
     });
-    // attach observer after content is in DOM
-    // same logic here
   }
 });
 </script>

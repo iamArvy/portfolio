@@ -1,34 +1,26 @@
 <script setup lang="ts">
-import Breadcrumbs from "~/components/BreadcrumbsComponent.vue";
-// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "~/components/ui/button";
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuTrigger,
-// } from "@/components/ui/dropdown-menu";
+// import Breadcrumbs from "~/components/BreadcrumbsComponent.vue";
+// import { Button } from "~/components/ui/button";
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
+  // NavigationMenu,
+  // NavigationMenuItem,
+  // NavigationMenuLink,
+  // NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "~/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "~/components/ui/sheet";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "~/components/ui/tooltip";
-// import UserMenuContent from "@/components/UserMenuContent.vue";
-// import { getInitials } from "@/composables";
+// import {
+//   Sheet,
+//   SheetContent,
+//   SheetHeader,
+//   SheetTitle,
+//   SheetTrigger,
+// } from "~/components/ui/sheet";
+// import {
+//   Tooltip,
+//   TooltipContent,
+//   TooltipProvider,
+//   TooltipTrigger,
+// } from "~/components/ui/tooltip";
 import type { BreadcrumbItem } from "~/types";
 import { Menu, Search } from "lucide-vue-next";
 import { computed } from "vue";
@@ -44,7 +36,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const nav = useNav();
-const { socials, contacts } = await useAppProfile();
+const { socials, contacts } = await useContent();
 const activeItemStyles = computed(
   () => (url: string) =>
     nav.isCurrentRoute(url)

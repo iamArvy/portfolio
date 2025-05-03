@@ -33,21 +33,6 @@ export default defineNuxtConfig({
     public: {
       apiBase: process.env.API_BASE,
       authProvider: process.env.AUTH_PROVIDER,
-      appName: "The Spell",
     },
-    gitToken: process.env.GIT_TOKEN,
-    private: {
-      // apiKey: process.env.API_KEY,
-      // apiSecret: process.env.API_SECRET,
-      // authProvider: process.env.AUTH_PROVIDER,
-      gitToken: process.env.GIT_TOKEN,
-    },
-    // GitHub API configuration
-    // These values should be set in your environment variables
-    // github: {
-    //   token: process.env.GITHUB_TOKEN,
-    //   repo: process.env.GITHUB_REPO,
-    //   owner: process.env.GITHUB_OWNER,
-    // },
   },
 });

@@ -10,7 +10,7 @@ import { Icon } from "@iconify/vue";
 import { navs } from "~/data";
 
 const { isCurrentRoute } = useNav();
-const { socials, contacts } = await useAppProfile();
+const { socials, contacts } = await useContent();
 </script>
 
 <template>

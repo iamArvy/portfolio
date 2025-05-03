@@ -6,9 +6,7 @@
 //   AccordionTrigger,
 // } from "@/components/ui/accordion";
 import { Icon } from "@iconify/vue";
-const { data: experiences } = await useAsyncData("experience", () => {
-  return queryCollection("experience").order("role", "ASC").all();
-});
+const { experiences } = useContent();
 </script>
 <template>
   <div class="flex flex-col my-4">

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-const { data: certifications } = await useAsyncData("certification", () => {
-  return queryCollection("certification").order("date", "ASC").all();
-});
+const { certifications } = useContent();
 </script>
 <template>
   <ul class="flex flex-col my-4 gap-4">
