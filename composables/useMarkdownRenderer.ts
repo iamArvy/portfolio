@@ -1,44 +1,12 @@
 import MarkdownIt from "markdown-it";
-// utils/useMarkdownRenderer.ts
-// import MarkdownIt from "MarkdownIt";
 import markdownItAnchor from "markdown-it-anchor";
-import hljs from "highlight.js"; // https://highlightjs.org
+import hljs from "highlight.js";
 
 export interface TOCItem {
   content: string;
   slug: string;
   level: number;
 }
-
-// export function renderMarkdownWithTOC(markdown: string) {
-//   const toc: TOCItem[] = [];
-
-//   const md = new MarkdownIt({
-//     html: true,
-//     linkify: true,
-//     typographer: true,
-//   });
-
-//   md.use(markdownItAnchor, {
-//     slugify: (s) =>
-//       s
-//         .trim()
-//         .toLowerCase()
-//         .replace(/[\s]+/g, "-")
-//         .replace(/[^\w\-]+/g, ""),
-//     callback: (token, info) => {
-//       toc.push({
-//         content: token.content,
-//         slug: info.slug,
-//         level: parseInt(token.tag.slice(1)), // h2 -> 2
-//       });
-//     },
-//   });
-
-//   const html = md.render(markdown);
-
-//   return { html, toc };
-// }
 
 export const useMarkdown = () => {
   const renderMarkdown = (markdown: string) => {
@@ -55,7 +23,7 @@ export const useMarkdown = () => {
           } catch (__) {}
         }
 
-        return ""; // use external default escaping
+        return "";
       },
     });
     const headingMap: Record<string, string> = {};
@@ -66,7 +34,7 @@ export const useMarkdown = () => {
           .toLowerCase()
           .replace(/[\s]+/g, "-")
           .replace(/[^\w-]+/g, "");
-        headingMap[slug] = s; // store original heading by slug
+        headingMap[slug] = s;
         return slug;
       },
       callback: (
