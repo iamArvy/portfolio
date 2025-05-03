@@ -2,6 +2,7 @@ import MarkdownIt from "markdown-it";
 // utils/useMarkdownRenderer.ts
 // import MarkdownIt from "MarkdownIt";
 import markdownItAnchor from "markdown-it-anchor";
+import hljs from "highlight.js"; // https://highlightjs.org
 
 export interface TOCItem {
   content: string;
@@ -47,6 +48,15 @@ export const useMarkdown = () => {
       html: false,
       linkify: true,
       typographer: true,
+      highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return hljs.highlight(str, { language: lang }).value;
+          } catch (__) {}
+        }
+
+        return ""; // use external default escaping
+      },
     });
     const headingMap: Record<string, string> = {};
     md.use(markdownItAnchor, {
