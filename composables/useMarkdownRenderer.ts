@@ -1,3 +1,4 @@
+// @ts-expect-error Error from the library
 import MarkdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import hljs from "highlight.js";
@@ -16,11 +17,15 @@ export const useMarkdown = () => {
       html: false,
       linkify: true,
       typographer: true,
+      // @ts-expect-error Error from the library
       highlight: function (str, lang) {
         if (lang && hljs.getLanguage(lang)) {
           try {
             return hljs.highlight(str, { language: lang }).value;
-          } catch (__) {}
+          } catch (e) {
+            alert(e);
+            // do nothing
+          }
         }
 
         return "";
@@ -42,9 +47,9 @@ export const useMarkdown = () => {
         info: { slug: string }
       ) => {
         toc.push({
-          content: headingMap[info.slug] ?? info.slug, // lookup original heading
+          content: headingMap[info.slug] ?? info.slug,
           slug: info.slug,
-          level: parseInt(token.tag.slice(1)), // h2 -> 2
+          level: parseInt(token.tag.slice(1)),
         });
       },
     });
@@ -53,13 +58,8 @@ export const useMarkdown = () => {
 
     return { html, toc };
   };
-  const getMarkdown = async (url: string) => {
+  const getMarkdown = async (markdown: string) => {
     try {
-      const response = url ? await $fetch(url) : null;
-      if (!response) {
-        throw new Error(`HTTP error! status: ${response}`);
-      }
-      const markdown = await response;
       const { html, toc } = renderMarkdown(markdown as string);
       return { html, toc };
     } catch (error) {

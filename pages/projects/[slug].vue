@@ -20,22 +20,27 @@ definePageMeta({
   ],
 });
 
+const { getRepository } = useOctokit();
 const { getMarkdown } = useMarkdown();
 const html = ref<string>("");
 const toc = ref<TOCItem[]>([]);
 const currentSection = ref("");
+const repository = await getRepository(slug as string);
 onMounted(async () => {
-  const markdown = await getMarkdown(project.value?.content as string);
+  const repository = await getRepository(slug as string);
+  const markdown = await getMarkdown(repository?.readme?.text);
   html.value = markdown.html;
   toc.value = markdown.toc;
 });
+
 watch(html, async (newHtml) => {
   if (newHtml) {
-    await nextTick(); // wait for DOM update
+    await nextTick();
 
     const headings = document.querySelectorAll(
       "article h1, article h2, article h3"
     );
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -45,7 +50,7 @@ watch(html, async (newHtml) => {
         });
       },
       {
-        rootMargin: "0px 0px -70% 0px", // trigger earlier
+        rootMargin: "0px 0px -70% 0px",
         threshold: 0,
       }
     );
@@ -69,15 +74,17 @@ watch(html, async (newHtml) => {
     >
       <div class="flex-1 h-full flex flex-col gap-4 p-2 w-full">
         <div class="flex flex-col gap-4">
-          <h1 class="text-3xl font-bold">{{ project?.name }}</h1>
+          <h1 class="text-3xl font-bold capitalize">{{ repository?.name }}</h1>
+          <p v-if="repository?.description">{{ repository?.description }}</p>
           <div class="flex gap-2">
             <NuxtLink
-              :to="project?.live"
+              v-if="repository?.homepageUrl"
+              :to="repository?.homepageUrl"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button
-                :disabled="!project?.live"
+                :disabled="!repository?.homepageUrl"
                 class="cursor-pointer"
                 size="sm"
               >
@@ -86,12 +93,13 @@ watch(html, async (newHtml) => {
               </Button>
             </NuxtLink>
             <NuxtLink
-              :to="project?.repository"
+              v-if="repository?.url"
+              :to="repository?.url"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button
-                :disabled="!project?.repository"
+                :disabled="!repository?.url"
                 class="cursor-pointer"
                 size="sm"
               >
@@ -101,8 +109,16 @@ watch(html, async (newHtml) => {
             </NuxtLink>
           </div>
         </div>
-        <hr />
-        <div v-if="html" class="col-span-2">
+        <div
+          v-if="html"
+          class="col-span-2 border border-sidebar-border/70 dark:border-sidebar-border p-2 rounded-xl"
+        >
+          <div>
+            <h2 class="text-2xl font-bold capitalize">Readme</h2>
+            <p class="text-gray-500">
+              This is the readme file for the project.
+            </p>
+          </div>
           <article
             class="w-full prose-w-full prose prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-headings:text-primary dark:prose-headings:text-white dark:prose-invert prose-a:text-blue-500 prose-a:underline prose-a:decoration-primary-foreground"
             v-html="html"

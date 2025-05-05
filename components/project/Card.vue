@@ -1,23 +1,23 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import type { Repository } from "~/types/github";
 defineProps<{
-  project: {
-    name: string;
-    release: string;
-    image: string;
-    repository: string;
-    live: string;
-    slug: string;
-  };
+  // project: {
+  //   name: string;
+  //   release: string;
+  //   image: string;
+  //   repository: string;
+  //   live: string;
+  //   slug: string;
+  // };
+  project: Repository;
 }>();
 const img = useImage();
 </script>
 <template>
   <NuxtLink
     :aria-label="project.name + ' project link'"
-    :to="project.repository ? `/projects/${project.slug}` : project.live"
-    :target="project.repository ? '_self' : '_blank'"
-    :rel="project.repository ? undefined : 'noopener noreferrer'"
+    :to="`/projects/${project.name}`"
     class="group relative flex cursor-pointer flex-col gap-1 rounded-lg border border-white/10 bg-zinc-900/80 p-1 shadow-2xl shadow-zinc-950/50 backdrop-blur-sm"
   >
     <div class="flex gap-1 px-1 py-[2px]">
@@ -33,11 +33,15 @@ const img = useImage();
     </div>
     <div class="flex h-56 justify-center overflow-hidden rounded-lg">
       <NuxtImg
-        :placeholder="img(`${project.image}`)"
+        :placeholder="
+          img(
+            `https://raw.githubusercontent.com/${project.nameWithOwner}/main/preview.png`
+          )
+        "
         width="1536"
-        :alt="project.name + ' project image'"
+        :alt="project.nameWithOwner"
         class="h-full rounded-lg object-cover transition-all duration-300 hover:scale-105"
-        :src="project.image"
+        :src="`https://raw.githubusercontent.com/${project.nameWithOwner}/main/preview.png`"
         :aria-label="project.name + ' project image'"
       />
     </div>
@@ -54,7 +58,7 @@ const img = useImage();
                 {{ project.name }}
               </span>
               <span class="whitespace-nowrap text-xs text-neutral-500">
-                {{ project.release ? project.release : "soon" }}
+                <!-- {{ project.release ? project.release : "soon" }} -->
               </span>
             </div>
           </div>

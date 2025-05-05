@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     public: {
       apiBase: process.env.API_BASE,
       authProvider: process.env.AUTH_PROVIDER,
+      githubToken: process.env.GITHUB_TOKEN,
     },
   },
 });

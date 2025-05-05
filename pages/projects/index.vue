@@ -14,14 +14,22 @@ definePageMeta({
   ],
 });
 
-const { projects } = await useContent();
-// const { repos } = useOctokit();
+// const { projects } = await useContent();
+const { getRepositories } = useOctokit();
+// const { data: repositories } = getRepositories();
+const repositories = await getRepositories();
+onMounted(() => {
+  // console.log(gr.user.repositories.nodes);
+  // repositoriesgr.value = repositoriesgr.value.filter(
+  //   (repo: any) => repo.name !== "dashboard"
+  // );
+});
 </script>
 <template>
   <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4">
     <div class="grid auto-rows-min gap-4 md:grid-cols-3">
       <ProjectCard
-        v-for="project in projects"
+        v-for="project in repositories.nodes"
         :key="project.name"
         :project="project"
         class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border p-2"
