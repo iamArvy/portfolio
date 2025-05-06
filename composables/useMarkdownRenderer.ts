@@ -2,6 +2,7 @@
 import MarkdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import hljs from "highlight.js";
+import { Octokit } from "@octokit/rest";
 
 export interface TOCItem {
   content: string;
@@ -9,55 +10,65 @@ export interface TOCItem {
   level: number;
 }
 
-export const useMarkdown = () => {
-  const renderMarkdown = (markdown: string) => {
-    const toc: TOCItem[] = [];
+const octokit = new Octokit();
+const renderMarkdown = (markdown: string) => {
+  const toc: TOCItem[] = [];
 
-    const md = new MarkdownIt({
-      html: false,
-      linkify: true,
-      typographer: true,
-      // @ts-expect-error Error from the library
-      highlight: function (str, lang) {
-        if (lang && hljs.getLanguage(lang)) {
-          try {
-            return hljs.highlight(str, { language: lang }).value;
-          } catch (e) {
-            alert(e);
-            // do nothing
-          }
+  const md = new MarkdownIt({
+    html: false,
+    linkify: true,
+    typographer: true,
+    // @ts-expect-error Error from the library
+    highlight: function (str, lang) {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return hljs.highlight(str, { language: lang }).value;
+        } catch (e) {
+          alert(e);
+          // do nothing
         }
+      }
 
-        return "";
-      },
+      return "";
+    },
+  });
+  const headingMap: Record<string, string> = {};
+  md.use(markdownItAnchor, {
+    slugify: (s: string): string => {
+      const slug = s
+        .trim()
+        .toLowerCase()
+        .replace(/[\s]+/g, "-")
+        .replace(/[^\w-]+/g, "");
+      headingMap[slug] = s;
+      return slug;
+    },
+    callback: (
+      token: { content: string; tag: string },
+      info: { slug: string }
+    ) => {
+      toc.push({
+        content: headingMap[info.slug] ?? info.slug,
+        slug: info.slug,
+        level: parseInt(token.tag.slice(1)),
+      });
+    },
+  });
+
+  const html = md.render(markdown);
+
+  return { html, toc };
+};
+
+export const useMarkdown = () => {
+  const { githubUsername: username } = useAppConfig();
+
+  const getReadme = (repo: string) =>
+    octokit.rest.repos.getReadme({
+      owner: username,
+      repo,
     });
-    const headingMap: Record<string, string> = {};
-    md.use(markdownItAnchor, {
-      slugify: (s: string): string => {
-        const slug = s
-          .trim()
-          .toLowerCase()
-          .replace(/[\s]+/g, "-")
-          .replace(/[^\w-]+/g, "");
-        headingMap[slug] = s;
-        return slug;
-      },
-      callback: (
-        token: { content: string; tag: string },
-        info: { slug: string }
-      ) => {
-        toc.push({
-          content: headingMap[info.slug] ?? info.slug,
-          slug: info.slug,
-          level: parseInt(token.tag.slice(1)),
-        });
-      },
-    });
 
-    const html = md.render(markdown);
-
-    return { html, toc };
-  };
   const getMarkdown = async (markdown: string) => {
     try {
       const { html, toc } = renderMarkdown(markdown as string);
@@ -69,5 +80,6 @@ export const useMarkdown = () => {
   };
   return {
     getMarkdown,
+    getReadme,
   };
 };

@@ -1,11 +1,11 @@
 {
   "name": "The Spell",
+  "description": "The Spell is a portfolio template designed for developers and designers. It features a clean and modern design, with a focus on showcasing your work and skills. The template is built with Nuxt.js and TypeScript, making it easy to customize and extend.",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "the-spell",
   "tags": ["nuxt", "typescript", "portfolio", "template"],
   "job": "frontend",
   "live": "",
-  "repository": "https://github.com/iamArvy/The-Spell",
-  "content": "https://raw.githubusercontent.com/iamArvy/The-Spell/main/README.md"
+  "repository": "The-Spell"
 }

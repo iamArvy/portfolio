@@ -33,7 +33,6 @@ const sections = [
   },
 ];
 
-// const { user } = useOctokit();
 const { profile } = useContent();
 </script>
 <template>
@@ -55,7 +54,7 @@ const { profile } = useContent();
             {{ profile?.name }}
           </h1>
           <h3 class="text-sm">
-            Web Developer, Cloud Solutions Architect and DevOps Engineer
+            {{ profile?.job as string }}
           </h3>
         </div>
       </div>

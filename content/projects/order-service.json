@@ -1,11 +1,11 @@
 {
   "name": "Order Service",
+  "description": "Order Service is a backend microservice built with NestJS and TypeScript. It provides a robust and scalable solution for managing orders in an e-commerce application. The service is designed to be efficient and reliable, ensuring smooth order processing and management.",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "order-service",
   "tags": ["backend", "microservice", "nestjs", "typescript", "mongodb", "prisma"],
   "job": "backend",
   "live": "",
-  "repository": "https://github.com/iamArvy/OrderService",
-  "content": "https://raw.githubusercontent.com/iamArvy/OrderService/main/README.md"
+  "repository": "OrderService"
 }

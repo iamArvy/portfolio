@@ -6,6 +6,5 @@
   "tags": ["nuxt", "typescript", "dashboard", "template"],
   "job": "frontend",
   "live": "",
-  "repository": "https://github.com/iamArvy/Emporium-Dashboard",
-  "content": "https://raw.githubusercontent.com/iamArvy/Emporium-Dashboard/main/README.md"
+  "repository": "Emporium-Dashboard"
 }

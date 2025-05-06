@@ -1,11 +1,11 @@
 {
   "name": "Dreamscape",
+  "description": "Dreamscape is a social media platform built with Nuxt.js and TypeScript. It allows users to connect, share, and interact with each other in a vibrant online community. The platform is designed to be user-friendly and engaging, providing a seamless experience for all users.",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "dreamscape",
   "tags": ["nuxt", "typescript", "frontend", "chat", "social"],
   "job": "frontend",
   "live": "",
-  "repository": "https://github.com/iamArvy/Dreamscape",
-  "content": "https://raw.githubusercontent.com/iamArvy/Dreamscape/main/README.md"
+  "repository": "Dreamscape"
 }

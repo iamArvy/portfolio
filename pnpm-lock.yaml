@@ -29,9 +29,6 @@ importers:
       '@nuxt/test-utils':
         specifier: 3.17.2
         version: 3.17.2(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(magicast@0.3.5)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
-      '@octokit/graphql':
-        specifier: ^8.2.2
-        version: 8.2.2
       '@octokit/rest':
         specifier: ^21.1.1
         version: 21.1.1
@@ -95,6 +92,9 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@4.1.4)
+      tailwindcss-animated:
+        specifier: ^2.0.0
+        version: 2.0.0(tailwindcss@4.1.4)
       tw-animate-css:
         specifier: ^1.2.8
         version: 1.2.8
@@ -4480,6 +4480,11 @@ packages:
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
+
+  tailwindcss-animated@2.0.0:
+    resolution: {integrity: sha512-anNNGpxNgjydD8p1lcJjxxH+XbjW6KR8Xs29owTrbcf3tOJ6IRblpyFob43HBkfxFJJTAfFQqugoEG2b1EsR0A==}
+    peerDependencies:
+      tailwindcss: '>=3.1.0 || >=4.0.0'
 
   tailwindcss@4.1.4:
     resolution: {integrity: sha512-1ZIUqtPITFbv/DxRmDr5/agPqJwF69d24m9qmM1939TJehgY539CtzeZRjbLt5G6fSy/7YqqYsfvoTEw9xUI2A==}
@@ -10485,6 +10490,10 @@ snapshots:
   tailwind-merge@3.2.0: {}
 
   tailwindcss-animate@1.0.7(tailwindcss@4.1.4):
+    dependencies:
+      tailwindcss: 4.1.4
+
+  tailwindcss-animated@2.0.0(tailwindcss@4.1.4):
     dependencies:
       tailwindcss: 4.1.4
 

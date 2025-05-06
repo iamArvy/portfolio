@@ -7,12 +7,8 @@ export const useContent = () => {
     return queryCollection("profile").first();
   });
 
-  const getProject = (slug: string) => {
-    const { data: project } = useAsyncData("project", () => {
-      return queryCollection("project").where("slug", "=", slug).first();
-    });
-    return project;
-  };
+  const getProject = (slug: string) =>
+    queryCollection("project").where("slug", "=", slug).first();
 
   const { data: experiences } = useAsyncData("experience", () => {
     return queryCollection("experience").order("role", "ASC").all();
@@ -22,8 +18,8 @@ export const useContent = () => {
     return queryCollection("certification").order("date", "ASC").all();
   });
 
-  const { data: stacks } = useAsyncData("stack", () => {
-    return queryCollection("stack").order("name", "ASC").all();
+  const { data: stacks } = useAsyncData("stack", async () => {
+    return queryCollection("stack").first();
   });
 
   return {

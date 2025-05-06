@@ -1,23 +1,15 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import type { Repository } from "~/types/github";
+import type { Project } from "~/types";
 defineProps<{
-  // project: {
-  //   name: string;
-  //   release: string;
-  //   image: string;
-  //   repository: string;
-  //   live: string;
-  //   slug: string;
-  // };
-  project: Repository;
+  project: Project;
 }>();
 const img = useImage();
 </script>
 <template>
   <NuxtLink
     :aria-label="project.name + ' project link'"
-    :to="`/projects/${project.name}`"
+    :to="`/projects/${project.slug}`"
     class="group relative flex cursor-pointer flex-col gap-1 rounded-lg border border-white/10 bg-zinc-900/80 p-1 shadow-2xl shadow-zinc-950/50 backdrop-blur-sm"
   >
     <div class="flex gap-1 px-1 py-[2px]">
@@ -33,15 +25,11 @@ const img = useImage();
     </div>
     <div class="flex h-56 justify-center overflow-hidden rounded-lg">
       <NuxtImg
-        :placeholder="
-          img(
-            `https://raw.githubusercontent.com/${project.nameWithOwner}/main/preview.png`
-          )
-        "
+        :placeholder="img(`/projects/sample.png`)"
         width="1536"
-        :alt="project.nameWithOwner"
+        :alt="project.name"
         class="h-full rounded-lg object-cover transition-all duration-300 hover:scale-105"
-        :src="`https://raw.githubusercontent.com/${project.nameWithOwner}/main/preview.png`"
+        :src="project.image"
         :aria-label="project.name + ' project image'"
       />
     </div>
@@ -53,12 +41,9 @@ const img = useImage();
           <div class="flex items-center gap-2">
             <div class="flex items-center gap-2">
               <span
-                class="whitespace-nowrap text-sm font-semibold text-white/90"
+                class="whitespace-nowrap text-sm font-semibold text-white/90 capitalize"
               >
                 {{ project.name }}
-              </span>
-              <span class="whitespace-nowrap text-xs text-neutral-500">
-                <!-- {{ project.release ? project.release : "soon" }} -->
               </span>
             </div>
           </div>

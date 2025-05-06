@@ -1,5 +1,6 @@
 {
   "name": "Recommendation Service",
+  "description": "Recommendation Service is a backend microservice built with NestJS and TypeScript. It provides a robust and scalable solution for managing product recommendations in an e-commerce application. The service is designed to be efficient and reliable, ensuring smooth recommendation processing and management.",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "recommendation-service",
@@ -7,6 +8,5 @@
   "stack": ["Nest.js", "Typescript", "MongoDB", "Prisma"],
   "tag": "backend",
   "live": "",
-  "repository": "https://github.com/iamArvy/RecommendationService",
-  "content": "https://raw.githubusercontent.com/iamArvy/RecommendationService/main/README.md"
+  "repository": "RecommendationService"
 }

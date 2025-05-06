@@ -6,6 +6,5 @@
   "tags": ["nestjs", "typescript", "prisma", "postgresql"],
   "job": "backend",
   "live": "",
-  "repository": "https://github.com/iamArvy/Devfolio-API",
-  "content": "https://raw.githubusercontent.com/iamArvy/Devfolio-API/main/README.md"
+  "repository": "Devfolio-API"
 }

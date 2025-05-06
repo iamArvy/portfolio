@@ -5,9 +5,11 @@ export interface Repository {
   url: string;
   homepageUrl: string;
   languages: {
-    name: string;
-    color: string;
-  }[];
+    nodes: {
+      name: string;
+      color: string;
+    }[];
+  };
   topics: {
     nodes: {
       topic: {

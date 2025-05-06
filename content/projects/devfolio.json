@@ -1,11 +1,11 @@
 {
   "name": "Devfolio",
+  "description": "Devfolio is a portfolio template designed for developers and designers. It features a clean and modern design, with a focus on showcasing your work and skills. The template is built with Laravel and Vue.js, making it easy to customize and extend.",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "devfolio",
   "tags": ["laravel", "vue", "fullstack", "dashboard", "postgresql"],
   "job": "fullstack",
   "live": "",
-  "repository": "https://github.com/iamArvy/Devfolio",
-  "content": "https://raw.githubusercontent.com/iamArvy/Devfolio/main/README.md"
+  "repository": "Devfolio"
 }

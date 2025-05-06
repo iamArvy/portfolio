@@ -1,12 +1,11 @@
 {
   "name": "Search Service",
+  "description": "Search Service is a backend microservice built with NestJS and TypeScript. It provides a robust and scalable solution for managing search functionality in an e-commerce application. The service is designed to be efficient and reliable, ensuring smooth search processing and management.",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "search-service",
   "tags": ["backend", "microservice", "nestjs", "typescript", "mongodb", "prisma"],
   "job": "backend",
-  "description": "A Backend Microservice for handling searches",
   "live": "",
-  "repository": "https://github.com/iamArvy/SearchService",
-  "content": "https://raw.githubusercontent.com/iamArvy/SearchService/main/README.md"
+  "repository": "SearchService"
 }

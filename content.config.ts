@@ -8,6 +8,7 @@ export default defineContentConfig({
       schema: z.object({
         name: z.string(),
         image: z.string(),
+        description: z.string(),
         release: z.string(),
         slug: z.string(),
         tags: z.array(z.string()),
@@ -17,16 +18,20 @@ export default defineContentConfig({
         content: z.string(),
       }),
     }),
+
     stack: defineCollection({
       type: "data",
-      source: "stacks/**.json",
+      source: "stack.json",
       schema: z.object({
-        name: z.string(),
-        icon: z.string(),
-        url: z.string(),
-        job: z.string(),
+        items: z.array(
+          z.object({
+            name: z.string(),
+            icon: z.string(),
+          })
+        ),
       }),
     }),
+
     experience: defineCollection({
       type: "data",
       source: "experiences/**.json",
@@ -37,6 +42,7 @@ export default defineContentConfig({
         date: z.string(),
       }),
     }),
+
     certification: defineCollection({
       type: "data",
       source: "certifications/**.json",
@@ -49,16 +55,7 @@ export default defineContentConfig({
         description: z.string(),
       }),
     }),
-    jobs: defineCollection({
-      type: "data",
-      source: "jobs/**.json",
-      schema: z.object({
-        name: z.string(),
-        image: z.string(),
-        repository: z.string(),
-        live: z.string(),
-      }),
-    }),
+
     profile: defineCollection({
       type: "data",
       source: "profile.json",
@@ -66,6 +63,7 @@ export default defineContentConfig({
         name: z.string(),
         image: z.string(),
         bio: z.string(),
+        job: z.string(),
         socials: z.array(
           z.object({
             url: z.string(),
