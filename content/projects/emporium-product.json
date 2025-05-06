@@ -7,5 +7,5 @@
   "tags": ["backend", "microservice", "nestjs", "typescript", "mongodb", "prisma"],
   "job": "backend",
   "live": "",
-  "repository": "ProductService"
+  "repository": "Emporium-Product"
 }

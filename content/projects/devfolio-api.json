@@ -1,5 +1,6 @@
 {
   "name": "Devfolio API",
+  "description": "",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "devfolio-api",

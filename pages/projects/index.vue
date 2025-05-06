@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const title = "Projects";
 useAppTitle(title);
-
 const breadcrumbs = useBreadcrumbs();
 breadcrumbs.value = [{ title: title, href: "/projects" }];
 definePageMeta({
@@ -15,15 +14,6 @@ definePageMeta({
 });
 
 const { projects } = await useContent();
-// const { getRepositories } = useOctokit();
-// const { data: repositories } = getRepositories();
-// const repositories = await getRepositories();
-onMounted(() => {
-  // console.log(gr.user.repositories.nodes);
-  // repositoriesgr.value = repositoriesgr.value.filter(
-  //   (repo: any) => repo.name !== "dashboard"
-  // );
-});
 </script>
 <template>
   <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4">
