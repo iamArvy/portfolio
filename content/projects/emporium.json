@@ -1,12 +1,10 @@
 {
   "name": "Emporium",
-  "description": "Emporium is a multi-store ecommerce platform built with Laravel and Vue.js. It allows users to create and manage multiple stores, providing a seamless shopping experience for customers. The platform is designed to be scalable and efficient, making it suitable for various use cases.",
+  "description": "Emporium is a multi-store e-commerce platform built with a microservice architecture. It allows users to create and manage multiple stores, providing a seamless shopping experience for customers. The platform is designed to be scalable and efficient, making it suitable for various use cases.",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "emporium",
-  "tags": ["laravel", "vue", "ecommerce", "multi-store"],
-  "stack": ["Laravel", "Vue", "Postgresql"],
-  "job": "web",
+  "tags": ["nuxtjs", "nestjs", "e-commerce", "multi-store", "docker", "grpc", "microservices", "typescript", "mongodb", "postgresql"],
   "live": "",
-  "repository": "Emporium"
+  "repository": "emporium"
 }

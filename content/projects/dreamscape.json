@@ -1,11 +1,10 @@
 {
   "name": "Dreamscape",
-  "description": "Dreamscape is a social media platform built with Nuxt.js and TypeScript. It allows users to connect, share, and interact with each other in a vibrant online community. The platform is designed to be user-friendly and engaging, providing a seamless experience for all users.",
+  "description": "Dreamscape is a modern, scalable social media platform built with a microservices architecture. It enables users to post updates, view and engage with content, like and comment on posts, and communicate in real time via direct messages and group chats.",
   "image": "/projects/sample.png",
   "release": "2023",
   "slug": "dreamscape",
-  "tags": ["nuxt", "typescript", "frontend", "chat", "social"],
-  "job": "frontend",
+  "tags": ["docker", "jwt", "microservices", "nuxtjs", "nestjs", "websockets", "grpc", "kafka", "typescript", "frontend", "chat", "social"],
   "live": "",
-  "repository": "Dreamscape"
+  "repository": "dreamscape"
 }
