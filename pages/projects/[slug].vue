@@ -11,11 +11,6 @@ useAppTitle(project.value?.name as string);
 const { getProject } = useContent();
 
 // Breadcrumbs
-const breadcrumbs = useBreadcrumbs();
-breadcrumbs.value = [
-  { title: "Projects", href: "projects" },
-  { title: project?.value?.name as string, href: `/projects/${slug}` },
-];
 
 // Meta
 definePageMeta({
@@ -40,7 +35,11 @@ onMounted(async () => {
   toc.value = markdown.toc;
   loading.value = false;
 });
-
+const breadcrumbs = useBreadcrumbs();
+breadcrumbs.value = [
+  { title: "Projects", href: "projects" },
+  { title: project?.value?.name as string, href: `/projects/${slug}` },
+];
 watch(html, async (newHtml) => {
   if (newHtml) {
     await nextTick();
@@ -85,7 +84,7 @@ watch(html, async (newHtml) => {
           <div v-if="project" class="flex flex-col gap-4">
             <h1 class="text-3xl font-bold capitalize">{{ project.name }}</h1>
             <p>{{ project.description }}</p>
-            <div class="flex gap-1">
+            <div class="flex flex-wrap gap-1">
               <span
                 v-for="item in project.tags"
                 :key="item"
