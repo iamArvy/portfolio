@@ -7,5 +7,5 @@
   "tags": ["nestjs", "docker", "prisma", "postgresql", "sqs", "mongodb", "typescript"],
   "job": "backend",
   "live": "",
-  "repository": "authentication-service"
+  "repository": "post-service"
 }
