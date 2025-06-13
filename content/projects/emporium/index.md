@@ -4,6 +4,7 @@ description: Emporium is a multi-store e-commerce platform built with a microser
 breadcrumbs: [{ title: "Projects", href: "projects" }, { title: Emporium, href: 'projects/emporium' }]
 tags: ["nuxtjs", "nestjs", "e-commerce", "multi-store", "docker", "grpc", "microservices", "typescript", "mongodb", "postgresql"]
 release: 2023
+type: project
 ---
 
 # Emporium

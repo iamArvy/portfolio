@@ -1,6 +1,9 @@
 export const useContent = () => {
   const { data: projects } = useAsyncData("project", async () => {
-    return queryCollection("project").order("name", "ASC").all();
+    return queryCollection("projects")
+      .where("type", "=", "project")
+      .order("title", "ASC")
+      .all();
   });
 
   const { data: profile } = useAsyncData("profile", async () => {
@@ -8,7 +11,7 @@ export const useContent = () => {
   });
 
   const getProject = (slug: string) =>
-    queryCollection("project").where("slug", "=", slug).first();
+    queryCollection("projects").path(`/projects/${slug}`).first();
 
   const { data: experiences } = useAsyncData("experience", () => {
     return queryCollection("experience").order("role", "ASC").all();

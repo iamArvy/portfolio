@@ -2,6 +2,7 @@
 // import { Icon } from "@iconify/vue";
 const route = useRoute();
 const slug = route.params.slug as string;
+
 const { data: page } = await useAsyncData(`page-${slug}`, () => {
   return queryCollection("projects").path(`/projects/${slug}`).first();
 });

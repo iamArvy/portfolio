@@ -16,6 +16,7 @@ export default defineContentConfig({
             href: z.string(),
           })
         ),
+        type: z.string(),
       }),
     }),
 
