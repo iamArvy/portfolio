@@ -2,20 +2,20 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 
 export default defineContentConfig({
   collections: {
-    project: defineCollection({
-      type: "data",
-      source: "projects/**.json",
+    projects: defineCollection({
+      type: "page",
+      source: "projects/**",
       schema: z.object({
-        name: z.string(),
-        image: z.string(),
-        description: z.string(),
-        release: z.string(),
-        slug: z.string(),
-        tags: z.array(z.string()),
-        job: z.string(),
-        repository: z.string(),
-        live: z.string(),
-        content: z.string(),
+        title: z.string(),
+        description: z.string().optional(),
+        tags: z.array(z.string()).optional(),
+        layout: z.string().optional(),
+        breadcrumbs: z.array(
+          z.object({
+            title: z.string(),
+            href: z.string(),
+          })
+        ),
       }),
     }),
 

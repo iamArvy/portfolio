@@ -36,4 +36,16 @@ export default defineNuxtConfig({
       githubToken: process.env.GITHUB_TOKEN,
     },
   },
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 2,
+        },
+        highlight: {
+          theme: "github-light",
+        },
+      },
+    },
+  },
 });

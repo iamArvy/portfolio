@@ -15,7 +15,7 @@ const renderMarkdown = (markdown: string) => {
   const toc: TOCItem[] = [];
 
   const md = new MarkdownIt({
-    html: false,
+    html: true,
     linkify: true,
     typographer: true,
     // @ts-expect-error Error from the library
