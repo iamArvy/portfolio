@@ -6,6 +6,8 @@ import {
 } from "#components";
 
 useAppTitle();
+const navigation = useProjectNavigation();
+navigation.value = undefined;
 const breadcrumbs = useBreadcrumbs();
 breadcrumbs.value = ["profile"];
 definePageMeta({

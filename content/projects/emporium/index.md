@@ -1,12 +1,11 @@
 ---
-title: Overview
-description: Emporium is a multi-store e-commerce platform built with a microservices architecture, enabling users to manage multiple stores while offering customers a seamless shopping experience. It's designed for scalability and efficiency across diverse use cases.
+project: emporium
 order: 1
 ---
 
-# Emporium
+# Overview
 
-A scalable multi-store eCommerce platform built with a microservices architecture.
+Emporium is a multi-store e-commerce platform built with a microservices architecture, enabling users to manage multiple stores while offering customers a seamless shopping experience. It's designed for scalability and efficiency across diverse use cases.
 
 ---
 

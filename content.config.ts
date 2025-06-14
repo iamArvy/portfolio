@@ -21,6 +21,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
+        project: z.string(),
         order: z.number(),
       }),
     }),

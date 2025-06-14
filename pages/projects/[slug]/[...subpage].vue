@@ -9,11 +9,13 @@ const { data: page } = await useAsyncData(`project-${slug}-${fullPath}`, () => {
 });
 const { data: pages } = await useAsyncData(`project-${slug}-pages`, () => {
   return queryCollection("projectPages")
-    .path(`/projects/${slug}/`)
+    .where("project", "=", slug)
     .order("order", "ASC")
     .all();
 });
 
+const navigation = useProjectNavigation();
+navigation.value = pages.value ?? undefined;
 const currentIndex = computed(() =>
   pages.value?.findIndex((p) => p.path === fullPath)
 );

@@ -12,11 +12,7 @@ import { navs } from "~/data";
 const { isCurrentRoute } = useNav();
 const { socials, contacts } = await useContent();
 
-const route = useRoute();
-const isProjectIndex = computed(() => {
-  return /^\/projects\/[^/]+$/.test(route.path);
-});
-
+const navigation = useProjectNavigation();
 // if (isProjectIndex) {
 
 // }
@@ -40,7 +36,25 @@ const isProjectIndex = computed(() => {
       </SidebarMenuItem>
     </SidebarMenu>
   </SidebarGroup>
-  <template v-if="!isProjectIndex">
+  <template v-if="navigation">
+    <SidebarGroup class="px-2 py-0 mb-2">
+      <SidebarGroupLabel>Project Navigation</SidebarGroupLabel>
+      <SidebarMenu>
+        <SidebarMenuItem v-for="item in navigation" :key="item.id">
+          <SidebarMenuButton
+            as-child
+            :tooltip="item.path"
+            :is-active="isCurrentRoute(item.path)"
+          >
+            <NuxtLink :href="item.path">
+              <span>{{ item.title }}</span>
+            </NuxtLink>
+          </SidebarMenuButton>
+        </SidebarMenuItem>
+      </SidebarMenu>
+    </SidebarGroup>
+  </template>
+  <template v-else>
     <SidebarGroup class="px-2 py-0 mb-2">
       <SidebarGroupLabel>Contact</SidebarGroupLabel>
       <SidebarMenu>
