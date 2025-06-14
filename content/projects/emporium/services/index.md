@@ -1,12 +1,23 @@
 ---
-title: Overview
+title: Emporium
 description: Emporium is a multi-store e-commerce platform built with a microservices architecture, enabling users to manage multiple stores while offering customers a seamless shopping experience. It's designed for scalability and efficiency across diverse use cases.
-order: 1
+breadcrumbs: [{ title: "Projects", href: "projects" }, { title: Emporium, href: 'projects/emporium' }]
+tags: ["nuxtjs", "nestjs", "e-commerce", "multi-store", "docker", "grpc", "microservices", "typescript", "mongodb", "postgresql"]
+release: 2023
+type: project
+navigation: [
+  {
+    title: Overview, path: architecture
+  },
+  {
+    title: Architecture, path: architecture
+  }
+]
 ---
 
-# Emporium
+# Services
 
-A scalable multi-store eCommerce platform built with a microservices architecture.
+These is an Overview of the services used in the Project
 
 ---
 

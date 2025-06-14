@@ -1,6 +1,6 @@
 ---
   title: The Spell
-  description: The Spell is a portfolio template designed for developers and designers. It features a clean and modern design, with a focus on showcasing your work and skills. The template is built with Nuxt.js and TypeScript, making it easy to customize and extend.
+  description: The Spell is a developer and designer portfolio template built with Nuxt.js and TypeScript. It features a clean, modern design focused on showcasing work and skills, and is easy to customize and extend.
   release: 2025
   tags: ["nuxt", "typescript", "portfolio", "template"]
   job: frontend

@@ -2,8 +2,10 @@
 const title = "Projects";
 useAppTitle(title);
 const breadcrumbs = useBreadcrumbs();
-breadcrumbs.value = [{ title: title, href: "/projects" }];
-const { projects } = useContent();
+breadcrumbs.value = ["projects"];
+const { data: projects } = useAsyncData("projects", async () => {
+  return queryCollection("projects").order("title", "ASC").all();
+});
 </script>
 <template>
   <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4">

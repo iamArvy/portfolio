@@ -3,20 +3,24 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 export default defineContentConfig({
   collections: {
     projects: defineCollection({
-      type: "page",
-      source: "projects/**",
+      type: "data",
+      source: "projects/*/index.json",
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
         tags: z.array(z.string()).optional(),
-        layout: z.string().optional(),
-        breadcrumbs: z.array(
-          z.object({
-            title: z.string(),
-            href: z.string(),
-          })
-        ),
-        type: z.string(),
+        release: z.number().optional(),
+        live: z.string().optional(),
+        path: z.string(),
+      }),
+    }),
+
+    projectPages: defineCollection({
+      type: "page",
+      source: "projects/**/*.md",
+      schema: z.object({
+        title: z.string(),
+        description: z.string().optional(),
       }),
     }),
 

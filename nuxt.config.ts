@@ -41,6 +41,7 @@ export default defineNuxtConfig({
       markdown: {
         toc: {
           depth: 2,
+          searchDepth: 2,
         },
         highlight: {
           theme: "github-light",

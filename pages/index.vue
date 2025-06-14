@@ -7,7 +7,7 @@ import {
 
 useAppTitle();
 const breadcrumbs = useBreadcrumbs();
-breadcrumbs.value = [{ title: "Profile", href: "/" }];
+breadcrumbs.value = ["profile"];
 definePageMeta({
   title: "Profile",
   meta: [

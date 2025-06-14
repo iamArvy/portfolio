@@ -1,5 +1,5 @@
 export const useContent = () => {
-  const { data: projects } = useAsyncData("project", async () => {
+  const { data: projects } = useAsyncData("projects", async () => {
     return queryCollection("projects")
       .where("type", "=", "project")
       .order("title", "ASC")
