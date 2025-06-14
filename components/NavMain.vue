@@ -12,7 +12,7 @@ import { navs } from "~/data";
 const { isCurrentRoute } = useNav();
 const { socials, contacts } = await useContent();
 
-const navigation = useProjectNavigation();
+const { pages } = useProjectNavigation();
 // if (isProjectIndex) {
 
 // }
@@ -36,11 +36,11 @@ const navigation = useProjectNavigation();
       </SidebarMenuItem>
     </SidebarMenu>
   </SidebarGroup>
-  <template v-if="navigation">
+  <template v-if="pages && pages.length > 0">
     <SidebarGroup class="px-2 py-0 mb-2">
       <SidebarGroupLabel>Project Navigation</SidebarGroupLabel>
       <SidebarMenu>
-        <SidebarMenuItem v-for="item in navigation" :key="item.id">
+        <SidebarMenuItem v-for="item in pages" :key="item.id">
           <SidebarMenuButton
             as-child
             :tooltip="item.path"

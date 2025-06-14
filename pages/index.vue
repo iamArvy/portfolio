@@ -6,8 +6,6 @@ import {
 } from "#components";
 
 useAppTitle();
-const navigation = useProjectNavigation();
-navigation.value = undefined;
 const breadcrumbs = useBreadcrumbs();
 breadcrumbs.value = ["profile"];
 definePageMeta({
@@ -36,6 +34,11 @@ const sections = [
 ];
 
 const { profile } = useContent();
+const { setPages } = useProjectNavigation();
+
+onMounted(() => {
+  setPages();
+});
 </script>
 <template>
   <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4 overflow-x-auto">

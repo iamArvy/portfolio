@@ -1,8 +1,8 @@
 ---
-  title: Dreamsgate
-  description: Dreamsgate is a fullstack application built with Laravel and Vue.js, offering a smooth and efficient user experience. It's designed for scalability and adaptability across different use cases.
-  release: 2023,
-  tags: ["laravel", "vue", "fullstack"]
-  job: fullstack
-  type: project
+project: dreamsgate
+order: 1
 ---
+
+# Overview
+
+Overview of the Dreamsgate Project

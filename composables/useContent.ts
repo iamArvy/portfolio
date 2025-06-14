@@ -1,9 +1,6 @@
 export const useContent = () => {
   const { data: projects } = useAsyncData("projects", async () => {
-    return queryCollection("projects")
-      .where("type", "=", "project")
-      .order("title", "ASC")
-      .all();
+    return queryCollection("projects").order("title", "ASC").all();
   });
 
   const { data: profile } = useAsyncData("profile", async () => {

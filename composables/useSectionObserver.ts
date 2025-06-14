@@ -19,7 +19,6 @@ export function useSectionObserver(contentRef: Ref<HTMLElement | null>) {
 
         if (topEntry.target.id) {
           currentSection.value = topEntry.target.id;
-          console.log("Current section:", topEntry.target.id);
         }
       },
       {

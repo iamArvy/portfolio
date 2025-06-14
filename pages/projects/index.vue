@@ -7,8 +7,11 @@ const { data: projects } = useAsyncData("projects", async () => {
   return queryCollection("projects").order("title", "ASC").all();
 });
 
-const navigation = useProjectNavigation();
-navigation.value = undefined;
+const { setPages } = useProjectNavigation();
+
+onMounted(() => {
+  setPages();
+});
 </script>
 <template>
   <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4">

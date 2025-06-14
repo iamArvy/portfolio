@@ -1,6 +1,6 @@
 ---
 project: emporium
-order: 4
+order: 3.1
 ---
 # Product Service
 

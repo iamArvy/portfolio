@@ -1,0 +1,8 @@
+{
+  "title": "Dreamscape",
+  "description": "Dreamscape is a scalable social media platform using a microservices architecture, allowing users to share updates, interact with content through likes and comments, and chat in real time via direct and group messaging.",
+  "release": 2023,
+  "tags": ["docker", "jwt", "microservices", "nuxtjs", "nestjs", "websockets", "grpc", "kafka", "typescript", "frontend", "chat", "social"],
+  "live": "",
+  "path": "dreamscape"
+}
