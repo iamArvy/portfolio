@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <NuxtLink
     :aria-label="project.title + ' project link'"
-    :to="project.title.toLowerCase().replace(/\s+/g, '-')"
+    :to="'/projects/' + project.title.toLowerCase().replace(/\s+/g, '-')"
     class="group relative flex cursor-pointer flex-col space-y-2 rounded-sm p-3 hover:shadow-md shadow-primary backdrop-blur-sm transition-all ease-in-out duration-300 border-2"
   >
     <h1 class="text-primary text-xl font-bold line-clamp-2">
