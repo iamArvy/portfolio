@@ -38,7 +38,7 @@ const { pages } = useProjectNavigation();
   </SidebarGroup>
   <template v-if="pages && pages.length > 0">
     <SidebarGroup class="px-2 py-0 mb-2">
-      <SidebarGroupLabel>Project Navigation</SidebarGroupLabel>
+      <SidebarGroupLabel>Docs Navigation</SidebarGroupLabel>
       <SidebarMenu>
         <SidebarMenuItem v-for="item in pages" :key="item.id">
           <SidebarMenuButton

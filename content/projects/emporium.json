@@ -1,0 +1,8 @@
+{
+  "title": "Emporium",
+  "description": "Emporium is a multi-store e-commerce platform built with a microservices architecture, enabling users to manage multiple stores while offering customers a seamless shopping experience. It's designed for scalability and efficiency across diverse use cases.",
+  "tags": ["nuxtjs", "nestjs", "e-commerce", "multi-store", "docker", "grpc", "microservices", "typescript", "mongodb", "postgresql"],
+  "release": 2023,
+  "job": "frontend",
+  "url": "https://iamarvy.netlify.app"
+}

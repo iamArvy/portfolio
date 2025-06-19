@@ -4,20 +4,19 @@ export default defineContentConfig({
   collections: {
     projects: defineCollection({
       type: "data",
-      source: "projects/*/index.json",
+      source: "projects/*.json",
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
         tags: z.array(z.string()).optional(),
         release: z.number().optional(),
-        live: z.string().optional(),
-        path: z.string(),
+        url: z.string(),
       }),
     }),
 
-    projectPages: defineCollection({
+    docs: defineCollection({
       type: "page",
-      source: "projects/**/*.md",
+      source: "docs/**/*.md",
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
