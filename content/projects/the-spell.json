@@ -1,8 +1,0 @@
- {
-  "title": "The Spell",
-  "description": "The Spell is a developer and designer portfolio template built with Nuxt.js and TypeScript. It features a clean, modern design focused on showcasing work and skills, and is easy to customize and extend.",
-  "release": 2025,
-  "tags": ["nuxt", "typescript", "portfolio", "template"],
-  "job": "frontend",
-  "url": "https://iamarvy.netlify.app"
-}

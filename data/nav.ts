@@ -2,17 +2,17 @@ import type { NavItem } from "@/types";
 export const navs: NavItem[] = [
   {
     title: "Profile",
-    href: "/",
+    href: "profile",
     icon: "mingcute:profile-fill",
   },
   {
-    title: "Projects",
-    href: "/projects",
+    title: "Stacks",
+    href: "stacks",
     icon: "grommet-icons:projects",
   },
   {
-    title: "Docs",
-    href: "/docs",
-    icon: "material-symbols:docs",
+    title: "Projects",
+    href: "projects",
+    icon: "grommet-icons:projects",
   },
 ];

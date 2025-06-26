@@ -3,30 +3,5 @@
   "image": "/myimg.png",
   "bio" : "I’m a Full-Stack Web Developer, Cloud Solutions Architect specializing in AWS cloud-native solutions. I design and build scalable, secure, and high-performance applications, leveraging automation and modern development practices to streamline workflows and optimize efficiency. With a strong DevOps mindset, I focus on reliability, cost optimization, and seamless deployments to deliver robust digital solutions.",
   "job": "Web Developer and Cloud Solutions Architect",
-  "contacts": [
-    {
-      "url": "https://maps.app.goo.gl/17P8qssuzY6fiyMf7",
-      "icon": "fluent:location-24-filled",
-      "text": "Lagos, Nigeria"
-    },
-    {
-      "url": "mailto:okeoluwaseyimarvellous@gmail.com",
-      "icon": "mingcute:mail-send-fill",
-      "text": "okeoluwaseyimarvellous@gmail.com"
-    },
-    {
-      "url": "tel:+2349160397775",
-      "icon": "bx-phone-call",
-      "text": "+234 9160397775"
-    }
-  ],
-  "socials": [
-    { "url": "https://github.com/iamArvy", "icon": "skill-icons:github-dark", "platform": "Github" },
-    {
-      "url": "https://linkedin.com/in/oluwaseyioke-webdev",
-      "icon": "skill-icons:linkedin",
-      "platform": "LinkedIn"
-    },
-    { "url": "https://wa.link/2e231j", "icon": "logos:whatsapp-icon", "platform": "Whatsapp" }
-  ]
+  "resume": "/resume.pdf"
 }

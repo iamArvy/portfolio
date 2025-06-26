@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AppContent from "@/components/AppContent.vue";
-import AppHeader from "@/components/AppHeader.vue";
-import AppShell from "@/components/AppShell.vue";
+import AppContent from "~/components/app/Content.vue";
+import AppHeader from "~/components/app/Header.vue";
+import AppShell from "~/components/app/Shell.vue";
 const breadcrumbs = useBreadcrumbs();
 </script>
 

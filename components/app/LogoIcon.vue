@@ -10,7 +10,7 @@ interface Props {
 }
 
 defineProps<Props>();
-const { profile } = await useAppProfile();
+const { profile } = useContent();
 </script>
 
 <template>

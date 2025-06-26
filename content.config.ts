@@ -14,17 +14,6 @@ export default defineContentConfig({
       }),
     }),
 
-    docs: defineCollection({
-      type: "page",
-      source: "docs/**/*.md",
-      schema: z.object({
-        title: z.string(),
-        description: z.string().optional(),
-        project: z.string(),
-        order: z.number(),
-      }),
-    }),
-
     stack: defineCollection({
       type: "data",
       source: "stack.json",
@@ -38,27 +27,31 @@ export default defineContentConfig({
       }),
     }),
 
-    experience: defineCollection({
+    socials: defineCollection({
       type: "data",
-      source: "experiences/**.json",
+      source: "social.json",
       schema: z.object({
-        role: z.string(),
-        location: z.string(),
-        description: z.array(z.string()),
-        date: z.string(),
+        items: z.array(
+          z.object({
+            url: z.string(),
+            platform: z.string(),
+            icon: z.string(),
+          })
+        ),
       }),
     }),
 
-    certification: defineCollection({
+    contacts: defineCollection({
       type: "data",
-      source: "certifications/**.json",
+      source: "contact.json",
       schema: z.object({
-        name: z.string(),
-        date: z.string(),
-        file: z.string(),
-        location: z.string(),
-        location_url: z.string(),
-        description: z.string(),
+        items: z.array(
+          z.object({
+            url: z.string(),
+            icon: z.string(),
+            text: z.string(),
+          })
+        ),
       }),
     }),
 
@@ -70,20 +63,7 @@ export default defineContentConfig({
         image: z.string(),
         bio: z.string(),
         job: z.string(),
-        socials: z.array(
-          z.object({
-            url: z.string(),
-            platform: z.string(),
-            icon: z.string(),
-          })
-        ),
-        contacts: z.array(
-          z.object({
-            url: z.string(),
-            icon: z.string(),
-            text: z.string(),
-          })
-        ),
+        resume: z.string(),
       }),
     }),
   },

@@ -7,15 +7,12 @@ export const useContent = () => {
     return queryCollection("profile").first();
   });
 
-  const getProject = (slug: string) =>
-    queryCollection("projects").path(`/projects/${slug}`).first();
-
-  const { data: experiences } = useAsyncData("experience", () => {
-    return queryCollection("experience").order("role", "ASC").all();
+  const { data: socials } = useAsyncData("experience", () => {
+    return queryCollection("socials").first();
   });
 
-  const { data: certifications } = useAsyncData("certification", () => {
-    return queryCollection("certification").order("date", "ASC").all();
+  const { data: contacts } = useAsyncData("certification", () => {
+    return queryCollection("contacts").first();
   });
 
   const { data: stacks } = useAsyncData("stack", async () => {
@@ -24,12 +21,9 @@ export const useContent = () => {
 
   return {
     profile,
-    socials: profile?.value?.socials,
-    contacts: profile?.value?.contacts,
     projects,
-    getProject,
-    experiences,
-    certifications,
-    stacks,
+    stacks: stacks.value?.items,
+    socials: socials.value?.items,
+    contacts: contacts.value?.items,
   };
 };

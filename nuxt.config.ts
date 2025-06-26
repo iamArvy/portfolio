@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "@vee-validate/nuxt",
     "@nuxt/content",
+    "@nuxt/icon",
   ],
   vite: {
     plugins: [tailwindcss()],

@@ -6,7 +6,7 @@ const { stacks } = useContent();
 <template>
   <div class="flex flex-wrap gap-4 justify-center my-4">
     <div
-      v-for="item in stacks?.items"
+      v-for="item in stacks"
       :key="item.name"
       class="flex flex-col items-center gap-2 font-bold rounded-full px-3 py-2 group cursor-pointer"
     >
