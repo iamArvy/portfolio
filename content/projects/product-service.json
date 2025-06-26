@@ -1,6 +1,6 @@
 {
   "title": "Product Service",
-  "description": "A secure and scalable authentication microservice built with NestJS, Passport, and JWT, supporting gRPC transport for efficient internal communication in microservice architectures.",
+  "description": "This is a microservice built with Nest.js for managing products, categories and product variants in an e-commerce platform, supporting gRPC transport for efficient internal communication in microservice architectures.",
   "release": 2025,
   "tags": ["nest.js", "gRPC", "backend", "api", "e-commerce", "postgresql"],
   "job": "backend",

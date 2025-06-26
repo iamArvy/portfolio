@@ -11,7 +11,6 @@ import { navs } from "~/data";
 
 const { isCurrentRoute } = useNav(navs);
 const { socials, contacts } = useContent();
-// const { currentSection } = useSectionObserver(navs);
 </script>
 
 <template>
