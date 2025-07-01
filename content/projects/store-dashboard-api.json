@@ -1,8 +1,0 @@
-{
-  "title": "Store Dashboard API",
-  "description": "This is an API Gateway built with Nest.js, it serves as a layer of communication between the frontend and the microservices in the architecture. It's designed for scalability and adaptability across different use cases.",
-  "release": 2025,
-  "tags": ["nest.js", "typescript", "GraphQL", "REST", "gateway", "grpc-client"],
-  "job": "backend",
-  "url": "https://github.com/iamArvy/store-dashboard-api"
-}
