@@ -4,5 +4,7 @@
   "release": 2025,
   "tags": ["nuxt.js", "vue", "template", "frontend", "portfolio"],
   "job": "backend",
-  "url": "https://github.com/iamArvy/product-service"
+  "live": "https://iamarvy.netlify.app",
+  "repository": "https://github.com/iamArvy/the-spell"
+
 }

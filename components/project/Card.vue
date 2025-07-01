@@ -20,13 +20,27 @@ defineProps<{
         </ProjectTag>
       </div>
     </div>
-    <NuxtLink
-      :aria-label="project.title + ' project link'"
-      :href="project.url"
-      class="self-end"
-      target="_blank"
-    >
-      <Button>View</Button>
-    </NuxtLink>
+    <div class="flex items-center justify-end space-x-2">
+      <NuxtLink
+        v-if="project.live"
+        :aria-label="project.title + ' project link'"
+        :href="project.live"
+        target="_blank"
+      >
+        <Button><Icon name="lucide:eye" />Live</Button>
+      </NuxtLink>
+      <NuxtLink
+        v-if="project.repository"
+        :class="!project.live ? 'ml-2' : ''"
+        :aria-label="project.title + ' project link'"
+        :href="project.repository"
+        target="_blank"
+      >
+        <Button>
+          <Icon name="mingcute:code-fill" size="20px" />
+          Code
+        </Button>
+      </NuxtLink>
+    </div>
   </div>
 </template>

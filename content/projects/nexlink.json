@@ -4,5 +4,5 @@
   "release": 2025,
   "tags": ["nest.js", "gRPC", "backend", "api", "authentication", "postgresql"],
   "job": "backend",
-  "url": "https://github.com/iamArvy/nexlink"
+  "repository": "https://github.com/iamArvy/nexlink"
 }

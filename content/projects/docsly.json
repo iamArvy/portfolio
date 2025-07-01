@@ -4,5 +4,6 @@
   "release": 2025,
   "tags": ["nuxt", "vue", "frontend", "docs", "template"],
   "job": "frontend",
-  "url": "https://docsly.netlify.app"
+  "live": "https://docsly.netlify.app",
+  "repository": "https://github.com/iamArvy/docsly"
 }

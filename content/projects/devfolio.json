@@ -4,5 +4,5 @@
   "release": 2025,
   "tags": ["laravel", "vue", "fullstack", "dashboard", "postgresql", "nestjs"],
   "job": "fullstack",
-  "url": "https://github.com/iamArvy/devfolio"
+  "repository": "https://github.com/iamArvy/devfolio"
 }

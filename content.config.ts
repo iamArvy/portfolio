@@ -10,7 +10,8 @@ export default defineContentConfig({
         description: z.string().optional(),
         tags: z.array(z.string()).optional(),
         release: z.number().optional(),
-        url: z.string(),
+        repository: z.string(),
+        live: z.string().optional(),
       }),
     }),
 

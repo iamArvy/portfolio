@@ -4,5 +4,5 @@
   "release": 2025,
   "tags": ["nest.js", "gRPC", "backend", "api", "authentication", "postgresql"],
   "job": "fullstack",
-  "url": "https://github.com/iamArvy/inventra"
+  "repository": "https://github.com/iamArvy/inventra"
 }
