@@ -1,8 +1,0 @@
-{
-  "title": "Authentication Service",
-  "description": "A secure and scalable authentication microservice built with NestJS, Passport, and JWT, supporting gRPC transport for efficient internal communication in microservice architectures.",
-  "release": 2025,
-  "tags": ["nest.js", "gRPC", "backend", "api", "authentication", "postgresql"],
-  "job": "backend",
-  "url": "https://github.com/iamArvy/authentication-service"
-}
