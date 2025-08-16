@@ -12,20 +12,20 @@ export default defineContentConfig({
         release: z.number().optional(),
         repository: z.string(),
         live: z.string().optional(),
+        role: z.string()
       }),
     }),
 
     stack: defineCollection({
       type: "data",
-      source: "stack.json",
+      source: "stacks/*.json",
       schema: z.object({
-        items: z.array(
-          z.object({
-            name: z.string(),
-            icon: z.string(),
-          })
-        ),
-      }),
+        name: z.string(),
+        icon: z.string(),
+        role: z.array(
+          z.string()
+        )
+      })
     }),
 
     socials: defineCollection({
@@ -58,12 +58,11 @@ export default defineContentConfig({
 
     profile: defineCollection({
       type: "data",
-      source: "profile.json",
+      source: "profiles/*.json",
       schema: z.object({
-        name: z.string(),
-        image: z.string(),
         bio: z.string(),
-        job: z.string(),
+        role: z.string(),
+        roleName: z.string(),
         resume: z.string(),
       }),
     }),
