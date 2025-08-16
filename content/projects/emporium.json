@@ -3,6 +3,6 @@
   "description": "Emporium is a multi-store e-commerce platform built with a microservices architecture, enabling users to manage multiple stores while offering customers a seamless shopping experience. It's designed for scalability and efficiency across diverse use cases.",
   "tags": ["laravel", "monolithic", "e-commerce", "auctions", "postgresql", "inertia.js", "vue", "workos"],
   "release": 2025,
-  "job": "fullstack",
+  "role": "web",
   "repository": "https://github.com/iamArvy/emporium"
 }

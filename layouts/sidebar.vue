@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import AppContent from "~/components/app/Content.vue";
 import AppShell from "~/components/app/Shell.vue";
-// import AppSidebar from "~/components/sidebar/App.vue";
-// import AppSidebarHeader from "@/components/AppSidebarHeader.vue";
 const breadcrumbs = useBreadcrumbs();
 </script>
 
