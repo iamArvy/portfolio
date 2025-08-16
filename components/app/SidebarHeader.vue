@@ -18,6 +18,7 @@ defineProps<{
         <Breadcrumbs :breadcrumbs="breadcrumbs" />
       </template>
       <div class="ml-auto flex items-center gap-2">
+        <RoleSwitcher />
         <AppearanceButton />
       </div>
     </div>

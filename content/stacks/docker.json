@@ -1,1 +1,1 @@
-{ "name": "Docker", "icon": "logos:docker-icon" }
+{ "name": "Docker", "icon": "logos:docker-icon", "role": ["backend", "cloud"] }

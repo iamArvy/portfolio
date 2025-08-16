@@ -1,1 +1,1 @@
-{ "name": "Nuxt.js", "icon": "logos:nuxt-icon"}
+{ "name": "Nuxt.js", "icon": "logos:nuxt-icon", "role": ["web"]}

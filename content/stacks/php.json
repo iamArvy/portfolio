@@ -1,1 +1,1 @@
-{ "name": "PHP", "icon": "logos:php" }
+{ "name": "PHP", "icon": "logos:php", "role": ["backend"] }

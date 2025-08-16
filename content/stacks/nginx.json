@@ -1,1 +1,1 @@
-{ "name": "Nginx", "icon": "logos:nginx" }
+{ "name": "Nginx", "icon": "logos:nginx", "role": ["backend", "cloud"] }

@@ -1,1 +1,1 @@
-{ "name": "Redis", "icon": "logos:redis" }
+{ "name": "Redis", "icon": "logos:redis", "role": ["backend", "cloud"] }

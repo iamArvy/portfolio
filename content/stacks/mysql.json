@@ -1,1 +1,1 @@
-{ "name": "MySQL", "job": "database", "icon": "logos:mysql" }
+{ "name": "MySQL", "job": "database", "icon": "logos:mysql", "role": ["backend", "cloud"]}

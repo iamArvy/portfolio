@@ -56,6 +56,19 @@ export default defineContentConfig({
       }),
     }),
 
+    roles: defineCollection({
+      type: "data",
+      source: "roles.json",
+      schema: z.object({
+        items: z.array(
+          z.object({
+            title: z.string(),
+            value: z.string(),
+          })
+        ),
+      }),
+    }),
+
     profile: defineCollection({
       type: "data",
       source: "profiles/*.json",

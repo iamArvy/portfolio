@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ProfileSection, ProjectSection, StackSection } from "#components";
-
 useAppTitle();
 const breadcrumbs = useBreadcrumbs();
 breadcrumbs.value = ["profile"];
@@ -22,7 +21,7 @@ const sections = [
   {
     id: "stacks",
     title: "Tech Stack",
-    description: "Tools, languages, and frameworks I use to build software.",
+    description: "Tools, languages, and frameworks I use.",
     component: StackSection,
   },
   {
@@ -33,10 +32,6 @@ const sections = [
   },
 ];
 
-// Home Page: Introduce yourself as a junior web developer and include a call to action.
-// Projects Page: Showcase 3-5 of your top projects with descriptions and links to the GitHub repository and live demos.
-// About Page: Share your background and motivations in a concise and engaging way.
-// Contact Page: Make it easy for people to reach out.
 </script>
 <template>
   <div

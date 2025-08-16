@@ -2,20 +2,26 @@ import type { StackCollectionItem } from "@nuxt/content";
 
 export const useContent = () => {
   const route = useRoute()
-  const role = route.query.role
-  const key = (suffix: string) => `content-${role ?? 'all'}-${suffix}`
+  const role = useState<string>('role', () => route.query.role as string || '')
+  const key = (suffix: string) => `content-${role.value ?? 'all'}-${suffix}`
   const { data: projects } = useAsyncData(
     key('projects'), 
     () => {
       let query = queryCollection("projects").order("title", "ASC")
-      if (role) query = query.where("role", "=", role)
+      if (role.value && role.value !== 'all') query = query.where("role", "=", role.value)
       return query.all()
-    }
+    },
+    { watch: [role] }
   );
 
   const { data: profile } = useAsyncData(
     key("profile"),
-    () => queryCollection("profile").where("role", "=", role ?? 'all').first()
+    () => {
+      return queryCollection("profile")
+      .where("role", "=", role.value ?? 'all')
+      .first()
+    },
+    { watch: [role] }
   );
 
   const { data: socials } = useAsyncData(
@@ -28,13 +34,19 @@ export const useContent = () => {
     () => queryCollection("contacts").first()
   );
 
+  const { data: roles } = useAsyncData(
+    "roles", 
+    () => queryCollection("roles").first()
+  );
+
   const { data: stacks } = useAsyncData(
     key("stacks"),
     async () => {
       const results = await queryCollection("stack").all()
-       if (role) return results.filter((item: StackCollectionItem) => item.role?.includes(role as string))
+       if (role.value && role.value !== 'all') return results.filter((item: StackCollectionItem) => item.role?.includes(role.value))
       return results
-    }
+    },
+    { watch: [role] }
   );
 
   return {
@@ -43,5 +55,6 @@ export const useContent = () => {
     stacks,
     socials: socials.value?.items,
     contacts: contacts.value?.items,
+    roles: roles.value?.items,
   };
 };
