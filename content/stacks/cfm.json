@@ -1,0 +1,1 @@
+{ "name": "Cloud Formation", "icon": "logos:aws-cloudformation", "role": ["backend", "cloud"] }

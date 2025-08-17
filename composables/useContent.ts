@@ -1,29 +1,60 @@
+import type { StackCollectionItem } from "@nuxt/content";
+
 export const useContent = () => {
-  const { data: projects } = useAsyncData("projects", async () => {
-    return queryCollection("projects").order("title", "ASC").all();
-  });
+  const route = useRoute()
+  const role = useState<string>('role', () => route.query.role as string || '')
+  const key = (suffix: string) => `content-${role.value ?? 'all'}-${suffix}`
+  const { data: projects } = useAsyncData(
+    key('projects'), 
+    () => {
+      let query = queryCollection("projects").order("title", "ASC")
+      if (role.value && role.value !== 'all') query = query.where("role", "=", role.value)
+      return query.all()
+    },
+    { watch: [role] }
+  );
 
-  const { data: profile } = useAsyncData("profile", async () => {
-    return queryCollection("profile").first();
-  });
+  const { data: profile } = useAsyncData(
+    key("profile"),
+    () => {
+      return queryCollection("profile")
+      .where("role", "=", role.value ?? 'all')
+      .first()
+    },
+    { watch: [role] }
+  );
 
-  const { data: socials } = useAsyncData("experience", () => {
-    return queryCollection("socials").first();
-  });
+  const { data: socials } = useAsyncData(
+    "socials",
+    () => queryCollection("socials").first()
+  );
 
-  const { data: contacts } = useAsyncData("certification", () => {
-    return queryCollection("contacts").first();
-  });
+  const { data: contacts } = useAsyncData(
+    "contacts", 
+    () => queryCollection("contacts").first()
+  );
 
-  const { data: stacks } = useAsyncData("stack", async () => {
-    return queryCollection("stack").first();
-  });
+  const { data: roles } = useAsyncData(
+    "roles", 
+    () => queryCollection("roles").first()
+  );
+
+  const { data: stacks } = useAsyncData(
+    key("stacks"),
+    async () => {
+      const results = await queryCollection("stack").all()
+       if (role.value && role.value !== 'all') return results.filter((item: StackCollectionItem) => item.role?.includes(role.value))
+      return results
+    },
+    { watch: [role] }
+  );
 
   return {
     profile,
     projects,
-    stacks: stacks.value?.items,
+    stacks,
     socials: socials.value?.items,
     contacts: contacts.value?.items,
+    roles: roles.value?.items,
   };
 };

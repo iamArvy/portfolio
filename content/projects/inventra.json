@@ -3,6 +3,6 @@
   "description": "Inventra is a modern, event-driven inventory management system built with a microservices architecture using NestJS. Designed for both store owners and administrators, it features role-based access, real-time inventory tracking, GraphQL/REST APIs, and gRPC-powered service communication.",
   "release": 2025,
   "tags": ["nest.js", "gRPC", "backend", "api", "authentication", "postgresql"],
-  "job": "fullstack",
+  "role": "backend",
   "repository": "https://github.com/iamArvy/inventra"
 }

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const { data: projects } = useAsyncData("projects", async () => {
-  return queryCollection("projects").order("title", "ASC").all();
-});
+// const { data: projects } = useAsyncData("projects", async () => {
+//   return queryCollection("projects").order("title", "ASC").all();
+// });
+const { projects } = useContent()
 </script>
 <template>
   <div class="grid auto-rows-min gap-4 md:grid-cols-2">

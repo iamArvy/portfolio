@@ -1,0 +1,1 @@
+{ "name": "PostgreSQL", "icon": "logos:postgresql", "role": ["backend", "cloud"] }

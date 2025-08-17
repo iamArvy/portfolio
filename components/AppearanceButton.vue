@@ -9,6 +9,6 @@ const { currentTheme, updateAppearance } = useAppearance();
     size="icon"
     @click="updateAppearance(currentTheme === 'light' ? 'dark' : 'light')"
   >
-    <Icon :icon="currentTheme === 'light' ? 'lucide:moon' : 'lucide:sun'" />
+    <Icon :icon="currentTheme === 'light' ? 'lucide:sun' : 'lucide:moon'" />
   </Button>
 </template>
