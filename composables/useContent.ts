@@ -2,7 +2,7 @@ import type { StackCollectionItem } from "@nuxt/content";
 
 export const useContent = () => {
   const route = useRoute()
-  const role = useState<string>('role', () => route.query.role as string || '')
+  const role = useState<string>('role', () => route.query.role as string || 'all')
   const key = (suffix: string) => `content-${role.value ?? 'all'}-${suffix}`
   const { data: projects } = useAsyncData(
     key('projects'), 
@@ -18,7 +18,7 @@ export const useContent = () => {
     key("profile"),
     () => {
       return queryCollection("profile")
-      .where("role", "=", role.value ?? 'all')
+      .where("role", "=", role.value)
       .first()
     },
     { watch: [role] }
