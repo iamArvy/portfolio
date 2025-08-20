@@ -35,7 +35,7 @@ const sections = [
 </script>
 <template>
   <div
-    class="flex h-full flex-1 flex-col gap-4 rounded-xl px-4 overflow-x-auto"
+    class="flex h-full flex-1 flex-col gap-4 rounded-xl lg:px-4 overflow-x-auto"
   >
     <SectionMain
       v-for="item in sections"
