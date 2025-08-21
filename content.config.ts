@@ -79,5 +79,32 @@ export default defineContentConfig({
         resume: z.string(),
       }),
     }),
+
+    page: defineCollection({
+      type: "data",
+      source: "page.json",
+      schema: z.object({
+        name: z.string(),
+        sections: z.array(
+          z.object({
+            id: z.string(),
+            icon: z.string(),
+            name: z.string(),
+            component: z.string(),
+            title: z.string().optional(),
+            description: z.string().optional(),
+            order: z.number()
+          })
+        ),
+        seo: z.object({
+          title: z.string(),
+          ogTitle: z.string(),
+          description: z.string(),
+          ogDescription: z.string(),
+          ogImage: z.string(),
+          twitterCard: z.string()
+        })
+      }),
+    }),
   },
 });

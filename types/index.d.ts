@@ -1,8 +1,8 @@
 export interface NavItem {
-  title: string;
-  href: string;
+  name: string;
+  id: string;
   icon?: string;
-  isActive?: boolean;
+  // isActive?: boolean;
 }
 
 export type Appearance = "light" | "dark" | "system";

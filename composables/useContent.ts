@@ -2,8 +2,13 @@ import type { StackCollectionItem } from "@nuxt/content";
 
 export const useContent = () => {
   const route = useRoute()
-  const role = useState<string>('role', () => route.query.role as string || '')
+  const role = useState<string>('role', () => route.query.role as string || 'all')
   const key = (suffix: string) => `content-${role.value ?? 'all'}-${suffix}`
+  const { data: page } = useAsyncData(
+    "page", 
+    () => queryCollection("page").first()
+  );
+
   const { data: projects } = useAsyncData(
     key('projects'), 
     () => {
@@ -18,7 +23,7 @@ export const useContent = () => {
     key("profile"),
     () => {
       return queryCollection("profile")
-      .where("role", "=", role.value ?? 'all')
+      .where("role", "=", role.value)
       .first()
     },
     { watch: [role] }
@@ -50,11 +55,13 @@ export const useContent = () => {
   );
 
   return {
+    page,
     profile,
     projects,
     stacks,
     socials: socials.value?.items,
     contacts: contacts.value?.items,
     roles: roles.value?.items,
+    sections: page.value?.sections
   };
 };

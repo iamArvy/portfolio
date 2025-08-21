@@ -7,25 +7,25 @@ import {
   SidebarMenuItem,
 } from "~/components/ui/sidebar";
 import { Icon } from "@iconify/vue";
-import { navs } from "~/data";
 
-const { isCurrentRoute } = useNav(navs);
-const { socials, contacts } = useContent();
+const { socials, contacts, sections } = useContent();
+const { isCurrentRoute } = useNav(sections ?? []);
+
 </script>
 
 <template>
   <SidebarGroup class="px-2 py-0 mb-2">
     <SidebarGroupLabel>Navigation</SidebarGroupLabel>
     <SidebarMenu>
-      <SidebarMenuItem v-for="item in navs" :key="item.title">
+      <SidebarMenuItem v-for="item in sections" :key="item.order">
         <SidebarMenuButton
           as-child
-          :is-active="isCurrentRoute(item.href)"
+          :is-active="isCurrentRoute(item.id)"
           :tooltip="item.title"
         >
-          <NuxtLink :href="'#' + item.href">
+          <NuxtLink :href="'#' + item.id">
             <Icon v-if="item.icon" :icon="item.icon" width="50" />
-            <span>{{ item.title }}</span>
+            <span>{{ item.name }}</span>
           </NuxtLink>
         </SidebarMenuButton>
       </SidebarMenuItem>

@@ -1,0 +1,38 @@
+{
+    "name": "home",
+    "sections": [
+        {
+            "id": "profile",
+            "name": "Profile",
+            "icon": "mingcute:profile-fill",
+            "component": "ProfileSection",
+            "order": 1
+        },
+        {
+            "id": "stacks",
+            "icon": "mingcute:layers-fill",
+            "title": "Tech Stack",
+            "name": "Stack",
+            "description": "Tools, languages, and frameworks I use.",
+            "component": "StackSection",
+            "order": 2
+        },
+        {
+            "id": "projects",
+            "icon": "grommet-icons:projects",
+            "name": "Projects",
+            "title": "Featured Projects",
+            "description": "A showcase of my most impactful and polished work.",
+            "component": "ProjectSection",
+            "order": 3
+        }
+    ],
+    "seo": {
+        "title": "My Portfolio - Projects",
+        "ogTitle": "My Portfolio - Projects",
+        "description": "Showcase of my projects, skills, and experiences.",
+        "ogDescription": "Showcase of my projects, skills, and experiences.",
+        "ogImage": "/og-image.png",
+        "twitterCard": "summary_large_image"
+    }
+}
