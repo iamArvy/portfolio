@@ -32,7 +32,7 @@ export function useNav(navItems: NavItem[]) {
     setupIntersectionObserver();
 
     navItems.forEach((nav) => {
-      const id = nav.href;
+      const id = nav.id;
       const el = document.getElementById(id);
       if (el) {
         intersectionObserver!.observe(el);

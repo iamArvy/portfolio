@@ -4,6 +4,11 @@ export const useContent = () => {
   const route = useRoute()
   const role = useState<string>('role', () => route.query.role as string || 'all')
   const key = (suffix: string) => `content-${role.value ?? 'all'}-${suffix}`
+  const { data: page } = useAsyncData(
+    "page", 
+    () => queryCollection("page").first()
+  );
+
   const { data: projects } = useAsyncData(
     key('projects'), 
     () => {
@@ -50,11 +55,13 @@ export const useContent = () => {
   );
 
   return {
+    page,
     profile,
     projects,
     stacks,
     socials: socials.value?.items,
     contacts: contacts.value?.items,
     roles: roles.value?.items,
+    sections: page.value?.sections
   };
 };
