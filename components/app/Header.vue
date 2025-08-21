@@ -21,28 +21,25 @@ import {
 //   TooltipProvider,
 //   TooltipTrigger,
 // } from "~/components/ui/tooltip";
-import type { BreadcrumbItem } from "~/types";
 import { Menu, Search } from "lucide-vue-next";
-import { computed } from "vue";
 import { Icon } from "@iconify/vue";
-import { navs } from "~/data";
 
 interface Props {
-  breadcrumbs?: BreadcrumbItem[];
+  breadcrumbs?: string[];
 }
 
 const props = withDefaults(defineProps<Props>(), {
   breadcrumbs: () => [],
 });
 
-const nav = useNav();
-const { socials, contacts } = await useContent();
-const activeItemStyles = computed(
-  () => (url: string) =>
-    nav.isCurrentRoute(url)
-      ? "text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100"
-      : ""
-);
+const { socials, contacts, sections } = useContent();
+const {isCurrentRoute} = useNav(sections ?? []);
+// const activeItemStyles = computed(
+//   () => (url: string) =>
+//     nav.isCurrentRoute(url)
+//       ? "text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100"
+//       : ""
+// );
 </script>
 
 <template>
@@ -69,9 +66,9 @@ const activeItemStyles = computed(
               >
                 <nav class="-mx-1 space-y-1">
                   <NuxtLink
-                    v-for="item in navs"
-                    :key="item.title"
-                    :to="item.href"
+                    v-for="item in sections"
+                    :key="item.name"
+                    :to="item.id"
                     active-class="text-neutral-900 bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-100"
                     class="flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent"
                   >
@@ -127,15 +124,15 @@ const activeItemStyles = computed(
           <NavigationMenu class="ml-10 flex h-full items-stretch">
             <NavigationMenuList class="flex h-full items-stretch space-x-2">
               <NavigationMenuItem
-                v-for="(item, index) in navs"
-                :key="index"
+                v-for="item in sections"
+                :key="item.order"
                 class="relative flex h-full items-center"
               >
-                <NuxtLink :to="item.href">
+                <NuxtLink :to="item.id">
                   <NavigationMenuLink
+                    :active="isCurrentRoute(item.id)"
                     :class="[
                       navigationMenuTriggerStyle(),
-                      activeItemStyles(item.href),
                       'h-9 cursor-pointer px-3',
                     ]"
                   >
@@ -148,7 +145,7 @@ const activeItemStyles = computed(
                   </NavigationMenuLink>
                 </NuxtLink>
                 <div
-                  v-if="nav.isCurrentRoute(item.href)"
+                  v-if="isCurrentRoute(item.id)"
                   class="absolute bottom-0 left-0 h-0.5 w-full translate-y-px bg-black dark:bg-white"
                 >
                   <span />
