@@ -7,9 +7,9 @@ defineProps<{
 </script>
 <template>
   <div
-    class="group relative flex cursor-pointer flex-col space-y-1 rounded-sm transition-all ease-in-out duration-300"
+    class="group relative flex flex-col space-y-1 rounded-sm transition-all ease-in-out duration-300 overflow-hidden"
   >
-    <NuxtImg :src="project.image" placeholder="/projects/sample.png" :alt="project.title" class="w-full aspect-video object-cover rounded-lg" />
+    <NuxtImg :src="project.image" placeholder="/projects/sample.png" :alt="project.title" class="w-full aspect-video object-cover rounded-lg transform transition-transform duration-300 group-hover:scale-105" />
     <div class="p-1">
       <div class="flex-1 space-y-1">
         <h1 class="text-primary text-xl font-bold line-clamp-2 capitalize">
@@ -25,7 +25,7 @@ defineProps<{
           :href="project.live"
           target="_blank"
         >
-          <Button><Icon name="lucide:eye" />View</Button>
+          <Button clas="cursor-pointer"><Icon name="lucide:eye" />View</Button>
         </NuxtLink>
         <NuxtLink
           v-if="project.repository"
@@ -34,7 +34,7 @@ defineProps<{
           :href="project.repository"
           target="_blank"
         >
-          <Button>
+          <Button class="cursor-pointer">
             <Icon name="mingcute:code-fill" size="20px" />
             Code
           </Button>
