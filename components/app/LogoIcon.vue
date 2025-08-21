@@ -10,11 +10,12 @@ interface Props {
 }
 
 defineProps<Props>();
-const { profile } = useContent();
+const { appName } = useAppConfig();
+
 </script>
 
 <template>
   <span class="font-bold">
-    {{ getInitials(profile?.name) }}
+    {{ getInitials(appName) }}
   </span>
 </template>

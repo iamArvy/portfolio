@@ -5,12 +5,11 @@
 const { projects } = useContent()
 </script>
 <template>
-  <div class="grid auto-rows-min gap-4 md:grid-cols-2">
+  <div class="grid auto-rows-min gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
     <ProjectCard
       v-for="project in projects"
       :key="project.title"
       :project="project"
-      class="relative overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border p-2"
     />
   </div>
 </template>

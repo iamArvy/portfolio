@@ -12,7 +12,7 @@ export const useContent = () => {
   const { data: projects } = useAsyncData(
     key('projects'), 
     () => {
-      let query = queryCollection("projects").order("title", "ASC")
+      let query = queryCollection("projects").order("rating", "ASC")
       if (role.value && role.value !== 'all') query = query.where("role", "=", role.value)
       return query.all()
     },

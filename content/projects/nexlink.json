@@ -1,8 +1,7 @@
 {
   "title": "nexlink",
   "description": "Nexlink is a modular, full-featured social media application built with NestJS microservices. It supports both REST and GraphQL APIs, real-time chat via WebSockets, and event-driven messaging with Redis. Designed for scalability and flexibility, Nexlink powers features like user profiles, friend/follow systems, group chats, and role-based access control.",
-  "release": 2025,
-  "tags": ["nest.js", "gRPC", "backend", "api", "authentication", "postgresql"],
+  "rating": 1,
   "role": "backend",
   "repository": "https://github.com/iamArvy/nexlink"
 }
