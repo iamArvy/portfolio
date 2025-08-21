@@ -1,8 +1,7 @@
 {
   "title": "Docsly",
   "description": "Docsly is a clean, customizable documentation template built with Nuxt Content. It supports structured navigation, markdown-based content, and dynamic grouping—perfect for product, API, or internal docs.",
-  "release": 2025,
-  "tags": ["nuxt", "vue", "frontend", "docs", "template"],
+  "rating": 4,
   "role": "web",
   "live": "https://docsly.netlify.app",
   "repository": "https://github.com/iamArvy/docsly"

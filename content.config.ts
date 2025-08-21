@@ -8,11 +8,11 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
-        tags: z.array(z.string()).optional(),
-        release: z.number().optional(),
+        rating: z.number(),
         repository: z.string(),
         live: z.string().optional(),
-        role: z.string()
+        role: z.string(),
+        image: z.string()
       }),
     }),
 

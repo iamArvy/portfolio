@@ -19,7 +19,7 @@ const { appName, image } = useAppConfig()
           <h1 class="text-xl sm:text-2xl md:text-4xl font-bold text-sidebar-primary">
             {{ appName }}
           </h1>
-          <h3 class="text-base md:text-lg font-bold">
+          <h3 class="text-sm md:text-lg font-bold">
             {{ profile.roleName }}
           </h3>
         </div>
