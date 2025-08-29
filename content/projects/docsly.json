@@ -4,5 +4,6 @@
   "rating": 4,
   "role": "web",
   "live": "https://docsly.netlify.app",
-  "repository": "https://github.com/iamArvy/docsly"
+  "repository": "https://github.com/iamArvy/docsly",
+  "image": "/images/projects/docsly.png"
 }
