@@ -1,0 +1,9 @@
+{
+  "title": "Leenkonnect",
+  "description": "A website for an IT Consultation Company with bookings, blog and e-commerce features built with Nuxt and Laravel API",
+  "rating": 5,
+  "role": "web",
+  "live": "https://leenkonnect.vercel.app",
+  "repository": "https://github.com/iamArvy/leenkonnect-frontend",
+  "image": "/images/projects/leenkonnect.png"
+}
