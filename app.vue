@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useHead } from "#imports";
-import type { LayoutKey } from "#build/types/layouts";
+import type { UseSeoMetaInput } from '@unhead/vue';
+import { meta } from './constants/seo';
 
 useHead({
   script: [
@@ -10,10 +10,10 @@ useHead({
     },
   ],
 });
-const { layout } = useAppConfig();
+useSeoMeta(meta as UseSeoMetaInput)
 </script>
 <template>
-  <NuxtLayout :name="layout as LayoutKey">
+  <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
 </template>

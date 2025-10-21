@@ -5,5 +5,6 @@
   "role": "web",
   "live": "https://docsly.netlify.app",
   "repository": "https://github.com/iamArvy/docsly",
-  "image": "/images/projects/docsly.png"
+  "image": "/images/projects/docsly.png",
+  "tags": [ "NuxtJS", "Nuxt Content", "Typescript", "TailwindCSS", "Shadcn"]
 }

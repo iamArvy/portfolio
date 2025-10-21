@@ -4,5 +4,6 @@
   "rating": 5,
   "role": "web",
   "live": "https://lodgr-pi.vercel.app",
-  "image": "/images/projects/lodgr.png"
+  "image": "/images/projects/lodgr.png",
+  "tags": [ "NuxtJS", "Nuxt Server", "Paystack", "Typescript", "TailwindCSS"]
 }

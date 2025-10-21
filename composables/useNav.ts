@@ -1,7 +1,7 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import type { NavItem } from "@/types";
+import { navs } from "~/constants";
 
-export function useNav(navItems: NavItem[]) {
+export function useNav() {
   const currentSection = ref("");
   let intersectionObserver: IntersectionObserver | null = null;
 
@@ -31,7 +31,7 @@ export function useNav(navItems: NavItem[]) {
   function observeNavSections() {
     setupIntersectionObserver();
 
-    navItems.forEach((nav) => {
+    navs.forEach((nav) => {
       const id = nav.id;
       const el = document.getElementById(id);
       if (el) {

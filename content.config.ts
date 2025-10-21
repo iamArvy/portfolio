@@ -12,7 +12,8 @@ export default defineContentConfig({
         repository: z.string(),
         live: z.string().optional(),
         role: z.string(),
-        image: z.string()
+        image: z.string(),
+        tags: z.array(z.string())
       }),
     }),
 
@@ -77,33 +78,6 @@ export default defineContentConfig({
         role: z.string(),
         roleName: z.string(),
         resume: z.string(),
-      }),
-    }),
-
-    page: defineCollection({
-      type: "data",
-      source: "page.json",
-      schema: z.object({
-        name: z.string(),
-        sections: z.array(
-          z.object({
-            id: z.string(),
-            icon: z.string(),
-            name: z.string(),
-            component: z.string(),
-            title: z.string().optional(),
-            description: z.string().optional(),
-            order: z.number()
-          })
-        ),
-        seo: z.object({
-          title: z.string(),
-          ogTitle: z.string(),
-          description: z.string(),
-          ogDescription: z.string(),
-          ogImage: z.string(),
-          twitterCard: z.string()
-        })
       }),
     }),
   },
