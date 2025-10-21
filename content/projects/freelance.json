@@ -1,0 +1,8 @@
+{
+  "title": "Freelance Portfolio",
+  "description": "A website for my Freelance Web Development business built with Nuxt and Nuxt Content",
+  "rating": 5,
+  "role": "web",
+  "live": "https://oluwaseyi-oke-freelance-portfolio.vercel.app",
+  "image": "/images/projects/freelance.png"
+}
