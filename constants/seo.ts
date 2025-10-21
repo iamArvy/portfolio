@@ -1,7 +1,7 @@
 
 const data = {
   title: "Oluwaseyi Oke Portfolio - Fullstack Software Engineer and Cloud Solutions Architect",
-  description: "Oluwaseyi Oke is a Web Developer, Backend Engineer and Cloud Solutions Architect. This website is contains details about him and his work.",
+  description: "Oluwaseyi Oke is a Web Developer, Backend Engineer, and Cloud Solutions Architect specializing in building scalable web applications and cloud-native solutions. Explore his portfolio to learn more about his projects, skills, and professional experience.",
   author: "Oluwaseyi Oke",
   keywords: "Web Development, Software Engineer, Backend Engineer, Cloud Solutions Architect, Fullstack Developer, Portfolio",
   domain: "https://oluwaseyi-oke-portfolio.vercel.app",
