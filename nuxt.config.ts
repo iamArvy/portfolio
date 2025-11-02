@@ -41,11 +41,18 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         toc: {
-          depth: 2,
-          searchDepth: 2,
+          depth: 3,
         },
         highlight: {
-          theme: "github-light",
+          theme: {
+            // Default theme (same as single string)
+            default: 'github-light',
+            // Theme used if `html.dark`
+            dark: 'github-dark',
+            // Theme used if `html.sepia`
+            sepia: 'monokai'
+          },
+          langs: ['js', 'ts', 'html', 'bash', 'json'],
         },
       },
     },

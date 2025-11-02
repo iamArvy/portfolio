@@ -80,5 +80,17 @@ export default defineContentConfig({
         resume: z.string(),
       }),
     }),
+
+    blogs: defineCollection({
+      type: "page",
+      source: "blogs/*.md",
+      schema: z.object({
+        title: z.string(),
+        slug: z.string(),
+        publishedAt: z.string(),
+        tags: z.array(z.string()).optional(),
+        image: z.string().optional(),
+      }),
+    }),
   },
 });
