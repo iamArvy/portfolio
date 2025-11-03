@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { navs } from "~/constants";
-const { socials, contacts } = useContent();
+import { navs, socials, contact } from "~/constants";
 const { isCurrentRoute } = useNav(navs);
-const { path } = useRoute();
+const { path, name } = useRoute();
+const isBlogActive = computed(() => path.startsWith("/blog"));
 </script>
 
 <template>
@@ -12,22 +12,18 @@ const { path } = useRoute();
       <SidebarMenuItem v-for="item in navs" :key="item.order">
         <SidebarMenuButton
           as-child
-          :is-active="isCurrentRoute(item.id)"
+          :is-active="isCurrentRoute(item.id) && name === 'index'"
           :tooltip="item.label"
         >
-          <NuxtLink :href="'/#' + item.id">
+          <NuxtLink :to="'/#' + item.id">
             <Icon v-if="item.icon" :name="item.icon" width="50" />
             <span>{{ item.label }}</span>
           </NuxtLink>
         </SidebarMenuButton>
       </SidebarMenuItem>
       <SidebarMenuItem>
-        <SidebarMenuButton
-          as-child
-          :is-active="path.startsWith('/blog')"
-          tooltip="blog"
-        >
-          <NuxtLink href="/blog">
+        <SidebarMenuButton as-child :is-active="isBlogActive" tooltip="blog">
+          <NuxtLink to="/blog">
             <Icon name="lucide:book" width="50" />
             <span>Blog</span>
           </NuxtLink>
@@ -38,7 +34,7 @@ const { path } = useRoute();
   <SidebarGroup class="px-2 py-0 mb-2">
     <SidebarGroupLabel>Contact</SidebarGroupLabel>
     <SidebarMenu>
-      <SidebarMenuItem v-for="item in contacts" :key="item.text">
+      <SidebarMenuItem v-for="item in contact" :key="item.text">
         <SidebarMenuButton as-child :tooltip="item.text">
           <NuxtLink :href="item.url" target="_blank">
             <Icon v-if="item.icon" :name="item.icon" width="50" />

@@ -13,7 +13,7 @@ export default defineContentConfig({
         live: z.string().optional(),
         role: z.string(),
         image: z.string(),
-        tags: z.array(z.string())
+        tags: z.array(z.string()),
       }),
     }),
 
@@ -23,37 +23,7 @@ export default defineContentConfig({
       schema: z.object({
         name: z.string(),
         icon: z.string(),
-        role: z.array(
-          z.string()
-        )
-      })
-    }),
-
-    socials: defineCollection({
-      type: "data",
-      source: "social.json",
-      schema: z.object({
-        items: z.array(
-          z.object({
-            url: z.string(),
-            platform: z.string(),
-            icon: z.string(),
-          })
-        ),
-      }),
-    }),
-
-    contacts: defineCollection({
-      type: "data",
-      source: "contact.json",
-      schema: z.object({
-        items: z.array(
-          z.object({
-            url: z.string(),
-            icon: z.string(),
-            text: z.string(),
-          })
-        ),
+        role: z.array(z.string()),
       }),
     }),
 

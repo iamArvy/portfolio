@@ -1,5 +1,4 @@
 import { ref, onMounted } from "vue";
-// import { navs } from "~/constants";
 import { useIntersectionObserver } from "@vueuse/core";
 
 interface Navigation {

@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const { stacks } = useContent();
+import type { Stack } from "~/interfaces";
+
+defineProps<{
+  stacks?: Stack[];
+}>();
 </script>
 <template>
   <SectionLayout>

@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <Sidebar collapsible="icon" variant="inset">
     <SidebarHeader>

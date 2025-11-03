@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { UseSeoMetaInput } from '@unhead/vue';
-import { meta } from './constants/seo';
+import type { UseSeoMetaInput } from "@unhead/vue";
+import { meta } from "./constants/seo";
 
 useHead({
   script: [
@@ -10,7 +10,7 @@ useHead({
     },
   ],
 });
-useSeoMeta(meta as UseSeoMetaInput)
+useSeoMeta(meta as UseSeoMetaInput);
 </script>
 <template>
   <NuxtLayout>
