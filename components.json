@@ -4,17 +4,18 @@
   "typescript": true,
   "tailwind": {
     "config": "",
-    "css": "assets/css/tailwind.css",
+    "css": "app/assets/css/tailwind.css",
     "baseColor": "slate",
     "cssVariables": true,
     "prefix": ""
   },
+  "iconLibrary": "lucide",
   "aliases": {
     "components": "@/components",
-    "composables": "@/composables",
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
-    "lib": "@/lib"
+    "lib": "@/lib",
+    "composables": "@/composables"
   },
-  "iconLibrary": "lucide"
+  "registries": {}
 }

@@ -1,20 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+  modules: ["@nuxt/icon", "@nuxt/content", "shadcn-nuxt", "@nuxt/image"],
   css: ["~/assets/css/tailwind.css"],
-  modules: [
-    "@nuxt/eslint",
-    "@nuxt/fonts",
-    "@nuxt/image",
-    "@nuxt/scripts",
-    "@nuxt/test-utils",
-    "shadcn-nuxt",
-    "@vee-validate/nuxt",
-    "@nuxt/content",
-    "@nuxt/icon",
-  ],
   vite: {
     plugins: [tailwindcss()],
   },
@@ -26,16 +17,9 @@ export default defineNuxtConfig({
     prefix: "",
     /**
      * Directory that the component lives in.
-     * @default "./components/ui"
+     * @default "./app/components/ui"
      */
-    componentDir: "./components/ui",
-  },
-  runtimeConfig: {
-    public: {
-      apiBase: process.env.API_BASE,
-      authProvider: process.env.AUTH_PROVIDER,
-      githubToken: process.env.GITHUB_TOKEN,
-    },
+    componentDir: "./app/components/ui",
   },
   content: {
     build: {
@@ -46,13 +30,13 @@ export default defineNuxtConfig({
         highlight: {
           theme: {
             // Default theme (same as single string)
-            default: 'github-light',
+            default: "github-light",
             // Theme used if `html.dark`
-            dark: 'github-dark',
+            dark: "github-dark",
             // Theme used if `html.sepia`
-            sepia: 'monokai'
+            sepia: "monokai",
           },
-          langs: ['js', 'ts', 'html', 'bash', 'json'],
+          langs: ["js", "ts", "html", "bash", "json"],
         },
       },
     },
