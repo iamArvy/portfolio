@@ -1,6 +1,7 @@
 export interface Profile {
+  name: string;
+  image: string;
+  job_description: string;
   bio: string;
-  role: string;
-  roleName: string;
   resume: string;
 }

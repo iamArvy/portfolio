@@ -1,0 +1,10 @@
+---
+  title: Lodgr
+  description: A website for a House Rentals Company with a Catalogue for browsing, booking features, and payment integration with Paystack built with Nuxt and Nuxt Server
+  rating: 5
+  role: web
+  live: https://lodgr-pi.vercel.app
+  image: /images/projects/lodgr.png
+  tags: [ "NuxtJS", "Nuxt Server", "Paystack", "Typescript", "TailwindCSS"]
+  slug: lodgr
+---

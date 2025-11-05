@@ -13,6 +13,7 @@ useHead({
 useSeoMeta(meta as UseSeoMetaInput);
 </script>
 <template>
+  <NuxtLoadingIndicator />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>

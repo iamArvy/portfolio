@@ -1,20 +1,22 @@
+import { Book, BookOpen, Folder, Rss, User } from "lucide-vue-next";
+
 export const navs = [
     {
-        id: "profile",
+        path: "/",
         label: "Profile",
-        icon: "mingcute:profile-fill",
+        icon: User,
         order: 1
     },
     {
-        id: "stacks",
-        icon: "mingcute:layers-fill",
-        label: "Stack",
+        path: "/projects",
+        icon: Folder,
+        label: "Projects",
         order: 2
     },
     {
-        id: "projects",
-        icon: "grommet-icons:projects",
-        label: "Projects",
+        path: "/blog",
+        icon: BookOpen,
+        label: "Blog",
         order: 3
     }
 ]

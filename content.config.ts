@@ -3,17 +3,16 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 export default defineContentConfig({
   collections: {
     projects: defineCollection({
-      type: "data",
-      source: "projects/*.json",
+      type: "page",
+      source: "projects/*.md",
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
         rating: z.number(),
-        repository: z.string(),
-        live: z.string().optional(),
         role: z.string(),
         image: z.string(),
         tags: z.array(z.string()),
+        slug: z.string()
       }),
     }),
 
@@ -37,17 +36,6 @@ export default defineContentConfig({
             value: z.string(),
           })
         ),
-      }),
-    }),
-
-    profile: defineCollection({
-      type: "data",
-      source: "profiles/*.json",
-      schema: z.object({
-        bio: z.string(),
-        role: z.string(),
-        roleName: z.string(),
-        resume: z.string(),
       }),
     }),
 

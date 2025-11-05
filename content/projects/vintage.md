@@ -1,0 +1,10 @@
+---
+  title: Vintage By Naomi
+  description: A Modern Luxury Spa Website with a Seamless, Step-by-Step Booking Experience built with Nuxt
+  rating: 5
+  role: web
+  live: https://vintage-by-naomie-demo.vercel.app
+  image: /images/projects/vintage.png
+  tags: [ "NuxtJS", "Nuxt Content", "Typescript", "TailwindCSS", "Shadcn"]
+  slug: vintage
+---

@@ -1,63 +1,66 @@
 <script setup lang="ts">
-import type { StackCollectionItem } from "@nuxt/content";
-import { name } from "~/constants";
+import { profile } from "~/constants";
 
 const breadcrumbs = useBreadcrumbs();
 onMounted(() => {
   breadcrumbs.value = [
     {
-      title: `${name}  Portfolio`,
+      title: `${profile.name}  Portfolio`,
     },
   ];
 });
-const { roles, role } = useRoles();
 const { data, pending, error } = await useAsyncData(
-  `homepage${role.value ? " " + role.value : ""}`,
+  'homepage',
   async () => {
     const projectsPromise = (async () => {
-      let query = queryCollection("projects").order("rating", "DESC");
-      if (role.value && role.value !== "all")
-        query = query.where("role", "=", role.value);
-      return query.all();
+      return queryCollection("projects").order("rating", "DESC").limit(3).all();
     })();
-
-    const profilePromise = (async () => {
-      return queryCollection("profile").where("role", "=", role.value).first();
-    })();
-
     const stacksPromise = (async () => {
-      const results = await queryCollection("stack").all();
-      if (role.value && role.value !== "all")
-        return results.filter((item: StackCollectionItem) =>
-          item.role?.includes(role.value)
-        );
-      return results;
+      return queryCollection("stack").all();
     })();
 
-    // Run all in parallel
-    const [projects, profile, stacks] = await Promise.all([
+    const [projects, stacks] = await Promise.all([
       projectsPromise,
-      profilePromise,
       stacksPromise,
     ]);
-
-    return { projects, profile, roles, stacks };
-  },
-  { watch: [role] }
+    console.log(projects, stacks);
+    return { projects, stacks };
+  }
 );
 </script>
 <template>
-  <div
-    class="flex h-full flex-1 flex-col gap-4 rounded-xl lg:px-4 overflow-x-auto"
-  >
-    <div id="profile">
-      <Profile :profile="data?.profile" />
-    </div>
+  <div class="flex h-full flex-1 flex-col gap-4 rounded-xl lg:px-4 overflow-x-auto">
+    <section class="p-2">
+      <div class="flex flex-row space-x-3 lg:space-x-7">
+        <NuxtImg :src="profile.image" :alt="profile.name" class="rounded-sm" placeholder quality="100"
+          sizes="100 md:150 lg:250px" fit="contain" />
+        <div class="flex flex-col space-y-2 col-span-2">
+          <div>
+            <h1 class="text-xl sm:text-2xl md:text-4xl font-bold text-sidebar-primary">
+              {{ profile.name }}
+            </h1>
+            <h3 class="text-sm md:text-lg font-bold">
+              {{ profile.job_description }}
+            </h3>
+          </div>
+          <p class="hidden lg:flex text-sm lg:text-base">
+            {{ profile.bio }}
+          </p>
+          <ResumeButton v-if="profile.resume" :file="profile.resume" />
+        </div>
+      </div>
+      <p class="lg:hidden mt-3 text-sm md:text-base">
+        {{ profile.bio }}
+      </p>
+    </section>
+    <SectionLayout id="projects" title="Featured Projects"
+      description="A showcase of my most impactful and polished work.">
+      <div class="grid auto-rows-min gap-5 lg:grid-cols-3">
+        <ProjectItem v-for="project in data?.projects" :key="project.title" :project="project" />
+      </div>
+    </SectionLayout>
     <div id="stacks">
       <Stacks :stacks="data?.stacks" />
-    </div>
-    <div id="projects">
-      <Projects :projects="data?.projects" />
     </div>
   </div>
 </template>
