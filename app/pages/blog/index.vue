@@ -9,7 +9,7 @@ const breadcrumbs = useBreadcrumbs();
 onMounted(() => {
   breadcrumbs.value = [
     {
-      title: `Arvy's Blog`,
+      title: `Blog`,
     },
   ];
 });
