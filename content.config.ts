@@ -7,7 +7,7 @@ export default defineContentConfig({
       source: "projects/*.md",
       schema: z.object({
         title: z.string(),
-        description: z.string().optional(),
+        description: z.string(),
         rating: z.number(),
         role: z.string(),
         image: z.string(),

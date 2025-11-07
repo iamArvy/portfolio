@@ -1,7 +1,7 @@
-import { name } from "~/constants";
+import { profile } from "~/constants";
 
 export const useAppTitle = (pageTitle?: string) => {
   useHead({
-    title: pageTitle ? `${pageTitle} - ${name}` : name,
+    title: pageTitle ? `${pageTitle} - ${profile.name}` : profile.name,
   });
 };

@@ -18,13 +18,16 @@ const { data, pending, error } = await useAsyncData(
     const stacksPromise = (async () => {
       return queryCollection("stack").all();
     })();
+    const blogPromise = (async () => {
+      return queryCollection("blogs").order("publishedAt", "DESC").limit(4).all();
+    })();
 
-    const [projects, stacks] = await Promise.all([
+    const [projects, stacks, blog] = await Promise.all([
       projectsPromise,
       stacksPromise,
+      blogPromise
     ]);
-    console.log(projects, stacks);
-    return { projects, stacks };
+    return { projects, stacks, blog };
   }
 );
 </script>
@@ -53,14 +56,19 @@ const { data, pending, error } = await useAsyncData(
         {{ profile.bio }}
       </p>
     </section>
-    <SectionLayout id="projects" title="Featured Projects"
-      description="A showcase of my most impactful and polished work.">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 space-y-3">
-        <ProjectItem v-for="project in data?.projects" :key="project.title" :project="project" />
-      </div>
-    </SectionLayout>
     <div id="stacks">
       <Stacks :stacks="data?.stacks" />
     </div>
+    <SectionLayout id="projects" title="Featured Projects"
+      description="A showcase of my most impactful and polished work.">
+      <GridRenderer>
+        <ProjectItem v-for="project in data?.projects" :key="project.title" :project="project" />
+      </GridRenderer>
+    </SectionLayout>
+    <SectionLayout id="projects" title="Latest Blogs" description="A showcase of my most impactful and polished work.">
+      <GridRenderer>
+        <BlogItem v-for="post in data?.blog" :key="post.title" :post="post" />
+      </GridRenderer>
+    </SectionLayout>
   </div>
 </template>
