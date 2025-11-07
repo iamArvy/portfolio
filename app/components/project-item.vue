@@ -15,10 +15,6 @@ defineProps<{ project: ProjectsCollectionItem }>();
         {{ project.title }}
       </h1>
       <p class="text-xs line-clamp-4 flex-1">{{ project.description }}</p>
-      <!-- <NuxtLink :to="project.path" class="group text-sm">
-        Read More
-        <ArrowRightIcon class="inline-block w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-      </NuxtLink> -->
     </div>
   </div>
 </template>

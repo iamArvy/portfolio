@@ -19,6 +19,7 @@ onMounted(() => {
     },
   ];
 });
+useAppTitle(blog.value?.title ?? "Blog");
 </script>
 <template>
   <PageRenderer v-if="blog" :page="blog" />
