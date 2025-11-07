@@ -65,7 +65,7 @@ const { data, pending, error } = await useAsyncData(
         <ProjectItem v-for="project in data?.projects" :key="project.title" :project="project" />
       </GridRenderer>
     </SectionLayout>
-    <SectionLayout id="projects" title="Latest Blogs" description="A showcase of my most impactful and polished work.">
+    <SectionLayout id="projects" title="Latest Blogs" description="Some of my latest writings and tutorials.">
       <GridRenderer>
         <BlogItem v-for="post in data?.blog" :key="post.title" :post="post" />
       </GridRenderer>
