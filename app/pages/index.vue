@@ -13,7 +13,7 @@ const { data, pending, error } = await useAsyncData(
   'homepage',
   async () => {
     const projectsPromise = (async () => {
-      return queryCollection("projects").order("rating", "DESC").limit(3).all();
+      return queryCollection("projects").order("rating", "DESC").limit(4).all();
     })();
     const stacksPromise = (async () => {
       return queryCollection("stack").all();
@@ -55,8 +55,8 @@ const { data, pending, error } = await useAsyncData(
     </section>
     <SectionLayout id="projects" title="Featured Projects"
       description="A showcase of my most impactful and polished work.">
-      <div class="flex flex-wrap space-y-3 justify-center auto-rows-min md:grid-cols-2 lg:grid-cols-3 ">
-        <ProjectItem v-for="project in data?.projects" :key="project.title" :project="project" class="lg:w-1/2 px-1" />
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 space-y-3">
+        <ProjectItem v-for="project in data?.projects" :key="project.title" :project="project" />
       </div>
     </SectionLayout>
     <div id="stacks">

@@ -35,7 +35,7 @@ const isOpen = useState("sidebarOpen", () => true);
     </Sidebar>
     <SidebarInset>
       <AppSidebarHeader class="sticky top-0 z-50 bg-background rounded-t-md" />
-      <div>
+      <div class="p-3">
         <slot />
       </div>
     </SidebarInset>
