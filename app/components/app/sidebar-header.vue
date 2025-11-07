@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { socials } from "~/constants";
 import Breadcrumbs from "./breadcrumbs.vue";
 const breadcrumbs = useBreadcrumbs();
-const { name } = useRoute()
+const route = useRoute()
 </script>
 
 <template>
@@ -14,12 +13,7 @@ const { name } = useRoute()
         <Breadcrumbs :breadcrumbs="breadcrumbs" />
       </template>
       <div class="ml-auto flex items-center gap-0.5">
-        <RoleSwitcher v-if="name === 'projects'" />
-        <Button as-child v-for="item in socials" variant="ghost" size="icon">
-          <NuxtLink :href="item.url">
-            <Icon :name="item.icon" />
-          </NuxtLink>
-        </Button>
+        <RoleSwitcher v-if="route.name === 'projects'" />
         <AppearanceButton />
       </div>
     </div>

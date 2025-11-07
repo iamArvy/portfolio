@@ -41,7 +41,7 @@ export default defineContentConfig({
 
     blogs: defineCollection({
       type: "page",
-      source: "blogs/*.md",
+      source: "blog/*.md",
       schema: z.object({
         title: z.string(),
         slug: z.string(),

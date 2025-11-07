@@ -1,24 +1,24 @@
 <script setup lang="ts">
+import type { BlogsCollectionItem } from '@nuxt/content';
 import { Calendar } from 'lucide-vue-next';
-import type { Post } from '~/interfaces';
 import placeholder from '~/assets/images/placeholder.png';
-defineProps<Post>()
+defineProps<{ post: BlogsCollectionItem }>()
 </script>
 <template>
   <Card class="py-0 overflow-hidden transition-all duration-300 group animate-fade-in cursor-pointer"
-    @click="navigateTo(`/blog/${slug}`)">
+    @click="navigateTo(post.path)">
     <div class="relative overflow-hidden aspect-video">
-      <img :src="image ?? placeholder" :alt="title" loading="lazy"
+      <img :src="post.image ?? placeholder" :alt="post.title" loading="lazy"
         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
     </div>
     <div class="p-3 text-sm">
       <h3 class="mb-3 line-clamp-3">
-        {{ title }}
+        {{ post.title }}
       </h3>
       <div class="flex items-center justify-between text-sm text-muted-foreground mb-4">
         <div class="flex items-center text-xs">
           <Calendar class="w-4 h-4 mr-1" />
-          {{ publishedAt }}
+          {{ post.publishedAt }}
         </div>
       </div>
     </div>

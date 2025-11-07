@@ -18,17 +18,9 @@ onMounted(() => {
 <template>
   <main class="container mx-auto my-4 px-4 space-y-5">
     <section class="space-y-6">
-      <div
-        v-if="blog?.length"
-        class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-      >
-        <BlogCard
-          v-for="(post, index) in blog"
-          :key="post.slug"
-          v-bind="post"
-          data-aos="fade-up"
-          :style="{ animationDelay: `${index * 100}ms` }"
-        />
+      <div v-if="blog?.length" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <BlogCard v-for="(post, index) in blog" :key="post.slug" :post="post" data-aos="fade-up"
+          :style="{ animationDelay: `${index * 100}ms` }" />
       </div>
       <Empty v-else>
         <EmptyHeader>

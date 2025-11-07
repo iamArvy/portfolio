@@ -4,19 +4,16 @@ export const navs = [
     {
         path: "/",
         label: "Profile",
-        icon: User,
-        order: 1
+        icon: "lucide:user",
     },
     {
         path: "/projects",
-        icon: Folder,
+        icon: "lucide:folder",
         label: "Projects",
-        order: 2
     },
     {
         path: "/blog",
-        icon: BookOpen,
+        icon: "lucide:book-open",
         label: "Blog",
-        order: 3
     }
 ]

@@ -5,7 +5,7 @@ const breadcrumbs = useBreadcrumbs();
 onMounted(() => {
   breadcrumbs.value = [
     {
-      title: `All Projects`
+      title: `Projects`
     },
   ];
 });
@@ -22,7 +22,7 @@ const { data: projects, pending, error } = await useAsyncData(
 );
 </script>
 <template>
-  <section v-if="projects && projects.length < 0" class=" p-2 grid auto-rows-min gap-5 lg:grid-cols-3 col-span-3">
+  <section v-if="projects && projects.length > 0" class=" p-2 grid auto-rows-min gap-5 lg:grid-cols-3 col-span-3">
     <ProjectItem v-for="project in projects" :key="project.title" :project="project" />
   </section>
   <Empty v-else>
