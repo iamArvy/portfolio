@@ -18,10 +18,10 @@ onMounted(() => {
 <template>
   <main class="container mx-auto my-4 px-4 space-y-5">
     <section class="space-y-6">
-      <div v-if="blog?.length" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <BlogItem v-for="(post, index) in blog" :key="post.slug" :post="post" data-aos="fade-up"
+      <GridRenderer v-if="blog?.length">
+        <BlogItem v-for="(post, index) in blog" :key="post.title" :post="post" data-aos="fade-up"
           :style="{ animationDelay: `${index * 100}ms` }" />
-      </div>
+      </GridRenderer>
       <Empty v-else>
         <EmptyHeader>
           <EmptyMedia variant="icon">

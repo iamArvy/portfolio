@@ -22,9 +22,9 @@ const { data: projects, pending, error } = await useAsyncData(
 );
 </script>
 <template>
-  <section v-if="projects && projects.length > 0" class="grid grid-cols-2 lg:grid-cols-4 gap-4 space-y-3">
+  <GridRenderer v-if="projects && projects.length > 0">
     <ProjectItem v-for="project in projects" :key="project.title" :project="project" />
-  </section>
+  </GridRenderer>
   <Empty v-else>
     <EmptyHeader>
       <EmptyMedia variant="icon">
