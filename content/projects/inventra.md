@@ -4,6 +4,15 @@
   release: 5
   role: backend
   repository: https://github.com/iamArvy/inventra
-  tags: [ "NestJS", "Prisma", "PostgreSQL", "Typescript", "Redis", "RabbitMQ", "gRPC", "GraphQL", "REST API"]
-  slug: inventra
+  technologies: [
+    { name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
+    { name: "Nest.js", icon: "logos:nestjs", slug: "nestjs" },
+    { name: "PostgreSQL", icon: "logos:postgresql", slug: "postgresql" },
+    { name: "Prisma", icon: "logos:prisma", slug: "prisma" },
+    { name: "Redis", icon: "logos:redis", slug: "redis" },
+    { name: "RabbitMQ", icon: "logos:rabbitmq-icon", slug: "rabbitmq" },
+    { name: "GraphQL", icon: "logos:graphql", slug: "graphql" },
+    { name: "gRPC", icon: "logos:grpc", slug: "grpc" },
+    { name: "Docker", icon: "logos:docker-icon", slug: "docker" }
+  ]
 ---

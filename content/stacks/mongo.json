@@ -1,1 +1,1 @@
-{ "name": "MongoDB", "icon": "logos:mongodb-icon", "role": ["backend", "cloud"]}
+{ "name": "MongoDB", "icon": "logos:mongodb-icon", "slug": "mongo" }

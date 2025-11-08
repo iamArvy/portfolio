@@ -5,6 +5,10 @@
   role: web
   live: https://vintage-by-naomie-demo.vercel.app
   image: /images/projects/vintage.png
-  tags: [ "NuxtJS", "Nuxt Content", "Typescript", "TailwindCSS", "Shadcn"]
-  slug: vintage
+  technologies: [
+    { name: "NuxtJS", icon: "logos:nuxt-icon", slug: "nuxtjs"},
+    { name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
+    { name: "TailwindCSS", icon: "logos:tailwindcss-icon", slug: "tailwindcss"},
+    { name: "Shadcn", icon: "simple-icons:shadcnui", slug: "shadcn"},
+  ]
 ---

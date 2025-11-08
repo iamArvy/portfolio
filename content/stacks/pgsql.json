@@ -1,1 +1,1 @@
-{ "name": "PostgreSQL", "icon": "logos:postgresql", "role": ["backend", "cloud"] }
+{ "name": "PostgreSQL", "icon": "logos:postgresql", "slug": "postgresql" }

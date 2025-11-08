@@ -11,8 +11,7 @@ export default defineContentConfig({
         rating: z.number(),
         role: z.string(),
         image: z.string(),
-        tags: z.array(z.string()),
-        slug: z.string()
+        technologies: z.array(z.object({ name: z.string(), icon: z.string(), slug: z.string() })),
       }),
     }),
 

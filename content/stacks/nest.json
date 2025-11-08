@@ -1,1 +1,1 @@
-{ "name": "Nest.js", "icon": "logos:nestjs", "role": ["backend", "web"]}
+{ "name": "Nest.js", "icon": "logos:nestjs", "slug": "nestjs" }

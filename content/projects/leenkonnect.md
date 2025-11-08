@@ -6,6 +6,12 @@
   live: https://leenkonnect.vercel.app
   repository: https://github.com/iamArvy/leenkonnect-frontend
   image: /images/projects/leenkonnect.png
-  tags: [ "NuxtJS", "Nuxt Server", "Laravel API", "Typescript", "TailwindCSS", "Paystack", "Shadcn"]
-  slug: leenkonnect
+  technologies: [
+    { name: "NuxtJS", icon: "logos:nuxt-icon", slug: "nuxtjs"},
+    { name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
+    { name: "TailwindCSS", icon: "logos:tailwindcss-icon", slug: "tailwindcss"},
+    { name: "Shadcn", icon: "simple-icons:shadcnui", slug: "shadcn"},
+    { name: "Laravel", icon: "logos:laravel", slug: "laravel" },
+    { name: "PostgreSQL", icon: "logos:postgresql", slug: "postgresql" },
+  ]
 ---

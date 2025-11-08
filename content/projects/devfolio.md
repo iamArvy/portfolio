@@ -4,5 +4,13 @@
   rating: 3
   role: web
   repository: "https://github.com/iamArvy/devfolio"
-  slug: devfolio
+  technologies:
+    - {name: Laravel, icon: logos:laravel, slug: laravel}
+    - {name: PHP, icon: logos:php, slug: php}
+    - {name: NestJS, icon: logos:nestjs, slug: nestjs}
+    - { name: Vue.js, icon: logos:vue, slug: vue }
+    - { name: Inertia.js, icon: simple-icons:inertia, slug: inertiajs }
+    - { name: Tailwind CSS, icon: logos:tailwindcss-icon, slug: tailwindcss}
+    - { name: TypeScript, icon: logos:typescript, slug: typescript}
+    - { name: PostgreSQL, icon: logos:postgresql, slug: postgresql}
 ---

@@ -1,1 +1,1 @@
-{ "name": "Typescript", "icon": "logos:typescript-icon", "role": ["backend", "cloud", "web"] }
+{ "name": "Typescript", "icon": "logos:typescript-icon", "slug": "typescript" }

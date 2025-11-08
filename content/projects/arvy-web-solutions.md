@@ -5,8 +5,12 @@
   role: web
   live: https://arvywebsolutions.vercel.app
   image: /images/projects/freelance.png
-  tags: [ "NuxtJS", "Nuxt Content", "Typescript", "TailwindCSS", "Shadcn"]
-  slug: freelance
+  technologies: [
+    {name: "NuxtJS", icon: "logos:nuxt-icon", slug: "nuxtjs"},
+    {name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
+    {name: "TailwindCSS", icon: "logos:tailwindcss-icon", slug: "tailwindcss"},
+    {name: "Shadcn", icon: "simple-icons:shadcnui", slug: "shadcn"}
+  ]
 ---
 
 # Arvy Web Solutions
