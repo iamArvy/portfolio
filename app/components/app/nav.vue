@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { navs, socials, contact } from "~/constants";
-// const { isCurrentRoute } = useNav(navs);
 const route = useRoute();
 </script>
 
@@ -25,7 +24,7 @@ const route = useRoute();
         <SidebarMenuButton as-child :tooltip="item.label">
           <NuxtLink :href="item.url" target="_blank">
             <Icon :name="item.icon" mode="svg" class="w-5 h-5 mr-1 inline-block" />
-            <span>{{ item.label }}</span>
+            <span>{{ item.value }}</span>
           </NuxtLink>
         </SidebarMenuButton>
       </SidebarMenuItem>

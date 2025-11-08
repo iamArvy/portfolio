@@ -38,5 +38,5 @@ defineProps<{ project: ProjectsCollectionItem }>();
       </div>
     </div>
   </div> -->
-  <!-- Make the tags tech instead and show just the icon then add a contact section in the home page -->
+  <!-- Make the tags tech instead and show just the icon -->
 </template>
