@@ -9,21 +9,33 @@ onMounted(() => {
     },
   ];
 });
-const { role } = useRoles();
 const { data: projects, pending, error } = await useAsyncData(
-  `projects${role.value ? " " + role.value : ""}`,
-  async () => {
-    let query = queryCollection("projects").order("rating", "DESC");
-    if (role.value && role.value !== "all")
-      query = query.where("role", "=", role.value);
-    return query.all();
-  },
-  { watch: [role] }
+  'projects',
+  () => queryCollection("projects").order("rating", "DESC").all()
 );
+const filters = useProjectFilter()
+
+const filteredProjects = computed(() => {
+  if (!projects.value) return []
+
+  let filtered = projects.value
+
+  if (filters.value.stack.length > 0) {
+    filtered = filtered.filter((project) =>
+      filters.value.stack.some((slug) =>
+        project.technologies.some((tech) => tech.slug === slug)
+      )
+    )
+  }
+
+  return filtered
+})
+
+
 </script>
 <template>
-  <GridRenderer v-if="projects && projects.length > 0">
-    <ProjectItem v-for="project in projects" :key="project.title" :project="project" />
+  <GridRenderer v-if="filteredProjects && filteredProjects.length > 0">
+    <ProjectItem v-for="project in filteredProjects" :key="project.title" :project="project" />
   </GridRenderer>
   <Empty v-else>
     <EmptyHeader>

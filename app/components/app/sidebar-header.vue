@@ -13,7 +13,7 @@ const route = useRoute()
         <Breadcrumbs :breadcrumbs="breadcrumbs" />
       </template>
       <div class="ml-auto flex items-center gap-0.5">
-        <RoleSwitcher v-if="route.name === 'projects'" />
+        <ProjectFilter v-if="route.name === 'projects'" />
         <AppearanceButton />
       </div>
     </div>

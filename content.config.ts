@@ -21,7 +21,7 @@ export default defineContentConfig({
       schema: z.object({
         name: z.string(),
         icon: z.string(),
-        role: z.array(z.string()),
+        slug: z.string(),
       }),
     }),
 
