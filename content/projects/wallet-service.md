@@ -9,14 +9,8 @@
     { name: "Nest.js", icon: "logos:nestjs", slug: "nestjs" },
     { name: "PostgreSQL", icon: "logos:postgresql", slug: "postgresql" },
     { name: "Prisma", icon: "logos:prisma", slug: "prisma" },
-    { name: "PostgreSQL", icon: "logos:postgresql", slug: "postgresql" },
     { name: "Docker", icon: "logos:docker-icon", slug: "docker" }
   ]
----
-# Digital Wallet Service API
-
-### Secure, API-first wallet infrastructure with payments, transfers, and key-based access
-
 ---
 
 ## 🌟 Overview
@@ -27,7 +21,7 @@ The Digital Wallet Service API is a scalable backend system that enables secure 
 
 ## 🚀 Key Features
 
-* Google OAuth–based user authentication with JWT session handling
+* Google OAuth-based user authentication with JWT session handling
 * API key generation, revocation, rollover, and permission-based access control
 * Personal digital wallets with balance tracking
 * Wallet funding via Paystack payment gateway
