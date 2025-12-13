@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
@@ -10,15 +9,7 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   shadcn: {
-    /**pnpm dlx shadcn-vue@latest init
-
-     * Prefix for all the imported component
-     */
     prefix: "",
-    /**
-     * Directory that the component lives in.
-     * @default "./app/components/ui"
-     */
     componentDir: "./app/components/ui",
   },
   content: {
@@ -29,11 +20,8 @@ export default defineNuxtConfig({
         },
         highlight: {
           theme: {
-            // Default theme (same as single string)
             default: "github-light",
-            // Theme used if `html.dark`
             dark: "github-dark",
-            // Theme used if `html.sepia`
             sepia: "monokai",
           },
           langs: ["js", "ts", "html", "bash", "json"],

@@ -13,9 +13,9 @@
   ]
 ---
 
-# Weavr
+# Weavr - Web Solutions for Modern Businesses
 
-### Web Solutions for Modern Businesses
+### Short Tagline
 
 *A one-sentence description highlighting the value or purpose.*
 
@@ -23,7 +23,7 @@
 
 ## 🌟 Overview
 
-A brief description (3-5 sentences) explaining:
+A brief description (3–5 sentences) explaining:
 
 * What the project does
 * Who it is for
@@ -115,6 +115,3 @@ Short reflection on:
 * **Live Demo:** URL
 * **Source Code:** GitHub URL
 * **Documentation:** (optional)
-
-<!--     "better-sqlite3": "^12.4.1",
- -->
