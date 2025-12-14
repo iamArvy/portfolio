@@ -42,7 +42,7 @@ Vintage by Naomie is a modern wellness and spa platform built to showcase servic
 
 ## ⚙️ Architecture & Design
 
-The application is built using Nuxt’s file-based routing and component-driven architecture. Dynamic content such as services, categories, and blog posts is managed through Markdown files via `@nuxt/content`, enabling fast updates without redeploying backend services. UI components are composed using Shadcn-Vue and Tailwind CSS to ensure visual consistency, accessibility, and responsiveness across devices.
+The application is built using Nuxt's file-based routing and component-driven architecture. Dynamic content such as services, categories, and blog posts is managed through Markdown files via `@nuxt/content`, enabling fast updates without redeploying backend services. UI components are composed using Shadcn-Vue and Tailwind CSS to ensure visual consistency, accessibility, and responsiveness across devices.
 
 ---
 

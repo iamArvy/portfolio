@@ -115,6 +115,3 @@ Short reflection on:
 * **Live Demo:** URL
 * **Source Code:** GitHub URL
 * **Documentation:** (optional)
-
-<!--     "better-sqlite3": "^12.4.1",
- -->
