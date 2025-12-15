@@ -11,6 +11,6 @@ import { profile } from "~/constants";
     </span>
   </div>
   <div class="ml-1 grid flex-1 text-left text-sm">
-    <span class="mb-0.5 truncate font-semibold leading-none">Oluwaseyi Oke</span>
+    <span class="mb-0.5 truncate font-semibold leading-none">{{ profile.name }}</span>
   </div>
 </template>
