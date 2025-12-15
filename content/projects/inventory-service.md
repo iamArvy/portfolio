@@ -14,15 +14,17 @@
   ]
 ---
 
-## 🌟 Overview
+## Overview
 
 The Inventory Management Service is a robust backend system designed to manage products, warehouses, stock levels, and inventory transactions at scale. Built with NestJS and TypeScript, it adopts a clean modular structure, multi-tenant data isolation, and an event-driven architecture to ensure consistency, extensibility, and reliability across inventory operations.
 
 This service is designed as a core backend component for enterprise or SaaS platforms that require accurate stock tracking across multiple tenants and warehouses.
 
+* **Source Code:** [https://github.com/iamArvy/inventra-inventory-service](https://github.com/iamArvy/inventra-inventory-service)
+* **Live API Docs:** [https://github.com/iamArvy/inventra-inventory-service](https://github.com/iamArvy/inventra-inventory-service)
 ---
 
-## 🚀 Key Features
+## Key Features
 
 * Full product lifecycle management (CRUD with soft deletes)
 * Warehouse management with status tracking and soft deletion
@@ -36,7 +38,7 @@ This service is designed as a core backend component for enterprise or SaaS plat
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Language & Runtime:** TypeScript, Node.js
 **Framework:** NestJS
@@ -47,7 +49,7 @@ This service is designed as a core backend component for enterprise or SaaS plat
 
 ---
 
-## ⚙️ Architecture & Design
+## Architecture & Design
 
 The service follows a modular NestJS architecture, separating concerns across products, warehouses, inventory, and transactions. Multi-tenancy is enforced at the database layer using request-scoped context (`nestjs-cls`) combined with Prisma client extensions, ensuring complete tenant isolation without duplicating schemas.
 
@@ -55,7 +57,7 @@ An event-driven approach is used for inventory workflows, allowing stock updates
 
 ---
 
-## 💡 My Contributions
+## My Contributions
 
 * Designed and implemented the complete service architecture using NestJS
 * Built a multi-tenant data access layer with Prisma and CLS-based context
@@ -66,7 +68,7 @@ An event-driven approach is used for inventory workflows, allowing stock updates
 
 ---
 
-## 📈 Results / Impact
+## Results / Impact
 
 * Ensured strict tenant data isolation suitable for SaaS use cases
 * Enabled accurate, auditable inventory tracking across warehouses
@@ -75,7 +77,7 @@ An event-driven approach is used for inventory workflows, allowing stock updates
 
 ---
 
-## 🧪 Testing & Quality Assurance
+## Testing & Quality Assurance
 
 * Centralized validation using DTOs and class validators
 * Defensive checks for stock availability and capacity limits
@@ -84,7 +86,7 @@ An event-driven approach is used for inventory workflows, allowing stock updates
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 * Tenant isolation enforced via required `x-tenant-id` header
 * Soft deletes to preserve historical data integrity
@@ -93,15 +95,9 @@ An event-driven approach is used for inventory workflows, allowing stock updates
 
 ---
 
-## 📚 What I Learned
+## What I Learned
 
 * Designing scalable multi-tenant backend systems
 * Applying event-driven patterns in NestJS applications
 * Structuring Prisma for complex relational domains
 * Building maintainable APIs with strong domain boundaries
-
----
-
-## 🔗 Links
-
-* **Source Code:** [https://github.com/iamArvy/inventra-inventory-service](https://github.com/iamArvy/inventra-inventory-service)

@@ -16,13 +16,14 @@
   ]
 ---
 
-## 🌟 Overview
+## Overview
 
 Leenkonnect is a full-stack web platform that provides IT consultation services alongside an integrated e-commerce experience. The application enables users to explore IT services, book expert consultations, purchase products, and consume technical content through a unified interface. Built with Nuxt.js and Vue 3, it leverages server-side rendering for performance, SEO, and a smooth user experience.
-
+* **Source Code:** [https://github.com/iamArvy/leenkonnect-frontend](https://github.com/iamArvy/leenkonnect-frontend)
+* **Live Demo:** [https://leenkonnect.vercel.app](https://leenkonnect.vercel.app)
 ---
 
-## 🚀 Key Features
+## Key Features
 
 * Secure user authentication with email verification and two-factor authentication
 * Full e-commerce workflow including product catalog, filtering, cart, and checkout
@@ -35,26 +36,26 @@ Leenkonnect is a full-stack web platform that provides IT consultation services 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-**Framework:** Nuxt.js 3, Vue 3, TypeScript
-**Styling & UI:** Tailwind CSS, Shadcn-Vue
-**Backend / API:** Nuxt Server Routes, Node.js
-**Authentication:** Nuxt Auth Utilities
-**Payments:** Paystack
-**Forms & Validation:** VeeValidate, Zod
-**UX Utilities:** Embla Carousel, Vue Sonner
-**Tooling:** pnpm, Faker.js
+* **Framework:** Nuxt.js 3, Vue 3, TypeScript
+* **Styling & UI:** Tailwind CSS, Shadcn-Vue
+* **Backend / API:** Nuxt Server Routes, Node.js
+* **Authentication:** Nuxt Auth Utilities
+* **Payments:** Paystack
+* **Forms & Validation:** VeeValidate, Zod
+* **UX Utilities:** Embla Carousel, Vue Sonner
+* **Tooling:** pnpm, Faker.js
 
 ---
 
-## ⚙️ Architecture & Design
+## Architecture & Design
 
 Leenkonnect uses Nuxt's hybrid rendering model, combining server-side rendering and client-side interactivity. Backend logic is handled through Nuxt server routes, enabling tight integration between frontend and API layers. The architecture supports modular features such as authentication, e-commerce, content delivery, and consultations while maintaining a cohesive developer experience and consistent UI patterns.
 
 ---
 
-## 💡 My Contributions
+## My Contributions
 
 * Designed and implemented the full application architecture using Nuxt.js
 * Built authentication flows including registration, login, password reset, and 2FA
@@ -65,7 +66,7 @@ Leenkonnect uses Nuxt's hybrid rendering model, combining server-side rendering 
 
 ---
 
-## 📈 Results / Impact
+## Results / Impact
 
 * Delivered an all-in-one platform combining services, commerce, and content
 * Improved user engagement through streamlined navigation and booking flows
@@ -74,7 +75,7 @@ Leenkonnect uses Nuxt's hybrid rendering model, combining server-side rendering 
 
 ---
 
-## 🧪 Testing & Quality Assurance
+## Testing & Quality Assurance
 
 * Schema-based validation with Zod and VeeValidate
 * Consistent API response handling via server routes
@@ -83,7 +84,7 @@ Leenkonnect uses Nuxt's hybrid rendering model, combining server-side rendering 
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 * Secure authentication with session handling and 2FA support
 * Input validation on both client and server
@@ -92,15 +93,9 @@ Leenkonnect uses Nuxt's hybrid rendering model, combining server-side rendering 
 
 ---
 
-## 📚 What I Learned
+## What I Learned
 
 * Building full-stack applications using Nuxt server routes
 * Designing scalable e-commerce and booking workflows
 * Balancing SSR performance with rich client-side UX
 * Structuring large Nuxt applications for maintainability
-
----
-
-## 🔗 Links
-
-* **Source Code:** [https://github.com/iamArvy/leenkonnect-frontend](https://github.com/iamArvy/leenkonnect-frontend)

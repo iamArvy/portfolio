@@ -13,13 +13,15 @@
   ]
 ---
 
-## 🌟 Overview
+## Overview
 
 The Digital Wallet Service API is a scalable backend system that enables secure user authentication, digital wallet management, and programmable financial operations. It is designed for developers and businesses that need wallet functionality, controlled API access, and seamless payment processing. The service supports OAuth-based authentication, API key permissions, and real-time payment handling through Paystack, making it suitable for fintech integrations and internal payment platforms.
 
+* **Source Code:** [https://github.com/iamArvy/wallet-service](https://github.com/iamArvy/wallet-service)
+* **Live API Docs (Swagger):** [https://wallet-service-t0py.onrender.com/docs](https://wallet-service-t0py.onrender.com/docs)
 ---
 
-## 🚀 Key Features
+## Key Features
 
 * Google OAuth-based user authentication with JWT session handling
 * API key generation, revocation, rollover, and permission-based access control
@@ -33,7 +35,7 @@ The Digital Wallet Service API is a scalable backend system that enables secure 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Backend:** Node.js, TypeScript, NestJS
 **Database:** PostgreSQL, Prisma ORM
@@ -44,13 +46,13 @@ The Digital Wallet Service API is a scalable backend system that enables secure 
 
 ---
 
-## ⚙️ Architecture & Design
+## Architecture & Design
 
 The system follows a modular NestJS architecture with clear separation of concerns across authentication, API key management, wallet operations, and payments. Prisma ORM is used for type-safe database access, while permission-scoped API keys enable third-party or service-to-service access without exposing user credentials. Idempotency keys are enforced for payment-related operations to prevent duplicate transactions, and webhooks are validated to ensure payment integrity.
 
 ---
 
-## 💡 My Contributions
+## My Contributions
 
 * Designed and implemented Google OAuth authentication and JWT-based session management
 * Built a permission-based API key system with expiry, rollover, and revocation support
@@ -61,7 +63,7 @@ The system follows a modular NestJS architecture with clear separation of concer
 
 ---
 
-## 📈 Results / Impact
+## Results / Impact
 
 * Enabled secure, programmatic wallet operations for external integrations
 * Reduced risk of duplicate payments through idempotent transaction handling
@@ -70,7 +72,7 @@ The system follows a modular NestJS architecture with clear separation of concer
 
 ---
 
-## 🧪 Testing & Quality Assurance
+## Testing & Quality Assurance
 
 * Input validation and request guards at the controller level
 * Authentication and authorization enforced via NestJS guards
@@ -79,7 +81,7 @@ The system follows a modular NestJS architecture with clear separation of concer
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 * OAuth-based authentication with JWT access tokens
 * Fine-grained API key permissions (read, deposit, transfer)
@@ -88,16 +90,9 @@ The system follows a modular NestJS architecture with clear separation of concer
 
 ---
 
-## 📚 What I Learned
+## What I Learned
 
 * Designing permission-scoped API keys for secure external access
 * Handling real-world payment workflows with webhooks and retries
 * Structuring a NestJS application for scalability and clarity
 * Applying idempotency patterns in financial systems
-
----
-
-## 🔗 Links
-
-* **Source Code:** [https://github.com/iamArvy/wallet-service](https://github.com/iamArvy/wallet-service)
-* **API Docs (Swagger):** [http://localhost:3000/docs](http://localhost:3000/docs)
