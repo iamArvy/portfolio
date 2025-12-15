@@ -1,10 +1,10 @@
 ---
-  title: Arvy Web Solutions
-  description: A website for my Freelance Web Development business built with Nuxt and Nuxt Content
+  title: Weavr
+  description: Web Solutions for Modern Businesses
   rating: 5
   role: web
   live: https://arvywebsolutions.vercel.app
-  image: /images/projects/freelance.png
+  image: /images/projects/weavr.png
   technologies: [
     {name: "NuxtJS", icon: "logos:nuxt-icon", slug: "nuxtjs"},
     {name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
