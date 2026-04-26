@@ -62,7 +62,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div v-if="projects" class="container-px mx-auto max-w-7xl py-16 md:py-24">
+  <main v-if="projects" class="container-px mx-auto max-w-7xl py-16 md:py-24">
     <SectionHeader
       title="Every project, in one place"
       description="Filter by type, stack, or search by name to find what you're after."
@@ -129,5 +129,5 @@ useSeoMeta({
         />
       </div>
     </div>
-  </div>
+  </main>
 </template>

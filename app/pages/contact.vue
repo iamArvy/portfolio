@@ -8,7 +8,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="container-px mx-auto max-w-7xl py-16 md:py-24">
+  <main class="container-px mx-auto max-w-7xl py-16 md:py-24">
     <!-- HEADER -->
     <SectionHeader
       title="Let's build something worth shipping"
@@ -121,5 +121,5 @@ useSeoMeta({
         Start a conversation
       </NuxtLink>
     </div>
-  </div>
+  </main>
 </template>
