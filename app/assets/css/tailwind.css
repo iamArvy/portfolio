@@ -148,10 +148,16 @@
   }
 
   .glass-strong {
+    /* fallback */
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    /* modern */
     background: linear-gradient(135deg, oklch(1 0 0 / 8%) 0%, oklch(1 0 0 / 3%) 100%);
+    border: 1px solid oklch(1 0 0 / 12%);
+
     -webkit-backdrop-filter: blur(28px) saturate(150%);
     backdrop-filter: blur(28px) saturate(150%);
-    border: 1px solid oklch(1 0 0 / 12%);
   }
 
   .text-gradient {
