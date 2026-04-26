@@ -2,25 +2,28 @@
   title: Leenkonnect - IT Solutions & E-commerce Platform
   description: A full-stack platform combining IT consulting, content, and e-commerce in one seamless experience
   rating: 4
-  role: web
-  live: https://leenkonnect.vercel.app
-  repository: https://github.com/iamArvy/leenkonnect-frontend
-  image: /images/projects/leenkonnect.png
-  technologies: [
-    { name: "NuxtJS", icon: "logos:nuxt-icon", slug: "nuxtjs"},
-    { name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
-    { name: "TailwindCSS", icon: "logos:tailwindcss-icon", slug: "tailwindcss"},
-    { name: "Shadcn", icon: "simple-icons:shadcnui", slug: "shadcn"},
-    { name: "Laravel", icon: "logos:laravel", slug: "laravel" },
-    { name: "PostgreSQL", icon: "logos:postgresql", slug: "postgresql" },
+  type: Website
+  cover: /images/projects/leenkonnect.png
+  stack: [
+    "NuxtJS",
+    "Typescript",
+    "TailwindCSS",
+    "Vue"
   ]
+  gallery: [
+    /images/projects/leenkonnect.png,
+    /images/projects/leenkonnect.png,
+    /images/projects/leenkonnect.png,
+  ]
+  links: {
+    live: "https://leenkonnect.com"
+  }
 ---
 
 ## Overview
 
 Leenkonnect is a full-stack web platform that provides IT consultation services alongside an integrated e-commerce experience. The application enables users to explore IT services, book expert consultations, purchase products, and consume technical content through a unified interface. Built with Nuxt.js and Vue 3, it leverages server-side rendering for performance, SEO, and a smooth user experience.
-* **Source Code:** [https://github.com/iamArvy/leenkonnect-frontend](https://github.com/iamArvy/leenkonnect-frontend)
-* **Live Demo:** [https://leenkonnect.vercel.app](https://leenkonnect.vercel.app)
+
 ---
 
 ## Key Features
@@ -33,19 +36,6 @@ Leenkonnect is a full-stack web platform that provides IT consultation services 
 * Client testimonials and social proof
 * Responsive, mobile-first UI
 * Paystack integration for secure payments
-
----
-
-## Tech Stack
-
-* **Framework:** Nuxt.js 3, Vue 3, TypeScript
-* **Styling & UI:** Tailwind CSS, Shadcn-Vue
-* **Backend / API:** Nuxt Server Routes, Node.js
-* **Authentication:** Nuxt Auth Utilities
-* **Payments:** Paystack
-* **Forms & Validation:** VeeValidate, Zod
-* **UX Utilities:** Embla Carousel, Vue Sonner
-* **Tooling:** pnpm, Faker.js
 
 ---
 

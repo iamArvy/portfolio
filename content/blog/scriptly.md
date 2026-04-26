@@ -1,7 +1,15 @@
 ---
 title:  Building Scriptly - An AI Content Strategist Using Mastra, Gemini API, and Telex
 slug: building-scriptly-ai-content-strategist-mastra-gemini-telex
-publishedAt: "November 2, 2025"
+date: "November 2, 2025"
+tags: [
+  "AI",
+  "A2A Protocol",
+  "Agent",
+  "Gemini",
+  "Mastra"
+]
+readingTime: 2 mins
 ---
 # Building **Scriptly** - An AI Content Strategist Using Mastra, Gemini API, and Telex
 

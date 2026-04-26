@@ -1,25 +1,33 @@
 ---
   title: Lodgr
-  description: A website for a House Rentals Company with a Catalogue for browsing, booking features, and payment integration with Paystack built with Nuxt and Nuxt Server
+  description: A website for a House Rentals Company with a Catalogue for browsing, booking features, and payment integration.
   rating: 5
-  role: web
-  live: https://lodgr-pi.vercel.app
-  image: /images/projects/lodgr.png
-  technologies: [
-    { name: "NuxtJS", icon: "logos:nuxt-icon", slug: "nuxtjs"},
-    { name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
-    { name: "TailwindCSS", icon: "logos:tailwindcss-icon", slug: "tailwindcss"},
-    { name: "Shadcn", icon: "simple-icons:shadcnui", slug: "shadcn"},
-    { name: "Nest.js", icon: "logos:nestjs", slug: "nestjs" },
-    { name: "PostgreSQL", icon: "logos:postgresql", slug: "postgresql" },
-    { name: "Prisma", icon: "logos:prisma", slug: "prisma" },
+  type: Website
+  cover: /images/projects/lodgr.png
+  stack: [
+    "Typescript",
+    "NuxtJS",
+    "Nest.js",
+    "Paystack",
+    "TailwindCSS",
+    "PostgreSQL",
+    "TypeORM",
+    "Vue"
+  ]
+  links: {
+    live: "https://lodgr-pi.vercel.app"
+  }
+  slug: lodgr
+  gallery: [
+    /images/projects/lodgr.png,
+    /images/projects/lodgr.png,
+    /images/projects/lodgr.png,
   ]
 ---
 ## Overview
 
 Lodgr is a full-stack property leasing platform designed to simplify how users discover, evaluate, and manage rental properties. The platform combines a modern, responsive frontend with structured backend APIs to deliver a smooth experience for browsing properties, managing wishlists, and tracking lease agreements. It is built to demonstrate real-world product flows common to prop-tech platforms, with a strong focus on UX, scalability, and clarity.
-* **Source Code:** [https://github.com/iamArvy/Lodgr-website](https://github.com/iamArvy/Lodgr-website)
-* **Live Demo:** [https://lodgr-pi.vercel.app](https://lodgr-pi.vercel.app)
+
 ---
 
 ## Key Features
@@ -31,18 +39,6 @@ Lodgr is a full-stack property leasing platform designed to simplify how users d
 * Lease management dashboard for active, expired, and past leases
 * Simulated Paystack payment flow for realistic booking experience
 * Responsive, mobile-first UI built with modern component patterns
-
----
-
-## Tech Stack
-
-**Framework:** Nuxt 4 (Vue 3), TypeScript
-**Styling & UI:** Tailwind CSS, Shadcn-Vue, Lucide Icons
-**Authentication:** Nuxt Auth Utils
-**Payments:** Paystack Inline JS (simulated)
-**Form Validation:** VeeValidate, Zod
-**State & Utilities:** @vueuse/core
-**Tooling:** pnpm, ESLint
 
 ---
 

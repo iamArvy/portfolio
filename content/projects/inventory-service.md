@@ -2,16 +2,19 @@
   title: Inventory Management Service API
   description: A scalable, multi-tenant inventory and warehouse management backend built with NestJS
   release: 5
-  role: backend
-  repository: https://github.com/iamArvy/inventra
-  technologies: [
-    { name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
-    { name: "Nest.js", icon: "logos:nestjs", slug: "nestjs" },
-    { name: "PostgreSQL", icon: "logos:postgresql", slug: "postgresql" },
-    { name: "Prisma", icon: "logos:prisma", slug: "prisma" },
-    { name: "Redis", icon: "logos:redis", slug: "redis" },
-    { name: "Docker", icon: "logos:docker-icon", slug: "docker" }
+  type: API
+  stack: [
+    "Typescript",
+    "Nest.js",
+    "PostgreSQL",
+    "Redis",
+    "Docker",
+    "TypeORM"
   ]
+  links: {
+    github: "https://github.com/iamArvy/inventra-inventory-service"
+  }
+  slug: 'inventra'
 ---
 
 ## Overview
@@ -20,8 +23,6 @@ The Inventory Management Service is a robust backend system designed to manage p
 
 This service is designed as a core backend component for enterprise or SaaS platforms that require accurate stock tracking across multiple tenants and warehouses.
 
-* **Source Code:** [https://github.com/iamArvy/inventra-inventory-service](https://github.com/iamArvy/inventra-inventory-service)
-* **Live API Docs:** [https://github.com/iamArvy/inventra-inventory-service](https://github.com/iamArvy/inventra-inventory-service)
 ---
 
 ## Key Features
