@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/seo",
     "@vueuse/motion/nuxt",
+    "nuxt-gtag",
   ],
   css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
   vite: {
@@ -45,10 +46,15 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     ogTitle: "Oluwaseyi Oke — Web Developer & Backend Engineer",
     ogDescription: "Building polished, fast, and resilient web platforms.",
-    ogImage: "/og-image.png",
+    ogImage: "/og-image.jpg",
     twitterCard: "summary_large_image",
+    twitterImage: "/og-image.jpg",
     themeColor: "#0a1024",
     keywords:
       "Web Development, Software Engineer, Backend Engineer, Cloud Solutions Architect, Fullstack Developer, Portfolio",
+  },
+  gtag: {
+    enabled: process.env.NODE_ENV === "production",
+    id: "G-PHDEFWH3MM",
   },
 });
