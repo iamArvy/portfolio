@@ -141,7 +141,7 @@ import { profile } from "~/constants";
 
             <!-- glow halo -->
             <div
-              class="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-gold/30 via-gold/10 to-transparent blur-3xl"
+              class="absolute inset-0 -z-10 rounded-full bg-linear-to-br from-gold/30 via-gold/10 to-transparent blur-3xl"
             />
 
             <!-- floating portrait -->
