@@ -12,32 +12,10 @@
 //   }
 // });
 const isOpen = useState("sidebarOpen", () => true);
-
 </script>
 
 <template>
-  <SidebarProvider :default-open="isOpen">
-    <Sidebar collapsible="icon" variant="inset">
-      <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton size="lg" as-child>
-              <NuxtLink to="/">
-                <AppLogo />
-              </NuxtLink>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarHeader>
-      <SidebarContent>
-        <AppNav />
-      </SidebarContent>
-    </Sidebar>
-    <SidebarInset>
-      <AppSidebarHeader class="sticky top-0 z-50 bg-background rounded-t-md" />
-      <div class="p-3">
-        <slot />
-      </div>
-    </SidebarInset>
-  </SidebarProvider>
+  <LayoutHeader />
+  <slot />
+  <LayoutFooter />
 </template>

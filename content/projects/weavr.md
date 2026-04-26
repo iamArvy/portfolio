@@ -2,23 +2,28 @@
   title: Weavr
   description: Web Solutions for Modern Businesses
   rating: 5
-  role: web
-  live: https://arvywebsolutions.vercel.app
-  image: /images/projects/weavr.png
-  technologies: [
-    {name: "NuxtJS", icon: "logos:nuxt-icon", slug: "nuxtjs"},
-    {name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
-    {name: "TailwindCSS", icon: "logos:tailwindcss-icon", slug: "tailwindcss"},
-    {name: "Shadcn", icon: "simple-icons:shadcnui", slug: "shadcn"}
+  type: Website
+  cover: /images/projects/weavr.png
+  stack: [
+    "Typescript",
+    "NuxtJS",
+    "TailwindCSS",
+    "Vue"
+  ]
+  links: {
+    live: https://weavrlabs.vercel.app,
+    github: https://github.com/iamArvy/weavr
+  }
+  gallery: [
+    /images/projects/weavr.png,
+    /images/projects/weavr.png,
+    /images/projects/weavr.png
   ]
 ---
 
 ## 🌟 Overview
 
 Weavr is a modern, content-driven portfolio website built to showcase web development projects, services, and process in a clean and professional way. The platform emphasizes performance, clarity, and strong visual hierarchy, serving as both a personal brand hub and a client-facing showcase. It is designed to be easily maintainable, SEO-friendly, and visually engaging across all devices.
-
-* **Source Code:** [https://github.com/iamArvy/weavr](https://github.com/iamArvy/weavr)
-* **Live Site:** [https://weavrlabs.vercel.app](https://weaverlabs.vercel.app)
 
 ---
 
@@ -32,18 +37,6 @@ Weavr is a modern, content-driven portfolio website built to showcase web develo
 * Interactive UI with subtle animations and transitions
 * Content-driven architecture using Nuxt Content
 * Direct contact via WhatsApp and standard contact channels
-
----
-
-## 🛠️ Tech Stack
-
-**Framework:** Nuxt (Vue 3), TypeScript
-**Styling & UI:** Tailwind CSS, Shadcn-Vue, Lucide Icons
-**Content Management:** Nuxt Content (JSON-based project data)
-**Forms & Validation:** VeeValidate, Zod
-**UX Enhancements:** Embla Carousel, AOS animations
-**Utilities:** @vueuse/core
-**Tooling:** pnpm, ESLint
 
 ---
 

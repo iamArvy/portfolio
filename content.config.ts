@@ -9,32 +9,15 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         rating: z.number(),
-        role: z.string(),
-        image: z.string(),
-        technologies: z.array(z.object({ name: z.string(), icon: z.string(), slug: z.string() })),
-      }),
-    }),
-
-    stack: defineCollection({
-      type: "data",
-      source: "stacks/*.json",
-      schema: z.object({
-        name: z.string(),
-        icon: z.string(),
+        type: z.string(),
+        cover: z.string().optional(),
+        stack: z.array(z.string()),
         slug: z.string(),
-      }),
-    }),
-
-    roles: defineCollection({
-      type: "data",
-      source: "roles.json",
-      schema: z.object({
-        items: z.array(
-          z.object({
-            title: z.string(),
-            value: z.string(),
-          })
-        ),
+        gallery: z.array(z.string()).optional(),
+        links: z.object({
+          live: z.string().optional(),
+          github: z.string().optional(),
+        }),
       }),
     }),
 
@@ -44,9 +27,11 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         slug: z.string(),
-        publishedAt: z.string(),
-        tags: z.array(z.string()).optional(),
-        image: z.string().optional(),
+        date: z.string(),
+        tags: z.array(z.string()),
+        cover: z.string().optional(),
+        excerpt: z.string(),
+        readingTime: z.string(),
       }),
     }),
   },

@@ -2,11 +2,19 @@
   title: Scriptly
   description: An agent-based AI content strategist built with Mastra and Gemini, integrated into Telex.
   rating: 4
-  role: web
-  image: /images/projects/freelance.png
-  technologies: [
-    {name: "Typescript", icon: "logos:typescript-icon", slug: "typescript"},
+  type: AI
+  cover: /images/projects/freelance.png
+  stack: [
+    "Typescript",
+    "Mastra",
+    "Gemini",
+    "Typescript",
+    "A2A Protocol"
   ]
+  links: {
+    github: "https://github.com/iamArvy/scriptly"
+  }
+  slug: scriptly
 ---
 ## Overview
 
@@ -14,8 +22,6 @@
 
 The project solves the problem of inconsistent, time-consuming content creation by providing structured, context-aware script generation in real time. What makes Scriptly unique is its **agent-based architecture**, built with Mastra and exposed via the **A2A protocol**, allowing it to integrate seamlessly into platforms like **Telex** and beyond.
 
-* **Live Demo:** N/A
-* **Source Code:** https://github.com/iamarvy/scriptly
 ---
 
 ## Key Features
@@ -24,16 +30,6 @@ The project solves the problem of inconsistent, time-consuming content creation 
 * **AI coworker integration** — usable directly inside Telex conversations without leaving the workspace
 * **Agent-based orchestration** — powered by Mastra for prompt control, reasoning flow, and extensibility
 * **A2A protocol support** — enables Scriptly to be embedded into any application via simple HTTP endpoints
-
----
-
-## Tech Stack
-
-**Backend:** Mastra, Node.js, TypeScript
-**Frontend:** Telex AI Coworker Interface
-**Database:** In-memory / agent state (Mastra memory system)
-**Infrastructure / DevOps:** Cloud-hosted Mastra instance
-**Tools & Utilities:** Google Gemini 2.5 Flash API, A2A Protocol
 
 ---
 
@@ -46,8 +42,6 @@ Key architectural decisions include:
 * Using **Mastra's agent abstraction** to avoid manual prompt and model management
 * Leveraging the **A2A protocol** for platform-agnostic integrations
 * Designing the agent to be stateless per request, enabling easy scalability and reuse
-
-> Optional: Insert diagrams.
 
 ---
 
