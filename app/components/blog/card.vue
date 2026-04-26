@@ -38,7 +38,7 @@ const delay = (props.index ?? 0) * 60;
       :to="`/blog/${props.post.slug}`"
       class="group relative flex h-full flex-col overflow-hidden rounded-3xl glass transition-all duration-500 hover:border-gold/30 hover:-translate-y-1"
     >
-      <div class="aspect-[16/9] overflow-hidden">
+      <div class="aspect-video overflow-hidden">
         <NuxtImg
           :src="post.cover ?? ''"
           :alt="props.post.title"

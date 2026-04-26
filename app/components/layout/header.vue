@@ -44,7 +44,7 @@ watch(
         <!-- LOGO -->
         <NuxtLink to="/" class="group flex items-center gap-2">
           <span
-            class="relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-gold to-gold-soft font-display font-bold text-primary-foreground"
+            class="relative flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br from-gold to-gold-soft font-display font-bold text-primary-foreground"
           >
             O
             <span
@@ -57,7 +57,6 @@ watch(
           </span>
         </NuxtLink>
 
-        <!-- DESKTOP NAV -->
         <nav class="hidden items-center gap-1 md:flex">
           <NuxtLink
             v-for="l in navs"
@@ -74,7 +73,7 @@ watch(
         <a
           href="#"
           target="_blank"
-          class="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-gold to-gold-soft px-4 py-1.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-105"
+          class="hidden md:inline-flex items-center gap-2 rounded-full bg-linear-to-br from-gold to-gold-soft px-4 py-1.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-105"
         >
           Resume
         </a>
@@ -118,7 +117,7 @@ watch(
           <a
             href="#"
             target="_blank"
-            class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-gold to-gold-soft px-4 py-3 text-sm font-semibold text-primary-foreground"
+            class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-linear-to-br from-gold to-gold-soft px-4 py-3 text-sm font-semibold text-primary-foreground"
           >
             View Resume
           </a>

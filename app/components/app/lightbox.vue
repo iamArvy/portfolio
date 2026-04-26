@@ -43,7 +43,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
         transition: { duration: 300 },
       },
     }"
-    class="fixed inset-0 z-[100] flex items-center justify-center bg-background/90 backdrop-blur-2xl p-6"
+    class="fixed inset-0 z-100 flex items-center justify-center bg-background/90 backdrop-blur-2xl p-6"
     @click="onClose"
   >
     <!-- Close -->
