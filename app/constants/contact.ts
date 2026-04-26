@@ -8,13 +8,6 @@ export const contact = [
     value: "okeoluwaseyimarvellous@gmail.com",
     desc: "Best for project inquiries and serious questions.",
   },
-  // {
-  //   url: "tel:+2349160397775",
-  //   icon: "lucide:phone-call",
-  //   label: "Phone",
-  //   value: "+2349160397775",
-  //   desc: "Available during West Africa working hours.",
-  // },
   {
     url: "https://github.com/iamArvy",
     icon: "lucide:github",
@@ -30,7 +23,7 @@ export const contact = [
     desc: "For roles, partnerships, and longer-form intros.",
   },
   {
-    url: "https://wa.link/2e231j",
+    url: "https://wa.me/message/SRV5Q4ZIO7BBH1",
     icon: "logos:whatsapp-icon",
     label: "Whatsapp",
     value: "+2349160397775",

@@ -49,7 +49,7 @@ import { profile, contact, navs } from "~/constants";
               rel="noreferrer"
               class="text-foreground/80 hover:text-gold transition-colors"
             >
-              {{ item.value }}
+              {{ item.label }}
             </NuxtLink>
           </div>
         </div>
