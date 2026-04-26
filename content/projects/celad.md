@@ -15,4 +15,4 @@
   }
   slug: 'celad'
   cover: /images/projects/celad.png
----a
+---

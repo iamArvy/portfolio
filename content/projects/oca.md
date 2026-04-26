@@ -17,4 +17,4 @@
   }
   slug: 'one-click-africa'
   cover: /images/projects/oca.png
----a
+---
