@@ -1,7 +1,7 @@
 ---
   title: OneClick Africa
   description: A modern, high-performance web application dedicated to delivering engaging African news, culture, and stories.
-  release: 5
+  release: 6
   type: Website
   stack: [
     "Typescript",

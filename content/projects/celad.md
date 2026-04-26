@@ -1,7 +1,7 @@
 ---
   title: Celad
   description: A modern business website for Celad Oil and Gas Company.
-  release: 5
+  release: 6
   type: Website
   stack: [
     "Typescript",
