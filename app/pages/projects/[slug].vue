@@ -56,23 +56,23 @@ const lbIndex = ref<number | null>(null);
       </div>
 
       <div class="mt-8 flex flex-wrap gap-3">
-        <Nuxtlink
+        <NuxtLink
           v-if="project.links.live"
           :href="project.links.live"
           target="_blank"
           class="inline-flex items-center gap-2 rounded-full bg-linear-to-br from-gold to-gold-soft px-5 py-2.5 text-sm font-semibold text-primary-foreground"
         >
           Live demo
-        </Nuxtlink>
+        </NuxtLink>
 
-        <Nuxtlink
+        <NuxtLink
           v-if="project.links.github"
           :href="project.links.github"
           target="_blank"
           class="inline-flex items-center gap-2 rounded-full glass px-5 py-2.5 text-sm font-semibold"
         >
           GitHub
-        </Nuxtlink>
+        </NuxtLink>
       </div>
     </header>
 
