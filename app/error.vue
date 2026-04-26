@@ -11,12 +11,12 @@
         The page you're looking for drifted off the navigation map.
       </p>
       <div class="mt-8">
-        <Link
+        <NuxtLink
           to="/"
-          class="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-gold to-gold-soft px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow"
+          class="inline-flex items-center gap-2 rounded-full bg-linear-to-br from-gold to-gold-soft px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow"
         >
           ← Return home
-        </Link>
+        </NuxtLink>
       </div>
     </div>
   </div>
