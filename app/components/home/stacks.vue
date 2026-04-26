@@ -9,7 +9,7 @@ import { stack } from "~/constants";
       description="A curated set of technologies I use to ship fast, maintainable systems."
     />
 
-    <div class="mt-16 grid gap-6 md:grid-cols-3">
+    <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <div
         v-for="(cat, ci) in stack"
         :key="cat.category"

@@ -35,9 +35,11 @@ import { profile } from "~/constants";
           },
         },
       }"
-      class="container-px mx-auto max-w-7xl"
+      class="container-px mx-auto max-w-7xl mt-16 lg:mt-0"
     >
-      <div class="grid items-center gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+      <div
+        class="grid items-center gap-y-24 lg:grid-cols-[1.4fr_1fr] lg:gap-16"
+      >
         <div class="max-w-2xl">
           <h1
             v-motion="{

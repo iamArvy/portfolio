@@ -1,9 +1,9 @@
 <template>
-  <div class="overflow-hidden">
+  <main class="overflow-hidden">
     <HomeHero />
     <HomeStacks />
     <HomeProjects />
     <HomeBlogs />
     <HomeContact />
-  </div>
+  </main>
 </template>

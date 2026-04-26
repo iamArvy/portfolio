@@ -45,9 +45,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="container-px mx-auto max-w-7xl py-16 md:py-24" v-if="posts">
+  <main class="container-px mx-auto max-w-7xl py-16 md:py-24" v-if="posts">
     <SectionHeader
-      eyebrow="Writing"
       title="Notes from the workshop"
       description="Thoughts on shipping, systems, and the craft of building software people actually enjoy using."
     />
@@ -55,7 +54,6 @@ useSeoMeta({
     <!-- Filters -->
     <div class="mt-12 space-y-5">
       <div class="relative">
-
         <svg
           class="absolute left-5 top-1/2 -translate-y-1/2 text-muted-foreground"
           width="18"
@@ -126,5 +124,5 @@ useSeoMeta({
         />
       </div>
     </div>
-  </div>
+  </main>
 </template>

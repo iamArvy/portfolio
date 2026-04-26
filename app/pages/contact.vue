@@ -2,7 +2,7 @@
 import { contact, profile } from "~/constants";
 
 useSeoMeta({
-  description: "Get in touch — email, phone, GitHub, LinkedIn, Twitter.",
+  description: "Get in touch — email, GitHub, LinkedIn, Whatsapp.",
   ogDescription: "Contact — Oluwaseyi Oke",
 });
 </script>
@@ -11,7 +11,6 @@ useSeoMeta({
   <div class="container-px mx-auto max-w-7xl py-16 md:py-24">
     <!-- HEADER -->
     <SectionHeader
-      eyebrow="Get in touch"
       title="Let's build something worth shipping"
       description="The fastest path to me is email — but I'm equally reachable via the channels below. I read everything."
       align="center"

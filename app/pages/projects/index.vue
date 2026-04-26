@@ -64,7 +64,6 @@ useSeoMeta({
 <template>
   <div v-if="projects" class="container-px mx-auto max-w-7xl py-16 md:py-24">
     <SectionHeader
-      eyebrow="Archive"
       title="Every project, in one place"
       description="Filter by type, stack, or search by name to find what you're after."
     />
