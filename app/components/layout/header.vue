@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, watch } from "vue";
 import { useRoute } from "#imports";
-import { navs } from "~/constants";
+import { navs, profile } from "~/constants";
 
 const route = useRoute();
 
@@ -22,7 +22,6 @@ onBeforeUnmount(() => {
   window.removeEventListener("scroll", onScroll);
 });
 
-// close menu on route change
 watch(
   () => route.path,
   () => {
@@ -70,13 +69,13 @@ watch(
         </nav>
 
         <!-- RESUME -->
-        <a
-          href="#"
+        <NuxtLink
+          :href="profile.resume"
           target="_blank"
           class="hidden md:inline-flex items-center gap-2 rounded-full bg-linear-to-br from-gold to-gold-soft px-4 py-1.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-105"
         >
           Resume
-        </a>
+        </NuxtLink>
 
         <!-- MOBILE BUTTON -->
         <button
@@ -84,17 +83,7 @@ watch(
           class="md:hidden flex h-9 w-9 items-center justify-center rounded-full glass"
           aria-label="Menu"
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path v-if="open" d="M6 6l12 12M6 18L18 6" stroke-linecap="round" />
-            <path v-else d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
-          </svg>
+          <Icon :name="open ? 'lucide:x' : 'lucide:menu'" class="w-18 h-18" />
         </button>
       </div>
 
@@ -114,13 +103,13 @@ watch(
             {{ l.label }}
           </NuxtLink>
 
-          <a
-            href="#"
+          <NuxtLink
+            :href="profile.resume"
             target="_blank"
             class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-linear-to-br from-gold to-gold-soft px-4 py-3 text-sm font-semibold text-primary-foreground"
           >
             View Resume
-          </a>
+          </NuxtLink>
         </nav>
       </div>
     </div>
