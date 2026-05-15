@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@vueuse/motion/nuxt",
     "nuxt-gtag",
+    "nuxt-studio",
   ],
   css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
   vite: {
@@ -35,6 +36,15 @@ export default defineNuxtConfig({
           langs: ["js", "ts", "html", "bash", "json"],
         },
       },
+    },
+  },
+  studio: {
+    route: "/admin",
+    repository: {
+      provider: "github", // 'github' or 'gitlab'
+      owner: "iamArvy",
+      repo: "portfolio",
+      branch: "main",
     },
   },
   site: {

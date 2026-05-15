@@ -1,24 +1,21 @@
 ---
-  title: Weavr
-  description: Web Solutions for Modern Businesses
-  rating: 5
-  type: Website
-  cover: /images/projects/weavr.png
-  stack: [
-    "Typescript",
-    "NuxtJS",
-    "TailwindCSS",
-    "Vue"
-  ]
-  links: {
-    live: https://weavrlabs.vercel.app,
-    github: https://github.com/iamArvy/weavr
-  }
-  gallery: [
-    /images/projects/weavr.png,
-    /images/projects/weavr.png,
-    /images/projects/weavr.png
-  ]
+title: Weavr
+cover: /images/projects/weavr.png
+description: Web Solutions for Modern Businesses
+gallery:
+  - /images/projects/weavr.png
+  - /images/projects/weavr.png
+  - /images/projects/weavr.png
+links:
+  live: https://weavrlabs.vercel.app
+  github: https://github.com/iamArvy/weavr
+rating: 5
+stack:
+  - Typescript
+  - NuxtJS
+  - TailwindCSS
+  - Vue
+type: Website
 ---
 
 ## 🌟 Overview
@@ -29,14 +26,14 @@ Weavr is a modern, content-driven portfolio website built to showcase web develo
 
 ## 🚀 Key Features
 
-* Fully responsive, mobile-first design
-* Dynamic project showcase with carousel-based highlights
-* Clear presentation of services and development offerings
-* Structured breakdown of development process and workflow
-* SEO-optimized pages with meta tags and schema markup
-* Interactive UI with subtle animations and transitions
-* Content-driven architecture using Nuxt Content
-* Direct contact via WhatsApp and standard contact channels
+- Fully responsive, mobile-first design
+- Dynamic project showcase with carousel-based highlights
+- Clear presentation of services and development offerings
+- Structured breakdown of development process and workflow
+- SEO-optimized pages with meta tags and schema markup
+- Interactive UI with subtle animations and transitions
+- Content-driven architecture using Nuxt Content
+- Direct contact via WhatsApp and standard contact channels
 
 ---
 
@@ -50,44 +47,44 @@ The UI is composed using reusable Shadcn-Vue components styled with Tailwind CSS
 
 ## 💡 My Contributions
 
-* Designed and implemented the complete frontend architecture
-* Built a reusable project showcase system driven by content files
-* Implemented SEO best practices including metadata and schema markup
-* Designed a responsive, brand-aligned UI with Tailwind CSS
-* Integrated animations and interactions to improve user engagement
-* Structured the site for easy scalability and long-term maintenance
+- Designed and implemented the complete frontend architecture
+- Built a reusable project showcase system driven by content files
+- Implemented SEO best practices including metadata and schema markup
+- Designed a responsive, brand-aligned UI with Tailwind CSS
+- Integrated animations and interactions to improve user engagement
+- Structured the site for easy scalability and long-term maintenance
 
 ---
 
 ## 📈 Results / Impact
 
-* Created a strong personal branding platform for client acquisition
-* Enabled rapid content updates without code changes
-* Improved project visibility through SEO-friendly structure
-* Delivered a polished, professional experience across devices
+- Created a strong personal branding platform for client acquisition
+- Enabled rapid content updates without code changes
+- Improved project visibility through SEO-friendly structure
+- Delivered a polished, professional experience across devices
 
 ---
 
 ## 🧪 Testing & Quality Assurance
 
-* Schema-based validation for contact forms
-* Component reuse to reduce UI inconsistencies
-* ESLint for consistent code quality
-* Manual cross-device and responsive testing
+- Schema-based validation for contact forms
+- Component reuse to reduce UI inconsistencies
+- ESLint for consistent code quality
+- Manual cross-device and responsive testing
 
 ---
 
 ## 🔐 Security Considerations
 
-* Client-side input validation for contact forms
-* No sensitive data stored or exposed client-side
-* Prepared architecture for future integrations requiring environment variables
+- Client-side input validation for contact forms
+- No sensitive data stored or exposed client-side
+- Prepared architecture for future integrations requiring environment variables
 
 ---
 
 ## 📚 What I Learned
 
-* Building content-first portfolio platforms with Nuxt Content
-* Structuring scalable frontend architectures
-* Applying SEO principles in modern frontend applications
-* Designing clean UI systems with reusable components
+- Building content-first portfolio platforms with Nuxt Content
+- Structuring scalable frontend architectures
+- Applying SEO principles in modern frontend applications
+- Designing clean UI systems with reusable components
